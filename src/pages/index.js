@@ -1,29 +1,31 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Layout from '../components/layout'
+import IndexLayout from '../components/index-layout'
 import SEO from '../components/seo'
 
 const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+  <div className="flex">
+    <IndexLayout>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
-        <Link to={node.fields.slug}>
-          <h3>{node.frontmatter.title}</h3>
-          <p>{node.excerpt}</p>
-        </Link>
+      <div className="pa4">
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <Link to={node.fields.slug}>
+              <h3>{node.frontmatter.title}</h3>
+              <p>{node.excerpt}</p>
+            </Link>
+          </div>
+        ))}
       </div>
-    ))}
-
-    <Link to="/about/">Go to about</Link>
-  </Layout>
+    </IndexLayout>
+  </div>
 )
 
 export default IndexPage
 
-export const testQuery = graphql`
+export const query = graphql`
   query {
     allMarkdownRemark {
       totalCount

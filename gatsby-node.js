@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: slug,
+      value: node.frontmatter.path,
     })
     createNodeField({
       node,

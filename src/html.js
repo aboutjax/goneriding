@@ -18,7 +18,7 @@ export default class HTML extends React.Component {
             href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
           />
         </head>
-        <body {...this.props.bodyAttributes}>
+        <body className="sans-serif h-100" {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div
             key={`body`}
