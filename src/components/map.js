@@ -39,14 +39,14 @@ class Map extends Component {
 
   fetchData() {
     this.setState({ loading: true })
-    let activityId = this.props.activityId
+    let publicAccessToken = '011c89ee01402ab591de0240d59ee84455fd4d42'
     let activityApiUrl =
       'https://www.strava.com/api/v3/activities/' + this.props.activityId
     fetch(activityApiUrl, {
       method: 'get',
       headers: {
         'content-type': 'application/json',
-        authorization: 'Bearer ' + '011c89ee01402ab591de0240d59ee84455fd4d42',
+        authorization: 'Bearer ' + publicAccessToken,
       },
     })
       .then(function(response) {
