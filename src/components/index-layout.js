@@ -17,11 +17,9 @@ const IndexLayout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div className="flex w-100">
-          <div className="flex flex-column w-100 overflow-auto vh-100 lh-body">
-            <Header siteTitle={data.site.siteMetadata.title} />
-            {children}
-          </div>
+        <div className="flex flex-column w-100 vh-100 lh-body">
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <div className="mw9 center w-100">{children}</div>
         </div>
       </>
     )}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import dummyData from './dummyData'
 
 const mapStyle = [
   {
@@ -190,10 +191,7 @@ class Map extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      activityData: null,
-      loading: true,
-    }
+    this.state = { activityData: dummyData, loading: true }
   }
 
   componentDidMount() {
@@ -204,12 +202,9 @@ class Map extends Component {
     let startLatlng = this.state.activityData.start_latlng
     let endLatlng = this.state.activityData.end_latlng
 
-    console.log(startLatlng)
-    console.log(endLatlng)
-
     let map = new window.google.maps.Map(document.getElementById('map'), {
       center: { lat: startLatlng[0], lng: startLatlng[1] },
-      zoom: 8,
+      zoom: 1,
       styles: mapStyle,
       disableDefaultUI: true,
     })
@@ -218,7 +213,8 @@ class Map extends Component {
     let decodedPolyline = window.google.maps.geometry.encoding.decodePath(
       encodedPolyline
     )
-    console.log(decodedPolyline)
+
+    console.log(decodedPolyline[0])
 
     let setPolyline = new window.google.maps.Polyline({
       path: decodedPolyline,
@@ -230,9 +226,12 @@ class Map extends Component {
     let bounds = new window.google.maps.LatLngBounds()
     bounds.extend({ lat: startLatlng[0], lng: startLatlng[1] })
     bounds.extend({ lat: endLatlng[0], lng: endLatlng[1] })
-    map.fitBounds(bounds)
+    decodedPolyline.forEach(element => {
+      bounds.extend({ lat: element.lat(), lng: element.lng() })
+    })
 
     setPolyline.setMap(map)
+    map.fitBounds(bounds)
   }
 
   fetchData() {
@@ -251,7 +250,6 @@ class Map extends Component {
         return response.json()
       })
       .then(json => {
-        console.log(json)
         this.setState({ activityData: json })
         this.setState({ loading: false })
         this.initMap()

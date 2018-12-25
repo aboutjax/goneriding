@@ -15,7 +15,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: 'strava_id',
-      value: node.frontmatter.stravaId,
+      value: node.frontmatter.strava_id,
+    })
+    createNodeField({
+      node,
+      name: 'cover_image',
+      value: node.frontmatter.cover_image,
     })
   }
 }

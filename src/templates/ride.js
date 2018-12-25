@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import Map from '../components/map'
 import rehypeReact from 'rehype-react'
 import Image from '../components/image'
+import Img from 'gatsby-image'
+import '../styles/index.css'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -11,18 +13,22 @@ const renderAst = new rehypeReact({
 }).Compiler
 
 export default ({ data }) => {
-  console.log(data)
   const post = data.markdownRemark
+  console.log(post)
 
   return (
     <div className="flex">
       <RideLayout>
         <div className="pa4 ride-post">
-          <div className="mw6 center">{renderAst(post.htmlAst)}</div>
+          <div className="center lh-copy f4 measure">
+            <Img sizes={post.frontmatter.cover_image.childImageSharp.sizes} />
+            <div>{post.frontmatter.date}</div>
+            {renderAst(post.htmlAst)}
+          </div>
         </div>
       </RideLayout>
       <div className="w-50 top-0 bottom-0 right-0">
-        <Map activityId={post.fields.strava_id} />
+        <Map activityId={post.frontmatter.strava_id} />
       </div>
     </div>
   )
@@ -32,11 +38,17 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
-      fields {
-        strava_id
-      }
       frontmatter {
         title
+        strava_id
+        cover_image {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+        date(formatString: "DD MMMM, YYYY")
       }
     }
   }
