@@ -27,3 +27,17 @@
 //   position: sticky;
 //   top: 3rem;
 // }
+
+.ride-body {
+  overflow: auto;
+  @media screen and (max-width: $large) {
+    overflow: inherit;
+    height: auto;
+  }
+}
+
+.ride-map {
+  @media screen and (max-width: $large) {
+    height: 600px;
+  }
+}

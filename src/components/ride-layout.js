@@ -17,8 +17,8 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div className="flex w-50">
-          <div className="flex flex-column w-100 overflow-auto vh-100 lh-body">
+        <div className="flex w-100 w-50-l fl">
+          <div className="flex flex-column w-100 ride-body vh-100 lh-body">
             <Header siteTitle={data.site.siteMetadata.title} />
             {children}
           </div>

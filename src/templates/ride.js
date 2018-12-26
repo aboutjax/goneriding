@@ -18,7 +18,7 @@ export default ({ data }) => {
   console.log(post)
 
   return (
-    <div className="flex">
+    <div className="cf">
       <RideLayout>
         <div className="">
           <Img sizes={post.frontmatter.cover_image.childImageSharp.sizes} />
@@ -38,7 +38,7 @@ export default ({ data }) => {
           </div>
         </div>
       </RideLayout>
-      <div className="w-50 top-0 bottom-0 right-0">
+      <div className="w-100 w-50-l top-0 bottom-0 right-0 fl">
         <Map activityId={post.frontmatter.strava_id} />
       </div>
     </div>
