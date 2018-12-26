@@ -250,6 +250,7 @@ class Map extends Component {
         return response.json()
       })
       .then(json => {
+        console.log(json)
         this.setState({ activityData: json })
         this.setState({ loading: false })
         this.initMap()

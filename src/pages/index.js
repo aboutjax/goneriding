@@ -6,60 +6,55 @@ import IndexLayout from '../components/index-layout'
 import SEO from '../components/seo'
 import FeatureCard from '../components/feature-card'
 
-// const IndexPage = ({ data }) => (
-//   <div className="flex">
-//     <IndexLayout>
-//       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-
-//       <div className="pa4">
-// {data.allMarkdownRemark.edges.map(({ node }) => (
-//   <div key={node.id}>
-//     <Link to={node.fields.slug}>
-//       <Img sizes={node.frontmatter.cover_image.childImageSharp.sizes} />
-//       <h3>{node.frontmatter.title}</h3>
-//       <p>{node.excerpt}</p>
-//     </Link>
-//   </div>
-// ))}
-//       </div>
-//     </IndexLayout>
-//   </div>
-// )
-
 const IndexPage = ({ data }) => {
   let firstPost = data.allMarkdownRemark.edges[0]
   let otherPosts = data.allMarkdownRemark.edges.slice(1)
   let firstPostCoverImageSrc =
     firstPost.node.frontmatter.cover_image.childImageSharp.sizes.src
 
+  let excerptTruncate = (str, number_of_words) => {
+    return (
+      str
+        .split(' ')
+        .splice(0, number_of_words)
+        .join(' ') + '...'
+    )
+  }
+
   return (
     <IndexLayout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="cf ph4">
-        <div className="fl pa2 w-100 w-50-ns">
+      <div className="cf ph0 ph5-l">
+        <div className="fl w-100 w-50-l pa3-l feature-ride-container">
           <FeatureCard
             slug={firstPost.node.fields.slug}
             imageSrc={firstPostCoverImageSrc}
             title={firstPost.node.frontmatter.title}
-            excerpt={firstPost.node.frontmatter.excerpt}
+            excerpt={excerptTruncate(firstPost.node.frontmatter.excerpt, 30)}
             date={firstPost.node.frontmatter.date}
           />
         </div>
-        <div className="fl pa2 w-100 w-50-ns flex flex-wrap">
+        <div className="fl w-100 flex flex-wrap w-50-l cf pa3 pa0-l">
           {otherPosts.map(({ node }) => (
-            <Link
-              key={node.id}
-              className="w-100 dib ph4-ns w-50-ns"
-              to={node.fields.slug}
-            >
+            <div key={node.id} className="fl w-100 w-50-ns pa3">
               <div>
-                <Img
-                  sizes={node.frontmatter.cover_image.childImageSharp.sizes}
-                  backgroundColor="#d7d7d7"
-                />
-                <h3 className="">{node.frontmatter.title}</h3>
+                <Link to={node.fields.slug}>
+                  <Img
+                    sizes={node.frontmatter.cover_image.childImageSharp.sizes}
+                    backgroundColor="#d7d7d7"
+                    className="dim black"
+                  />
+                </Link>
+                <h3 className="near-black lh-title mb2">
+                  <Link to={node.fields.slug} className="link dim black">
+                    {node.frontmatter.title}
+                  </Link>
+                </h3>
+                <p className="gray lh-copy mt0">
+                  {excerptTruncate(node.frontmatter.excerpt, 30)}
+                </p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

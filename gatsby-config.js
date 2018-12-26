@@ -21,6 +21,9 @@ module.exports = {
         path: `${__dirname}/src/pages/rides`,
       },
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+    },
     `gatsby-remark-copy-linked-files`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -38,6 +41,7 @@ module.exports = {
             options: {
               maxWidth: 1080,
               linkImagesToOriginal: false,
+              wrapperStyle: 'margin-bottom: 2rem;',
             },
           },
         ],

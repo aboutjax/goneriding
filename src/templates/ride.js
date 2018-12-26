@@ -5,11 +5,12 @@ import Map from '../components/map'
 import rehypeReact from 'rehype-react'
 import Image from '../components/image'
 import Img from 'gatsby-image'
-import '../styles/index.css'
+import '../styles/index.scss'
+import RideImage from '../components/ride-image'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { 'js-image': Image },
+  components: { 'ride-image': RideImage },
 }).Compiler
 
 export default ({ data }) => {
@@ -19,11 +20,21 @@ export default ({ data }) => {
   return (
     <div className="flex">
       <RideLayout>
-        <div className="pa4 ride-post">
-          <div className="center lh-copy f4 measure">
-            <Img sizes={post.frontmatter.cover_image.childImageSharp.sizes} />
-            <div>{post.frontmatter.date}</div>
-            {renderAst(post.htmlAst)}
+        <div className="">
+          <Img sizes={post.frontmatter.cover_image.childImageSharp.sizes} />
+          <div className="center mw8 pa4">
+            <div className="pt4 pb6 mb4 bb b--black-10 mw7 center">
+              <h1 className="tc f2 mb3 near-dark lh-title">
+                {post.frontmatter.title}
+              </h1>
+              <p className="f4 tc mv0 mt4 near-dark lh-copy measure center">
+                {post.frontmatter.excerpt}
+              </p>
+              <p className="i tc mt4 mb0 silver">{post.frontmatter.date}</p>
+            </div>
+            <div className="lh-copy f4 measure center">
+              {renderAst(post.htmlAst)}
+            </div>
           </div>
         </div>
       </RideLayout>
@@ -40,10 +51,11 @@ export const query = graphql`
       htmlAst
       frontmatter {
         title
+        excerpt
         strava_id
         cover_image {
           childImageSharp {
-            sizes(maxWidth: 600) {
+            sizes(maxWidth: 1400) {
               ...GatsbyImageSharpSizes
             }
           }

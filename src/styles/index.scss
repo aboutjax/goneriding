@@ -1,0 +1,22 @@
+.feature-ride {
+  min-height: calc(80vh);
+  position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 1;
+  }
+}
+
+.feature-ride__info {
+  z-index: 2;
+}
+
+// .feature-ride-container {
+//   position: sticky;
+//   top: 3rem;
+// }
