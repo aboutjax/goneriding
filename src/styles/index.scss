@@ -1,5 +1,12 @@
+@import './components/responsive';
+
 .feature-ride {
   min-height: calc(80vh);
+
+  @media screen and (max-width: $large) {
+    min-height: 50vh;
+  }
+
   position: relative;
   &::before {
     content: '';

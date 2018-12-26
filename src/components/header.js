@@ -3,19 +3,17 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const Header = ({ siteTitle }) => (
-  <div className="near-black pa5 h4">
-    <div className="pa3 flex justify-between items-center flex-none h-100">
-      <h3>
-        <Link to="/" className="near-black no-underline ttu">
-          {siteTitle}
-        </Link>
-      </h3>
-      <nav>
-        <Link to="/about" className="near-black no-underline">
-          About
-        </Link>
-      </nav>
-    </div>
+  <div className="near-black pv4 ph2 ph5-l flex justify-between items-center flex-none">
+    <h3 className="ph3">
+      <Link to="/" className="near-black no-underline ttu">
+        {siteTitle}
+      </Link>
+    </h3>
+    <nav className="ph3">
+      <Link to="/about" className="near-black no-underline">
+        About
+      </Link>
+    </nav>
   </div>
 )
 
