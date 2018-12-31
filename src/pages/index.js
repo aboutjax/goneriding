@@ -24,38 +24,40 @@ const IndexPage = ({ data }) => {
   return (
     <IndexLayout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="cf ph0 ph5-l">
-        <div className="fl w-100 w-50-l pa3-l feature-ride-container">
-          <FeatureCard
-            slug={firstPost.node.fields.slug}
-            imageSrc={firstPostCoverImageSrc}
-            title={firstPost.node.frontmatter.title}
-            excerpt={excerptTruncate(firstPost.node.frontmatter.excerpt, 30)}
-            date={firstPost.node.frontmatter.date}
-          />
-        </div>
-        <div className="fl w-100 flex flex-wrap w-50-l cf pa3 pa0-l">
-          {otherPosts.map(({ node }) => (
-            <div key={node.id} className="fl w-100 w-50-ns pa3">
-              <div>
-                <Link to={node.fields.slug}>
-                  <Img
-                    sizes={node.frontmatter.cover_image.childImageSharp.sizes}
-                    backgroundColor="#d7d7d7"
-                    className="dim black"
-                  />
-                </Link>
-                <h3 className="near-black lh-title mb2">
-                  <Link to={node.fields.slug} className="link dim black">
-                    {node.frontmatter.title}
+      <div className="mw9 center w-100 mb4">
+        <div className="cf ph0 ph5-l">
+          <div className="fl w-100 w-50-l pa3-l feature-ride-container">
+            <FeatureCard
+              slug={firstPost.node.fields.slug}
+              imageSrc={firstPostCoverImageSrc}
+              title={firstPost.node.frontmatter.title}
+              excerpt={excerptTruncate(firstPost.node.frontmatter.excerpt, 30)}
+              date={firstPost.node.frontmatter.date}
+            />
+          </div>
+          <div className="fl w-100 flex flex-wrap w-50-l pa3 pa0-l">
+            {otherPosts.map(({ node }) => (
+              <div key={node.id} className="fl w-100 w-50-ns pa3">
+                <div>
+                  <Link to={node.fields.slug}>
+                    <Img
+                      sizes={node.frontmatter.cover_image.childImageSharp.sizes}
+                      backgroundColor="#d7d7d7"
+                      className="dim black br3"
+                    />
                   </Link>
-                </h3>
-                <p className="gray lh-copy mt0">
-                  {excerptTruncate(node.frontmatter.excerpt, 30)}
-                </p>
+                  <h3 className="near-black lh-title mb2">
+                    <Link to={node.fields.slug} className="link dim black">
+                      {node.frontmatter.title}
+                    </Link>
+                  </h3>
+                  <p className="gray lh-copy mt0">
+                    {excerptTruncate(node.frontmatter.excerpt, 30)}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </IndexLayout>

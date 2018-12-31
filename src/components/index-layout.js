@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import Footer from './footer'
 
 import Header from './header'
 
@@ -17,9 +18,10 @@ const IndexLayout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div className="flex flex-column w-100 vh-100 lh-body">
+        <div className="vh-100 flex flex-column">
           <Header siteTitle={data.site.siteMetadata.title} />
-          <div className="mw9 center w-100">{children}</div>
+          {children}
+          <Footer />
         </div>
       </>
     )}

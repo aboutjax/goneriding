@@ -1,7 +1,9 @@
 @import './components/responsive';
 
 .feature-ride {
-  min-height: calc(80vh);
+  min-height: 80vh;
+  // border-radius: 10px;
+  // overflow: hidden;
 
   @media screen and (max-width: $large) {
     min-height: 50vh;
@@ -19,14 +21,17 @@
   }
 }
 
+.feature-ride-container {
+  @media screen and (max-width: $large) {
+    position: relative;
+  }
+  position: sticky;
+  top: 0px;
+}
+
 .feature-ride__info {
   z-index: 2;
 }
-
-// .feature-ride-container {
-//   position: sticky;
-//   top: 3rem;
-// }
 
 .ride-body {
   overflow: auto;

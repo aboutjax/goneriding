@@ -12,10 +12,10 @@ const FeatureCard = ({ title, excerpt, imageSrc, slug, date }) => {
     <Link
       style={firstPostStyle}
       to={slug}
-      className="w-100 h-100 dib feature-ride no-underline flex flex-column justify-end"
+      className="br0 br3-l overflow-hidden w-100 h-100 dib feature-ride no-underline flex dim flex-column justify-end"
     >
       <div className="pa5 feature-ride__info">
-        <h1 className="tc f1 mb3 near-white lh-title">{title}</h1>
+        <h1 className="tc f2 f1-ns mb3 near-white lh-title">{title}</h1>
         <p className="f4 tc mv0 mt4 near-white lh-copy">{excerpt}</p>
         <p className="i tc mt4 mb0 near-white">{date}</p>
       </div>

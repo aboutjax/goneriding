@@ -17,6 +17,9 @@ export default class HTML extends React.Component {
             rel="stylesheet"
             href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
           />
+          <noscript>
+            <p>Please enable javascript!</p>
+          </noscript>
         </head>
         <body className="sans-serif h-100" {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
