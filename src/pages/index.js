@@ -7,11 +7,13 @@ import SEO from '../components/seo'
 import FeatureCard from '../components/feature-card'
 
 const IndexPage = ({ data }) => {
-  let firstPost = data.allMarkdownRemark.edges[0]
-  let otherPosts = data.allMarkdownRemark.edges.slice(1)
-  let firstPostCoverImageSrc =
-    firstPost.node.frontmatter.cover_image.childImageSharp.sizes.src
+  let featurePost = data.featurePost.edges[0]
+  let featurePostCoverImageSrc =
+    featurePost.node.frontmatter.cover_image.childImageSharp.sizes.src
 
+  let otherPosts = data.allPosts.edges.slice(0, 7)
+
+  // Truncate post excerpt function
   let excerptTruncate = (str, number_of_words) => {
     return (
       str
@@ -24,15 +26,18 @@ const IndexPage = ({ data }) => {
   return (
     <IndexLayout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="mw9 center w-100 mb4">
-        <div className="cf ph0 ph5-l">
+      <div className="mw9 center w-100 mb4 flex-grow-1">
+        <div className="cf ph0 ph3-l">
           <div className="fl w-100 w-50-l pa3-l feature-ride-container">
             <FeatureCard
-              slug={firstPost.node.fields.slug}
-              imageSrc={firstPostCoverImageSrc}
-              title={firstPost.node.frontmatter.title}
-              excerpt={excerptTruncate(firstPost.node.frontmatter.excerpt, 30)}
-              date={firstPost.node.frontmatter.date}
+              slug={featurePost.node.fields.slug}
+              imageSrc={featurePostCoverImageSrc}
+              title={featurePost.node.frontmatter.title}
+              excerpt={excerptTruncate(
+                featurePost.node.frontmatter.excerpt,
+                30
+              )}
+              date={featurePost.node.frontmatter.date}
             />
           </div>
           <div className="fl w-100 flex flex-wrap w-50-l pa3 pa0-l">
@@ -41,22 +46,36 @@ const IndexPage = ({ data }) => {
                 <div>
                   <Link to={node.fields.slug}>
                     <Img
-                      sizes={node.frontmatter.cover_image.childImageSharp.sizes}
+                      fluid={node.frontmatter.cover_image.childImageSharp.fluid}
                       backgroundColor="#d7d7d7"
                       className="dim black br3"
                     />
                   </Link>
                   <h3 className="near-black lh-title mb2">
-                    <Link to={node.fields.slug} className="link dim black">
+                    <Link
+                      to={node.fields.slug}
+                      className="link dim black serif"
+                    >
                       {node.frontmatter.title}
                     </Link>
                   </h3>
-                  <p className="gray lh-copy mt0">
+                  <p className="silver i f6 mb3 mt0 lh-solid">
+                    {node.frontmatter.date}
+                  </p>
+                  <p className="fw3 gray lh-copy mt0">
                     {excerptTruncate(node.frontmatter.excerpt, 30)}
                   </p>
                 </div>
               </div>
             ))}
+            <div className="pa3 w-100">
+              <a
+                className="link dim db br2 mb0 ph3 pv3 tc white bg-black ttu"
+                href="/rides"
+              >
+                View all rides
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -68,7 +87,9 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+    allPosts: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       totalCount
       edges {
         node {
@@ -86,11 +107,42 @@ export const query = graphql`
                 sizes(maxWidth: 1800) {
                   ...GatsbyImageSharpSizes
                 }
-                fluid(maxWidth: 700) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 700, maxHeight: 500) {
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                  originalImg
+                  originalName
                 }
-                fixed(width: 400) {
-                  ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+    featurePost: allMarkdownRemark(
+      filter: { frontmatter: { title: { eq: "Hunua Overnighter" } } }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            strava_id
+            excerpt
+            title
+            date(formatString: "DD MMMM, YYYY")
+            cover_image {
+              childImageSharp {
+                sizes(maxWidth: 1800) {
+                  ...GatsbyImageSharpSizes
                 }
               }
             }

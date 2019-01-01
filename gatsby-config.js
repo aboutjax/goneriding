@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/goneriding',
   siteMetadata: {
-    title: `Goneriding`,
+    title: `goneriding`,
     description: `Goneriding`,
     author: `@gatsbyjs`,
   },
@@ -22,31 +22,33 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+              quality: 100,
+              showCaptions: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 3em; margin-top: 3em;`,
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-sass`,
     },
     `gatsby-remark-copy-linked-files`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          // gatsby-remark-relative-images must
-          // go before gatsby-remark-images
-          {
-            resolve: 'gatsby-remark-relative-images',
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1080,
-              linkImagesToOriginal: false,
-              wrapperStyle: 'margin-bottom: 2rem;',
-            },
-          },
-        ],
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

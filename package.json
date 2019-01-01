@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "chart.js": "^2.7.3",
     "gatsby": "^2.0.75",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-manifest": "^2.0.9",
@@ -20,9 +21,13 @@
     "gatsby-transformer-remark": "^2.1.17",
     "gatsby-transformer-sharp": "^2.1.9",
     "gh-pages": "^2.0.1",
+    "github-markdown-css": "^2.10.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "rehype-react": "^3.1.0"

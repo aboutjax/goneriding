@@ -1,68 +1,27 @@
 import React, { Component } from 'react'
-import dummyData from './dummyData'
 
 const mapStyle = [
   {
+    featureType: 'landscape.man_made',
     elementType: 'geometry',
     stylers: [
       {
-        color: '#f5f5f5',
+        color: '#f7f1df',
       },
     ],
   },
   {
-    elementType: 'labels.icon',
-    stylers: [
-      {
-        visibility: 'off',
-      },
-    ],
-  },
-  {
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#616161',
-      },
-    ],
-  },
-  {
-    elementType: 'labels.text.stroke',
-    stylers: [
-      {
-        color: '#f5f5f5',
-      },
-    ],
-  },
-  {
-    featureType: 'administrative.land_parcel',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#bdbdbd',
-      },
-    ],
-  },
-  {
-    featureType: 'administrative.neighborhood',
-    stylers: [
-      {
-        visibility: 'off',
-      },
-    ],
-  },
-  {
-    featureType: 'poi',
+    featureType: 'landscape.natural',
     elementType: 'geometry',
     stylers: [
       {
-        color: '#eeeeee',
+        color: '#d0e3b4',
       },
     ],
   },
   {
-    featureType: 'poi',
-    elementType: 'labels.text',
+    featureType: 'landscape.natural.terrain',
+    elementType: 'geometry',
     stylers: [
       {
         visibility: 'off',
@@ -71,18 +30,28 @@ const mapStyle = [
   },
   {
     featureType: 'poi',
-    elementType: 'labels.text.fill',
+    elementType: 'labels',
     stylers: [
       {
-        color: '#757575',
+        visibility: 'off',
       },
     ],
   },
   {
     featureType: 'poi.business',
+    elementType: 'all',
     stylers: [
       {
-        visibility: 'off',
+        visibility: 'on',
+      },
+    ],
+  },
+  {
+    featureType: 'poi.medical',
+    elementType: 'geometry',
+    stylers: [
+      {
+        color: '#fbd3da',
       },
     ],
   },
@@ -91,31 +60,49 @@ const mapStyle = [
     elementType: 'geometry',
     stylers: [
       {
-        color: '#e5e5e5',
-      },
-    ],
-  },
-  {
-    featureType: 'poi.park',
-    elementType: 'labels.text',
-    stylers: [
-      {
-        visibility: 'off',
-      },
-    ],
-  },
-  {
-    featureType: 'poi.park',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#9e9e9e',
+        color: '#bde6ab',
       },
     ],
   },
   {
     featureType: 'road',
-    elementType: 'geometry',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road',
+    elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#ffe15f',
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        color: '#efd151',
+      },
+    ],
+  },
+  {
+    featureType: 'road.arterial',
+    elementType: 'geometry.fill',
     stylers: [
       {
         color: '#ffffff',
@@ -123,90 +110,20 @@ const mapStyle = [
     ],
   },
   {
-    featureType: 'road',
-    elementType: 'labels',
-    stylers: [
-      {
-        visibility: 'off',
-      },
-    ],
-  },
-  {
-    featureType: 'road.arterial',
-    stylers: [
-      {
-        visibility: 'off',
-      },
-    ],
-  },
-  {
-    featureType: 'road.arterial',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#757575',
-      },
-    ],
-  },
-  {
-    featureType: 'road.highway',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#dadada',
-      },
-    ],
-  },
-  {
-    featureType: 'road.highway',
-    elementType: 'labels',
-    stylers: [
-      {
-        visibility: 'off',
-      },
-    ],
-  },
-  {
-    featureType: 'road.highway',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#616161',
-      },
-    ],
-  },
-  {
     featureType: 'road.local',
+    elementType: 'geometry.fill',
     stylers: [
       {
-        visibility: 'off',
+        color: 'black',
       },
     ],
   },
   {
-    featureType: 'road.local',
-    elementType: 'labels.text.fill',
+    featureType: 'transit.station.airport',
+    elementType: 'geometry.fill',
     stylers: [
       {
-        color: '#9e9e9e',
-      },
-    ],
-  },
-  {
-    featureType: 'transit.line',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#e5e5e5',
-      },
-    ],
-  },
-  {
-    featureType: 'transit.station',
-    elementType: 'geometry',
-    stylers: [
-      {
-        color: '#eeeeee',
+        color: '#cfb2db',
       },
     ],
   },
@@ -215,62 +132,35 @@ const mapStyle = [
     elementType: 'geometry',
     stylers: [
       {
-        color: '#c9c9c9',
-      },
-    ],
-  },
-  {
-    featureType: 'water',
-    elementType: 'labels.text',
-    stylers: [
-      {
-        visibility: 'off',
-      },
-    ],
-  },
-  {
-    featureType: 'water',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        color: '#9e9e9e',
+        color: '#a2daf2',
       },
     ],
   },
 ]
+
 class Map extends Component {
-  constructor(props) {
-    super(props)
+  componentDidMount() {}
 
-    this.state = { activityData: dummyData, loading: true }
-  }
+  initMap = () => {
+    let startLatlng = this.props.activityData.start_latlng
+    let endLatlng = this.props.activityData.end_latlng
 
-  componentDidMount() {
-    this.fetchData()
-  }
+    let encodedPolyline = this.props.activityData.map.polyline
+    let decodedPolyline = window.google.maps.geometry.encoding.decodePath(
+      encodedPolyline
+    )
 
-  initMap() {
-    let startLatlng = this.state.activityData.start_latlng
-    let endLatlng = this.state.activityData.end_latlng
-
-    let map = new window.google.maps.Map(document.getElementById('map'), {
+    window.map = new window.google.maps.Map(document.getElementById('map'), {
       center: { lat: startLatlng[0], lng: startLatlng[1] },
       zoom: 1,
       styles: mapStyle,
     })
 
-    let encodedPolyline = this.state.activityData.map.polyline
-    let decodedPolyline = window.google.maps.geometry.encoding.decodePath(
-      encodedPolyline
-    )
-
-    console.log(decodedPolyline[0])
-
     let setPolyline = new window.google.maps.Polyline({
       path: decodedPolyline,
       strokeColor: '#FF4136',
-      strokeOpacity: 1.0,
-      strokeWeight: 2,
+      strokeOpacity: 1,
+      strokeWeight: 3,
     })
 
     let bounds = new window.google.maps.LatLngBounds()
@@ -280,43 +170,42 @@ class Map extends Component {
       bounds.extend({ lat: element.lat(), lng: element.lng() })
     })
 
-    setPolyline.setMap(map)
-    map.fitBounds(bounds)
-  }
-
-  fetchData() {
-    this.setState({ loading: true })
-    let publicAccessToken = '011c89ee01402ab591de0240d59ee84455fd4d42'
-    let activityApiUrl =
-      'https://www.strava.com/api/v3/activities/' + this.props.activityId
-    fetch(activityApiUrl, {
-      method: 'get',
-      headers: {
-        'content-type': 'application/json',
-        authorization: 'Bearer ' + publicAccessToken,
+    new window.google.maps.Marker({
+      position: { lat: startLatlng[0], lng: startLatlng[1] },
+      map: window.map,
+      icon: {
+        path: window.google.maps.SymbolPath.CIRCLE,
+        scale: 6,
+        fillOpacity: 1,
+        fillColor: '#000000',
+        strokeOpacity: 0,
       },
+      title: 'Start',
     })
-      .then(function(response) {
-        return response.json()
-      })
-      .then(json => {
-        console.log(json)
-        this.setState({ activityData: json })
-        this.setState({ loading: false })
-        this.initMap()
-      })
+
+    new window.google.maps.Marker({
+      position: { lat: endLatlng[0], lng: endLatlng[1] },
+      map: window.map,
+      icon: {
+        path: window.google.maps.SymbolPath.CIRCLE,
+        scale: 6,
+        fillOpacity: 1,
+        fillColor: '#FF2222',
+        strokeOpacity: 0,
+      },
+      title: 'End',
+    })
+
+    setPolyline.setMap(window.map)
+    window.map.fitBounds(bounds)
   }
 
   render() {
-    if (this.state.loading === false) {
-      return <div id="map" className="vh-100 vw-100 bg-gray ride-map" />
+    if (this.props.loading) {
+      return <div id="map" className="vh-100 vw-100 bg-near-white ride-map" />
     } else {
-      return (
-        <div className="vh-100 vw-100 bg-near-white flex items-center justify-center">
-          {' '}
-          Loading...{' '}
-        </div>
-      )
+      this.initMap()
+      return <div id="map" className="vh-100 vw-100 bg-near-white ride-map" />
     }
   }
 }
