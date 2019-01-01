@@ -27,7 +27,10 @@ class MarkerLink extends Component {
         className="link"
         onClick={this.showOnMap.bind(this)}
       >
-        📍{this.props.children}
+        <span role="img" aria-label="pin">
+          📍
+        </span>
+        {this.props.children}
       </a>
     )
   }

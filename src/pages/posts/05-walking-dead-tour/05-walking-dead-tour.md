@@ -2,11 +2,12 @@
 path: '/rides/tour-of-walking-dead'
 date: '2018-04-21'
 title: 'Tour of the Walking Dead'
-excerpt: During my first week of employment at Wahoo Fitness, I went over to Atlanta, Georgia to meet everyone at Wahoo HQ.
+excerpt: During my first week of employment at Wahoo Fitness, I went over to Atlanta, Georgia to meet everyone at Wahoo HQ. Ben, Michael and I headed up north to Cartersville for a nice local scenic loop. I was told we'll be riding near some shooting locations of The Walking Dead.
 strava_id: 1523090078
 cover_image: 'cover.jpg'
 location: Atlanta, Georgia
 author: Jacky Lee
+publish: true
 ---
 
 During my first week of employment at Wahoo Fitness, I went over to Atlanta, Georgia to meet everyone at <marker-link lat="33.8777202" lng="-84.3866098" zoom="17">Wahoo HQ</marker-link>. It’s kinda cool to see the mothership in person, as I’ve only seen it previously from [DC Rainmaker](https://www.dcrainmaker.com/2014/08/behind-scenes-fitness.html).

@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
                     {node.frontmatter.date}
                   </p>
                   <p className="fw3 gray lh-copy mt0">
-                    {excerptTruncate(node.frontmatter.excerpt, 30)}
+                    {excerptTruncate(node.frontmatter.excerpt, 40)}
                   </p>
                 </div>
               </div>
@@ -88,6 +88,7 @@ export default IndexPage
 export const query = graphql`
   query {
     allPosts: allMarkdownRemark(
+      filter: { frontmatter: { publish: { eq: true } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       totalCount
@@ -117,7 +118,7 @@ export const query = graphql`
       }
     }
     featurePost: allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Hunua Overnighter" } } }
+      filter: { frontmatter: { title: { eq: "Hunua Overnighter: Day 1" } } }
     ) {
       edges {
         node {

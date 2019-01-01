@@ -116,7 +116,7 @@ class PostPage extends Component {
                 </div>
               </div>
               <div className="markdown-body">
-                <div className="lh-copy measure center f4">
+                <div className="lh-copy center f4">
                   {renderAst(this.state.post.htmlAst)}
                 </div>
               </div>
@@ -152,7 +152,7 @@ export const query = graphql`
         strava_id
         cover_image {
           childImageSharp {
-            fluid(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
+            fluid(maxWidth: 2000, maxHeight: 1400, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }

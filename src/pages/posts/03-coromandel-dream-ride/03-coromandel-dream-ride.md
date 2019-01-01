@@ -7,6 +7,7 @@ strava_id: 1844248203
 cover_image: 'cover.jpg'
 location: Coromandel, New Zealand
 author: Jacky Lee
+publish: false
 ---
 
 # Coffee Stop

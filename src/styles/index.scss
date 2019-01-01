@@ -119,3 +119,38 @@
 .serif {
   font-family: 'Merriweather', serif;
 }
+
+.gatsby-resp-image-link {
+  transition: opacity 0.1s ease-in;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// Overriding markdown body styles
+.markdown-body {
+  h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 36px !important;
+
+    @media screen and (max-width: $large) {
+      font-size: 24px !important;
+    }
+  }
+
+  p,
+  blockquote {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  blockquote {
+    margin: 0 auto !important;
+  }
+
+  h1 {
+    max-width: 500px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}

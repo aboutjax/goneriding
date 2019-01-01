@@ -2,14 +2,16 @@
 path: '/rides/turoa-nz-only-cycling-climb'
 date: '2018-03-25'
 title: 'Turoa: NZ’s only HC climb'
-excerpt: After an ultimately great 180km ride on our previous day, we’re ready to climb New Zealand’s only Hors Category (HC) road.
+excerpt: After an ultimately great 180km ride on our previous day, we’re ready to climb New Zealand’s only Hors Category (HC) road. We were, and continue to be surprised that the Ohakune to Turoa climb is NZ’s only HC climb. When you think of all of the other mountain roads there are throughout NZ, it’s a little surprising. Anyway, we were heading up the hill at 7am.
 strava_id: 1469733020
 cover_image: 'cover.jpg'
 location: Ohakune, Mt Ruapehu
 author: Jason Bryant
+publish: true
 ---
 
 After an ultimately great 180km ride on our previous day, we’re ready to climb New Zealand's only Hors Category (HC) road. We were, and continue to be surprised that the Ohakune to Turoa climb is NZ’s only HC climb. When you think of all of the other mountain roads there are throughout NZ, it’s a little surprising. Anyway, we were heading up the hill at 7am.
+
 ![Everyone feeling pumped & optimistic at the base of Turoa](01.JPG 'Everyone feeling pumped & optimistic at the base of Turoa')
 
 We’d definitely not had a big night the night before. In fact, we only managed a couple of beers each. Although I am sure that had we not been riding today then it could’ve been a lot worse. We’d got all of our gear ready the night before. Most opted for just one water bottle. It’s only 17km, but would probably take us close to 90 minutes.
@@ -40,6 +42,4 @@ Mark went and got the car and picked up Guy and his punctured bike. We all made 
 
 Thanks to everyone for making the effort.
 
-<div class="pa4 tc bg-near-white lh-body f5 near-black">
-This entry was originally posted <a href="http://greylynncycleclub.com/cycling-nzs-only-hc-climb/">here</a>
-</div>
+> This entry was originally posted [here](http://greylynncycleclub.com/cycling-nzs-only-hc-climb/)
