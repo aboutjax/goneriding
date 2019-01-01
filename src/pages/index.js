@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
               title={featurePost.node.frontmatter.title}
               excerpt={excerptTruncate(
                 featurePost.node.frontmatter.excerpt,
-                30
+                24
               )}
               date={featurePost.node.frontmatter.date}
             />
@@ -107,17 +107,8 @@ export const query = graphql`
                 sizes(maxWidth: 1800) {
                   ...GatsbyImageSharpSizes
                 }
-                fluid(maxWidth: 700, maxHeight: 500) {
-                  base64
-                  tracedSVG
-                  aspectRatio
-                  src
-                  srcSet
-                  srcWebp
-                  srcSetWebp
-                  sizes
-                  originalImg
-                  originalName
+                fluid(maxWidth: 700, maxHeight: 500, cropFocus: CENTER) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

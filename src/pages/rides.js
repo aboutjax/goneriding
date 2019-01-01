@@ -32,12 +32,12 @@ const RidesPage = ({ data }) => {
                     className="dim black br3"
                   />
                 </Link>
-                <h3 className="near-black lh-title mb2">
+                <h3 className="near-black lh-title mb2 serif">
                   <Link to={node.fields.slug} className="link dim black">
                     {node.frontmatter.title}
                   </Link>
                 </h3>
-                <p className="black i f6 mb3 mt0 lh-solid">
+                <p className="black i f6 mb3 mt0 lh-solid silver">
                   {node.frontmatter.date}
                 </p>
                 <p className="gray lh-copy mt0">

@@ -22,9 +22,13 @@ class MarkerLink extends Component {
   }
   render() {
     return (
-      <span className="link underline dim" onClick={this.showOnMap.bind(this)}>
-        {this.props.children}
-      </span>
+      <a
+        href="javacript:void()"
+        className="link"
+        onClick={this.showOnMap.bind(this)}
+      >
+        📍{this.props.children}
+      </a>
     )
   }
 }

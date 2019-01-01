@@ -73,6 +73,7 @@ class PostPage extends Component {
         <SEO
           title={this.state.post.frontmatter.title}
           keywords={[`gatsby`, `application`, `react`]}
+          description={this.state.post.frontmatter.excerpt}
         />
         <RideLayout>
           <div>
@@ -96,23 +97,23 @@ class PostPage extends Component {
                 <h1 className="tc f1 mb3 near-dark lh-title serif tracked-tight">
                   {this.state.post.frontmatter.title}
                 </h1>
-                <p className="tc mt0 mb5 silver lh-copy">
+                <p className="tc mt0 mb3 silver lh-copy">
                   {this.state.post.frontmatter.location} •{' '}
-                  {this.state.post.frontmatter.date}
+                  {this.state.post.frontmatter.date} • by{' '}
+                  {this.state.post.frontmatter.author}
                 </p>
-                <p className="f4 tc mt3 mb4 near-dark lh-copy measure center">
-                  {this.state.post.frontmatter.excerpt}
-                </p>
-                <AltitudeChart
-                  loading={this.state.loading}
-                  data={this.state.streams}
-                />
-                <StravaStats
-                  loading={this.state.loading}
-                  activityData={
-                    this.state.activityData ? this.state.activityData : 0
-                  }
-                />
+                <div className="mv4-l mv3">
+                  <AltitudeChart
+                    loading={this.state.loading}
+                    data={this.state.streams}
+                  />
+                  <StravaStats
+                    loading={this.state.loading}
+                    activityData={
+                      this.state.activityData ? this.state.activityData : 0
+                    }
+                  />
+                </div>
               </div>
               <div className="markdown-body">
                 <div className="lh-copy measure center f4">
@@ -147,10 +148,11 @@ export const query = graphql`
         title
         location
         excerpt
+        author
         strava_id
         cover_image {
           childImageSharp {
-            fluid(maxWidth: 1400, maxHeight: 1000) {
+            fluid(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }

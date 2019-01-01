@@ -6,6 +6,7 @@ excerpt: We’re up and ready to climb New Zealand’s only Hors Category (HC) r
 strava_id: 1844248203
 cover_image: 'cover.jpg'
 location: Coromandel, New Zealand
+author: Jacky Lee
 ---
 
 # Coffee Stop
