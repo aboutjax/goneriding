@@ -105,9 +105,6 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             cover_image {
               childImageSharp {
-                sizes(maxWidth: 1800) {
-                  ...GatsbyImageSharpSizes
-                }
                 fluid(maxWidth: 700, maxHeight: 500, cropFocus: CENTER) {
                   ...GatsbyImageSharpFluid
                 }
@@ -133,7 +130,7 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             cover_image {
               childImageSharp {
-                sizes(maxWidth: 1800) {
+                sizes(maxWidth: 1400) {
                   ...GatsbyImageSharpSizes
                 }
               }

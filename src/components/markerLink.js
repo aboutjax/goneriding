@@ -23,11 +23,7 @@ class MarkerLink extends Component {
   }
   render() {
     return (
-      <a
-        href="javacript:void()"
-        className="link"
-        onClick={this.showOnMap.bind(this)}
-      >
+      <a className="link" onClick={this.showOnMap.bind(this)}>
         <span role="img" aria-label="pin" />
         {this.props.children}
         📍

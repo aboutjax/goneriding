@@ -183,7 +183,7 @@ export const query = graphql`
         strava_id
         cover_image {
           childImageSharp {
-            fluid(maxWidth: 2000, maxHeight: 1400, cropFocus: CENTER) {
+            fluid(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
             }
           }
