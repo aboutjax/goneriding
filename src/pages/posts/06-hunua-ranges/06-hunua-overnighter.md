@@ -2,7 +2,7 @@
 path: '/rides/hunua-overnighter'
 date: '2018-11-02'
 title: 'Hunua Overnighter'
-excerpt: We’re up and ready to climb New Zealand’s only Hors Category (HC) road. We were, and continue to be surprised that the Ohakune to Turoa climb is NZ’s only HC climb. When you think of all of the other mountain roads there are throughout NZ, it’s a little surprising.
+excerpt: There's nothing quite like the feeling of exploring on two wheels. The joy of discovering new grounds at your own pace always brings a smile to our faces. Some say it's an addiction, I don't disagree.
 strava_id: 1940699639
 cover_image: 'cover.jpg'
 location: Hunua Ranges

@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <div className="bg-near-white gray pv2 ph2">
         <div className="pa3">
-          <p className="lh-title tc">
+          <p className="lh-title tc lh-copy">
             Built with{' '}
             <a
               className="link dim black"
