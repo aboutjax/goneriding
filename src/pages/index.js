@@ -26,7 +26,18 @@ const IndexPage = ({ data }) => {
 
   return (
     <IndexLayout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="Rides, Routes, Inspiration"
+        keywords={[
+          `bike packing`,
+          `publication`,
+          `bike touring`,
+          `adventure cyling`,
+          `world travel`,
+          `cycling`,
+        ]}
+        image={featurePostCoverImageSrc}
+      />
       <div className="mw9 center w-100 mb4 flex-grow-1">
         <div className="cf ph0 ph3-l">
           <div className="fl w-100 w-50-l pa3-l feature-ride-container">
