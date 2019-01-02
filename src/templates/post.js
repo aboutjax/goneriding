@@ -9,8 +9,6 @@ import MarkerLink from '../components/markerLink'
 import StravaStats from '../components/stravaStats'
 import AltitudeChart from '../components/altitudeChart'
 import SEO from '../components/seo'
-import 'github-markdown-css'
-// import '../styles/index.scss'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,

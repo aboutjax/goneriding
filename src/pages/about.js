@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Layout from '../components/index-layout'
 import SEO from '../components/seo'
 
@@ -12,7 +11,7 @@ const SecondPage = () => (
       </h1>
       <cite className="mb4 db silver"> – John F Kennedy.</cite>
       <div className="markdown-body mt6">
-        <div class="pa4-l pa0 f4 lh-copy silver mw7 tl center">
+        <div className="pa4-l pa0 f4 lh-copy silver mw7 tl center">
           <p className="">
             Welcome, this is a publication powered by{' '}
             <a
