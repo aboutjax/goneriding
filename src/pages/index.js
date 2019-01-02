@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import '../styles/index.scss'
 
 import IndexLayout from '../components/index-layout'
 import SEO from '../components/seo'
