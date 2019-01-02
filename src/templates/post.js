@@ -21,8 +21,6 @@ class PostPage extends Component {
   constructor(props) {
     super(props)
 
-    console.log(props.data)
-
     this.state = {
       post: props.data.queryPost,
       loading: true,
