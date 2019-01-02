@@ -159,8 +159,22 @@
     width: 100%;
   }
 
+  a {
+    transition: opacity 0.2s;
+    &:hover {
+      text-decoration: none !important;
+      opacity: 0.5;
+    }
+  }
+
   .link {
     color: #0366d6 !important;
+  }
+
+  button {
+    border: none !important;
+    outline: none !important;
+    background: none !important;
   }
 }
 
