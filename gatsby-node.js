@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark(filter: { frontmatter: { publish: { eq: true } } }) {
+        allMarkdownRemark {
           edges {
             node {
               frontmatter {

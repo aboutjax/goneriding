@@ -17,10 +17,8 @@
     "gatsby-plugin-sharp": "^2.0.16",
     "gatsby-remark-copy-linked-files": "^2.0.8",
     "gatsby-remark-images": "^3.0.1",
-    "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-remark-relative-images": "^0.2.1",
     "gatsby-remark-responsive-iframe": "^2.0.8",
-    "gatsby-remark-smartypants": "^2.0.7",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-remark": "^2.1.17",
     "gatsby-transformer-sharp": "^2.1.9",
@@ -29,14 +27,14 @@
     "lodash": "^4.17.11",
     "moment": "^2.23.0",
     "node-sass": "^4.11.0",
-    "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-pose": "^4.0.4",
-    "rehype-react": "^3.1.0"
+    "rehype-react": "^3.1.0",
+    "sharp": "^0.21.1"
   },
   "keywords": [
     "gatsby"
