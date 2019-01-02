@@ -15,7 +15,7 @@ const NotFoundPage = () => (
 
       <div class="pa2 f4 lh-copy silver mw5 tc center">
         <Link
-          className="link dim db br2 mb0 ph3 pv3 tc b tracked center white bg-black ttu"
+          className="link dim db br2 mb0 ph3 pv3 tc b center white bg-black ttu"
           to="/"
         >
           Go Home

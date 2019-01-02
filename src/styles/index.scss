@@ -144,7 +144,8 @@
   p,
   blockquote {
     max-width: 500px;
-    margin: 0 auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   blockquote {

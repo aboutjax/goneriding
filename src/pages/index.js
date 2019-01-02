@@ -70,7 +70,7 @@ const IndexPage = ({ data }) => {
             ))}
             <div className="pa3 w-100">
               <a
-                className="link dim db br2 mb0 ph3 pv3 tc b tracked center white bg-black ttu"
+                className="link dim db br2 mb0 ph3 pv3 tc b center white bg-black ttu"
                 href="/rides"
               >
                 View all rides

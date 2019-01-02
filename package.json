@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "chart.js": "^2.7.3",
-    "gatsby": "^2.0.75",
+    "gatsby": "^2.0.81",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-offline": "^2.0.16",
@@ -42,11 +42,11 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "rm -rf .cache/* && gatsby develop",
+    "develop": "rm -rf .cache/* public/* && yarn && gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "deploy": "rm -rf .cache/* && gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "rm -rf .cache/* public/* && gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
     "prettier": "^1.15.2"

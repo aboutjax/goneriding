@@ -12,7 +12,7 @@ const SecondPage = () => (
       </h1>
       <cite className="mb4 db silver"> – John F Kennedy.</cite>
       <div className="markdown-body">
-        <div class="mt6 pa4 f4 lh-copy silver mw6 tl center">
+        <div class="mt6 pa4-l pa0 f4 lh-copy silver mw7 tl center">
           <p className="mt0">
             Welcome, this is a publication powered by{' '}
             <a
