@@ -38,7 +38,7 @@ const SecondPage = () => (
           </p>
 
           <p>
-            The repo of this prjoect lives on
+            The repo of this project lives on
             <a href="https://github.com/aboutjax/goneriding"> Github</a>, you
             can also reach me on{' '}
             <a href="https://twitter.com/p0pmaker">Twitter</a> and{' '}
