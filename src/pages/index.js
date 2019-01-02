@@ -69,12 +69,12 @@ const IndexPage = ({ data }) => {
               </div>
             ))}
             <div className="pa3 w-100">
-              <a
+              <Link
                 className="link dim db br2 mb0 ph3 pv3 tc b center white bg-black ttu"
-                href="/rides"
+                to="/rides"
               >
                 View all rides
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@ export const query = graphql`
       }
     }
     featurePost: allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Hunua Overnighter: Day 1" } } }
+      filter: { frontmatter: { title: { eq: "Hunua Overnighter" } } }
     ) {
       edges {
         node {
