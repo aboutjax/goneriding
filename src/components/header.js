@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => (
   <div className="c-header near-black pv4 ph2 ph3-l flex justify-between items-center flex-none">
     <h2 className="ph3 lh-solid fw9 dim f3-l f4 serif c-header__logo">
       <Link to="/" className="near-black no-underline ttc link">
-        <span role="img" aria-label="mountain">
+        <span role="img" aria-label="mountain" className="c-header__emoji">
           🏔{' '}
         </span>
         {siteTitle}
