@@ -58,7 +58,7 @@
   letter-spacing: -1px;
 }
 .sans-serif {
-  font-family: 'Inter UI';
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 @keyframes loaderAnimation {
@@ -117,7 +117,7 @@
 }
 
 .serif {
-  font-family: 'Merriweather', serif;
+  font-family: 'IBM Plex Serif', serif;
 }
 
 .gatsby-resp-image-link {
@@ -129,8 +129,9 @@
 
 // Overriding markdown body styles
 .markdown-body {
+  font-family: 'IBM Plex Sans', sans-serif !important;
   h1 {
-    font-family: 'Merriweather', serif;
+    font-family: 'IBM Plex Serif', serif;
     font-size: 36px !important;
 
     @media screen and (max-width: $large) {
@@ -153,4 +154,13 @@
     margin-left: auto !important;
     margin-right: auto !important;
   }
+
+  video {
+    width: 100%;
+  }
+}
+
+.c-marker-link-label {
+  left: -0.3em;
+  top: -0.2em;
 }

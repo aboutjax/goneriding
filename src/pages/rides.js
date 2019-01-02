@@ -25,11 +25,11 @@ const RidesPage = ({ data }) => {
           {allPosts.map(({ node }) => (
             <div key={node.id} className="fl w-100 w-50-ns w-25-l pa3">
               <div>
-                <Link to={node.fields.slug}>
+                <Link to={node.fields.slug} className="link db black">
                   <Img
                     sizes={node.frontmatter.cover_image.childImageSharp.fluid}
                     backgroundColor="#d7d7d7"
-                    className="dim black br3"
+                    className="dim black br3 link"
                   />
                 </Link>
                 <h3 className="near-black lh-title mb2 serif">

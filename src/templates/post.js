@@ -20,9 +20,20 @@ const renderAst = new rehypeReact({
 class PostPage extends Component {
   constructor(props) {
     super(props)
+
+    // filter the correct route file
+    let RouteFiles = props.data.queryRouteFiles.edges
+
+    let routeFile = RouteFiles.filter(route => {
+      return route.node.base === props.data.queryPost.frontmatter.route_file
+    })
+
+    let thisRouteFile = routeFile[0].node
+
     this.state = {
-      post: props.data.markdownRemark,
+      post: props.data.queryPost,
       loading: true,
+      routeFile: thisRouteFile,
     }
   }
 
@@ -68,6 +79,7 @@ class PostPage extends Component {
   }
 
   render() {
+    // console.log(this.props.data)
     return (
       <div>
         <SEO
@@ -94,7 +106,7 @@ class PostPage extends Component {
 
             <div className="center mw8 pa4">
               <div className="pt4 pb3 mb4 mw7 center">
-                <h1 className="tc f1 mb3 near-dark lh-title serif tracked-tight">
+                <h1 className="tc f2 f1-l mb3 near-dark lh-title serif">
                   {this.state.post.frontmatter.title}
                 </h1>
                 <p className="tc mt0 mb3 silver lh-copy">
@@ -120,6 +132,24 @@ class PostPage extends Component {
                   {renderAst(this.state.post.htmlAst)}
                 </div>
               </div>
+              <div className="mt5 pa4 bg-near-white flex flex-wrap items-start">
+                <a
+                  className="link w-100 w-auto-l dim db br2 mb3 mb0-l ph3 pv3 mr3-l mr0 tc b tl tracked tx db white bg-black ttu"
+                  href={this.state.routeFile.publicURL}
+                >
+                  download gpx
+                </a>
+
+                <a
+                  className="link w-100 w-auto-l dim db br2 mb0 ph3 pv3 tc b tl tracked tx white db bg-black ttu"
+                  href={
+                    'https://www.strava.com/activities/' +
+                    this.state.post.frontmatter.strava_id
+                  }
+                >
+                  view strava activity
+                </a>
+              </div>
             </div>
           </div>
           <div className="db-l dn">
@@ -142,12 +172,13 @@ class PostPage extends Component {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    queryPost: markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       frontmatter {
         title
         location
         excerpt
+        route_file
         author
         strava_id
         cover_image {
@@ -158,6 +189,15 @@ export const query = graphql`
           }
         }
         date(formatString: "DD MMMM, YYYY")
+      }
+    }
+    queryRouteFiles: allFile(filter: { extension: { eq: "gpx" } }) {
+      edges {
+        node {
+          id
+          base
+          publicURL
+        }
       }
     }
   }

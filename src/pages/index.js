@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
             {otherPosts.map(({ node }) => (
               <div key={node.id} className="fl w-100 w-50-ns pa3">
                 <div>
-                  <Link to={node.fields.slug}>
+                  <Link to={node.fields.slug} className="link black db">
                     <Img
                       fluid={node.frontmatter.cover_image.childImageSharp.fluid}
                       backgroundColor="#d7d7d7"
@@ -70,7 +70,7 @@ const IndexPage = ({ data }) => {
             ))}
             <div className="pa3 w-100">
               <a
-                className="link dim db br2 mb0 ph3 pv3 tc white bg-black ttu"
+                className="link dim db br2 mb0 ph3 pv3 tc b tracked center white bg-black ttu"
                 href="/rides"
               >
                 View all rides

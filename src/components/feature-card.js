@@ -12,7 +12,7 @@ const FeatureCard = ({ title, excerpt, imageSrc, slug, date }) => {
     <Link
       style={firstPostStyle}
       to={slug}
-      className="br0 br3-l overflow-hidden w-100 h-100 dib feature-ride no-underline flex dim flex-column justify-end"
+      className="link black br0 br3-l overflow-hidden w-100 h-100 dib feature-ride no-underline flex dim flex-column justify-end"
     >
       <div className="pv5 ph5 ph5-l mw7 center feature-ride__info">
         <h1 className="tc f1-l f2 mb3 near-white lh-title serif">{title}</h1>

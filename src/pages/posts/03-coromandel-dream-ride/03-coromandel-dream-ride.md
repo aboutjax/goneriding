@@ -8,6 +8,7 @@ cover_image: 'cover.jpg'
 location: Coromandel, New Zealand
 author: Jacky Lee
 publish: false
+route_file: '/route.gpx'
 ---
 
 # Coffee Stop

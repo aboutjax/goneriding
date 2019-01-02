@@ -8,6 +8,7 @@ cover_image: 'cover2.jpg'
 location: Ohakune, Mt Ruapehu
 author: Jason Bryant
 publish: true
+route_file: 'ohakune-weekend-1.gpx'
 ---
 
 So the Ohakune weekend Stage 1 was upon us. We’d all managed to navigate our way safely to Ohakune, albeit some where pretty late. We were to get up at 4:30am to be on the road for 5. For those that arrived late on Friday night, that was a shock.
@@ -28,13 +29,13 @@ As soon as we reached the summit of the desert road, we cruised down to Turangi.
 
 ![Desert Road](IMG_0913.jpg 'Desert road.')
 
-We arrived in Turangi. Headed straight for the <marker-link lat="-38.9899245" lng="175.8070904" zoom="15">nearest café </marker-link>. Breakfast and multiple coffees, all of which were pretty top notch. Trying to eat whilst shivering was proving a problem. Guy looked hypothermic. That warmed me up, knowing I wasn’t the coldest in our group. We had to make a decision. Would we be able to make 330km, or should we be sensible and cut it short! The answer was proving difficult to find. I made the executive decision that we should just abandon our dreams of reaching 330. Let’s just cut it short and let sanity prevail. As soon as it was suggested that we would cut it short everyone agreed in haste.
+We arrived in Turangi. Headed straight for the <marker-link lat="-38.9899245" lng="175.8070904" zoom="15" label="A">nearest café </marker-link>. Breakfast and multiple coffees, all of which were pretty top notch. Trying to eat whilst shivering was proving a problem. Guy looked hypothermic. That warmed me up, knowing I wasn’t the coldest in our group. We had to make a decision. Would we be able to make 330km, or should we be sensible and cut it short! The answer was proving difficult to find. I made the executive decision that we should just abandon our dreams of reaching 330. Let’s just cut it short and let sanity prevail. As soon as it was suggested that we would cut it short everyone agreed in haste.
 
 # Turangi and onwards
 
 We finally left the café, and rode off towards Te Pihanga Saddle Road, state highway 47. It’s a 6km climb at 7%. We last tackled this climb at 240km. This time we are tackling it at 93km. That made one hell of a difference. My legs felt fresh, although my heart rate didn’t suggest that. The rain made an appearance once again. It wasn’t welcome. I continued up the hill as to not slow the group down. They visited the scenic lookout. This bought me enough time to make it to the top and down the other side before they rejoined. A crafty move it could be said, especially for the Strava data. That didn’t matter though.
 
-We regrouped and made our way to National Park. A <marker-link lat="-39.176939" lng="175.3995913" zoom="15">café</marker-link> and food beckoned. We could smell coffee. And with a good tailwind now playing its part, we knocked off the next 45km pretty quickly. National Park couldn’t come soon enough. Although we’d eaten only 3 hours previously, too soon for some, we all dived in and fed our souls.
+We regrouped and made our way to National Park. A <marker-link lat="-39.176939" lng="175.3995913" zoom="15" label="B">café</marker-link> and food beckoned. We could smell coffee. And with a good tailwind now playing its part, we knocked off the next 45km pretty quickly. National Park couldn’t come soon enough. Although we’d eaten only 3 hours previously, too soon for some, we all dived in and fed our souls.
 
 ![Refueling at cafe](IMG_9488.jpg 'Refueling at cafe.')
 
@@ -55,7 +56,7 @@ A dash to the old railway station for some more GLCC jersey pics, and our journe
 
 # Makatote Viaduct
 
-<marker-link lat="-39.2669636" lng="175.3878905" zoom="15">The Makatote Viaduct (Bridge 179)</marker-link> takes the North Island Main Trunk railway (NIMT) across the Makatote River. It is 335.7 km from Wellington, at the foot of Ruapehu, in northern Manawatu-Wanganui (central North Island), between National Park and Ohakune.
+<marker-link lat="-39.2669636" lng="175.3878905" zoom="15" label="C">The Makatote Viaduct (Bridge 179)</marker-link> takes the North Island Main Trunk railway (NIMT) across the Makatote River. It is 335.7 km from Wellington, at the foot of Ruapehu, in northern Manawatu-Wanganui (central North Island), between National Park and Ohakune.
 
 It was built between 1905 and 1908 for the Public Works Department (PWD), who passed it to New Zealand Railways Department (NZR) in 1909
 
@@ -63,7 +64,7 @@ When built it was tallest, and is now the third tallest, viaduct in New Zealand,
 
 # Ohakune
 
-<marker-link lat="-39.418654" lng="175.399945" zoom="15">Settlement of the town</marker-link> is considered to have commenced in the early 1890s and by March 1908 the railway line had reached Ohakune.The period of railway construction activities was followed quickly by intensive timber milling; as the forest was cleared, cattle and sheep were introduced and farming progressed. Ohakune was constituted a town district in August 1908 and in November 1911 attained borough status.
+<marker-link lat="-39.418654" lng="175.399945" zoom="15" label="D">Settlement of the town</marker-link> is considered to have commenced in the early 1890s and by March 1908 the railway line had reached Ohakune.The period of railway construction activities was followed quickly by intensive timber milling; as the forest was cleared, cattle and sheep were introduced and farming progressed. Ohakune was constituted a town district in August 1908 and in November 1911 attained borough status.
 
 The meaning of the name Ohakune in the Māori language is “the place of” (Ō) “the careful ones” (hakune).
 
