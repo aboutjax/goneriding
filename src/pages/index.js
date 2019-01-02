@@ -5,12 +5,13 @@ import Img from 'gatsby-image'
 import IndexLayout from '../components/index-layout'
 import SEO from '../components/seo'
 import FeatureCard from '../components/feature-card'
-// import '../styles/index.scss'
 
 const IndexPage = ({ data }) => {
   let featurePost = data.featurePost.edges[0]
   let featurePostCoverImageSrc =
     featurePost.node.frontmatter.cover_image.childImageSharp.sizes.src
+  let featurePostCoverFixedImageSrc =
+    featurePost.node.frontmatter.cover_image.childImageSharp.fixed.src
 
   let otherPosts = data.allPosts.edges.slice(0, 7)
 
@@ -36,7 +37,7 @@ const IndexPage = ({ data }) => {
           `world travel`,
           `cycling`,
         ]}
-        image={featurePostCoverImageSrc}
+        image={featurePostCoverFixedImageSrc}
       />
       <div className="mw9 center w-100 mb4 flex-grow-1">
         <div className="cf ph0 ph3-l">
@@ -144,6 +145,9 @@ export const query = graphql`
               childImageSharp {
                 sizes(maxWidth: 1400) {
                   ...GatsbyImageSharpSizes
+                }
+                fixed(width: 1200, height: 630, cropFocus: CENTER) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
