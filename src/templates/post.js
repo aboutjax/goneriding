@@ -21,19 +21,11 @@ class PostPage extends Component {
   constructor(props) {
     super(props)
 
-    // filter the correct route file
-    let RouteFiles = props.data.queryRouteFiles.edges
-
-    let routeFile = RouteFiles.filter(route => {
-      return route.node.base === props.data.queryPost.frontmatter.route_file
-    })
-
-    let thisRouteFile = routeFile[0].node
+    console.log(props.data)
 
     this.state = {
       post: props.data.queryPost,
       loading: true,
-      routeFile: thisRouteFile,
     }
   }
 
@@ -79,7 +71,6 @@ class PostPage extends Component {
   }
 
   render() {
-    // console.log(this.props.data)
     return (
       <div>
         <SEO
@@ -138,11 +129,10 @@ class PostPage extends Component {
               <div className="mt5 pa4 bg-near-white flex flex-wrap items-start">
                 <a
                   className="link w-100 w-auto-l dim db br2 mb3 mb0-l ph3 pv3 mr3-l mr0 tc b tl db white bg-black ttu"
-                  href={this.state.routeFile.publicURL}
+                  href={this.state.post.frontmatter.route_file.publicURL}
                 >
                   download gpx
                 </a>
-
                 <a
                   className="link w-100 w-auto-l dim db br2 mb0 ph3 pv3 tc b tl white db bg-black ttu"
                   href={
@@ -181,7 +171,9 @@ export const query = graphql`
         title
         location
         excerpt
-        route_file
+        route_file {
+          publicURL
+        }
         author
         strava_id
         cover_image {
@@ -192,15 +184,6 @@ export const query = graphql`
           }
         }
         date(formatString: "DD MMMM, YYYY")
-      }
-    }
-    queryRouteFiles: allFile(filter: { extension: { eq: "gpx" } }) {
-      edges {
-        node {
-          id
-          base
-          publicURL
-        }
       }
     }
   }

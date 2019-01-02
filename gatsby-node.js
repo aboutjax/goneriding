@@ -33,9 +33,6 @@ exports.createPages = ({ graphql, actions }) => {
         allMarkdownRemark(filter: { frontmatter: { publish: { eq: true } } }) {
           edges {
             node {
-              frontmatter {
-                route_file
-              }
               fields {
                 slug
               }
@@ -50,7 +47,6 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve('./src/templates/post.js'),
           context: {
             slug: node.fields.slug,
-            route_file: node.frontmatter.route_file,
           },
         })
       })
