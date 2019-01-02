@@ -6,6 +6,11 @@ class Footer extends Component {
       <div className="bg-near-white gray pv2 ph2">
         <div className="pa3">
           <p className="lh-title tc lh-copy">
+            Publication by{' '}
+            <a className="link dim black" href="https://twitter.com/p0pmaker">
+              Jacky Lee
+            </a>
+            <span className="mh2 o-50">•</span>
             Built with{' '}
             <a
               className="link dim black"
@@ -20,10 +25,6 @@ class Footer extends Component {
             &{' '}
             <a className="link dim black" href="https://www.gatsbyjs.org">
               Gatsby
-            </a>
-            {' • '}A Project by{' '}
-            <a className="link dim black" href="https://twitter.com/p0pmaker">
-              Jacky Lee
             </a>
           </p>
         </div>
