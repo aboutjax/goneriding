@@ -124,15 +124,15 @@ class PostPage extends Component {
                   {renderAst(this.state.post.htmlAst)}
                 </div>
               </div>
-              <div className="mt5 pa4 bg-near-white flex flex-wrap items-start">
+              <div className="mt5 ph4 pv2 bg-near-white flex flex-wrap items-start">
                 <a
-                  className="link w-100 w-auto-l dim db br2 mb3 mb0-l ph3 pv3 mr3-l mr0 tc b tl db white bg-black ttu"
+                  className="mv3 link w-100 w-auto-l dim db br2 mb3 mb0-l ph3 pv3 mr3-l mr0 tc b tl db white bg-black ttu"
                   href={this.state.post.frontmatter.route_file.publicURL}
                 >
                   download gpx
                 </a>
                 <a
-                  className="link w-100 w-auto-l dim db br2 mb0 ph3 pv3 tc b tl white db bg-black ttu"
+                  className="mv3 link w-100 w-auto-l dim db br2 mb0 ph3 pv3 tc b tl white db bg-black ttu"
                   href={
                     'https://www.strava.com/activities/' +
                     this.state.post.frontmatter.strava_id
