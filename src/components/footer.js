@@ -21,6 +21,10 @@ class Footer extends Component {
             <a className="link dim black" href="https://www.gatsbyjs.org">
               Gatsby
             </a>
+            {' • '}A Project by{' '}
+            <a className="link dim black" href="https://twitter.com/p0pmaker">
+              Jacky Lee
+            </a>
           </p>
         </div>
       </div>

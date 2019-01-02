@@ -61,7 +61,7 @@ Along the rest of the way to made plenty of quick stops when photo ops presents 
 
 As we blitzed through the flat East Coast Rd, we made a <marker-link lat="-36.983723" lng="175.248806" label="D" zoom="15">right turn into Tapapakanga Regional Park </marker-link>. Immediately passing through the gates we were greeted by a flock of sheep.
 
-![Welcomed by a flock of sheep.](IMG_0220.jpg 'A peaceful section before arriving at the campgrounds, welcomed by a flock of sheep.')
+![Welcomed by a flock of sheep.](IMG_0220.jpg 'A peaceful section before arriving at the campgrounds, we were welcomed by a flock of sheep.')
 
 Upon arrival, we had about 30 minutes to spare before dark. We swiftly set up the tent and prepared dinner – [Back Country Cuisine: Free Dried food](https://backcountrycuisine.co.nz/). Sam and I both were pleasantly surprised by how delicious it was. It's not the most economical way of camping, but the weight savings compared to carrying fresh ingredients were largely beneficial for an overnight trip like this.
 
