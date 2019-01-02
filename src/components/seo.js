@@ -3,24 +3,30 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription =
-          description || data.site.siteMetadata.description
+          description || data.DefaultSEO.siteMetadata.description
+        const metaImage = image || data.DefaultImage.edges[0].node.publicURL
+
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s | ${data.DefaultSEO.siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
                 content: metaDescription,
+              },
+              {
+                name: `og:image`,
+                content: metaImage,
               },
               {
                 property: `og:title`,
@@ -39,8 +45,12 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: `summary`,
               },
               {
+                name: `twitter:image`,
+                content: metaImage,
+              },
+              {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
+                content: data.DefaultSEO.siteMetadata.author,
               },
               {
                 name: `twitter:title`,
@@ -84,12 +94,20 @@ SEO.propTypes = {
 export default SEO
 
 const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site {
+  query {
+    DefaultSEO: site {
       siteMetadata {
         title
         description
         author
+        image
+      }
+    }
+    DefaultImage: allFile(filter: { name: { eq: "metaImage" } }) {
+      edges {
+        node {
+          publicURL
+        }
       }
     }
   }

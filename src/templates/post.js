@@ -85,6 +85,9 @@ class PostPage extends Component {
           title={this.state.post.frontmatter.title}
           keywords={[`gatsby`, `application`, `react`]}
           description={this.state.post.frontmatter.excerpt}
+          // image={
+          //   this.state.post.frontmatter.cover_image.childImageSharp.fluid.src
+          // }
         />
         <RideLayout>
           <div>

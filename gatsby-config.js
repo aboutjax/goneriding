@@ -4,6 +4,7 @@ module.exports = {
     title: `goneriding`,
     description: `Goneriding`,
     author: `@gatsbyjs`,
+    image: `src/images/metaImage.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
