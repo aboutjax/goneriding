@@ -118,6 +118,7 @@
 
 .serif {
   font-family: 'IBM Plex Serif', serif;
+  font-family: 'Merriweather', serif;
 }
 
 .gatsby-resp-image-link {
@@ -131,7 +132,8 @@
 .markdown-body {
   font-family: 'IBM Plex Sans', sans-serif !important;
   h1 {
-    font-family: 'IBM Plex Serif', serif;
+    // font-family: 'IBM Plex Serif', serif;
+    font-family: 'Merriweather', serif;
     font-size: 36px !important;
 
     @media screen and (max-width: $large) {
