@@ -12,7 +12,7 @@ class MarkerLink extends Component {
 
     marker.setMap(window.map)
     window.map.panTo(myLatLng)
-    window.map.setZoom(zoom)
+    window.map.setZoom(parseFloat(zoom))
 
     let mapElement = document.getElementById('map')
     mapElement.scrollIntoView({

@@ -11,7 +11,7 @@ publish: true
 route_file: 'tour-of-walking-dead.gpx'
 ---
 
-During my first week of employment at Wahoo Fitness, I went over to Atlanta, Georgia to meet everyone at <marker-link lat="33.8777202" lng="-84.3866098" zoom="17" label="A">Wahoo HQ</marker-link>. It was kinda cool to see the mothership in person, as I’ve only seen it previously from [DC Rainmaker](https://www.dcrainmaker.com/2014/08/behind-scenes-fitness.html).
+During my first week of employment at Wahoo Fitness, I went over to Atlanta, Georgia to meet everyone at <marker-link lat="33.877684" lng="-84.384866" zoom="17" label="A">Wahoo HQ</marker-link>. It was kinda cool to see the mothership in person, as I’ve only seen it previously from [DC Rainmaker](https://www.dcrainmaker.com/2014/08/behind-scenes-fitness.html).
 
 ![Wahoo Headquarters.](wahoo_hq.jpg 'Wahoo headquarters.')
 
