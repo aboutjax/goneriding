@@ -31,20 +31,11 @@ const SecondPage = () => (
             </a>
             .
           </p>
-          <p className="mb0">
-            I am currently helping{' '}
-            <a className="link dim black" href="https://www.wahoofitness.com">
-              Wahoo Fitness
-            </a>{' '}
-            designing delightful software experiences. When not working, I can
-            be found wandering around on my bike. Riding & capture photos on my
-            bike has inspired me to build this publication to document all the
-            worthy rides.
-          </p>
+
           <p>
-            I hope the content you find here will inspire you to get out there
-            on your bike. The bottom of each entry includes a{' '}
-            <code>route.gpx</code> file if you wish to relive the ride.
+            I hope the content here inspires you to get out there on your bike.
+            The bottom of each entry includes a <code>route.gpx</code> file if
+            you wish to relive the ride.
           </p>
 
           <p>
