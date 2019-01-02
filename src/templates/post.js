@@ -7,9 +7,10 @@ import Img from 'gatsby-image'
 import Footer from '../components/footer'
 import MarkerLink from '../components/markerLink'
 import StravaStats from '../components/stravaStats'
-import 'github-markdown-css'
 import AltitudeChart from '../components/altitudeChart'
 import SEO from '../components/seo'
+import 'github-markdown-css'
+// import '../styles/index.scss'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -85,9 +86,9 @@ class PostPage extends Component {
           title={this.state.post.frontmatter.title}
           keywords={[`gatsby`, `application`, `react`]}
           description={this.state.post.frontmatter.excerpt}
-          // image={
-          //   this.state.post.frontmatter.cover_image.childImageSharp.fluid.src
-          // }
+          image={
+            this.state.post.frontmatter.cover_image.childImageSharp.fluid.src
+          }
         />
         <RideLayout>
           <div>

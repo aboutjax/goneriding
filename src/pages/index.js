@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import IndexLayout from '../components/index-layout'
 import SEO from '../components/seo'
 import FeatureCard from '../components/feature-card'
+// import '../styles/index.scss'
 
 const IndexPage = ({ data }) => {
   let featurePost = data.featurePost.edges[0]

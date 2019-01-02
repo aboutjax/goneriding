@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: '/goneriding',
   siteMetadata: {
-    title: `goneriding`,
-    description: `Goneriding`,
+    title: `Goneriding`,
+    description: `Publication by Jacky Lee.`,
     author: `@gatsbyjs`,
     image: `src/images/metaImage.png`,
   },
