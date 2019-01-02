@@ -38,6 +38,7 @@
 
 .ride-body {
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   @media screen and (max-width: $large) {
     overflow: inherit;
     height: auto;
