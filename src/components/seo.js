@@ -10,8 +10,12 @@ function SEO({ description, lang, meta, keywords, title, image }) {
       render={data => {
         const metaDescription =
           description || data.DefaultSEO.siteMetadata.description
-        const metaImage = image || data.DefaultImage.edges[0].node.publicURL
+        const metaImage = image
+          ? data.DefaultSEO.siteMetadata.domain + image
+          : data.DefaultSEO.siteMetadata.domain +
+            data.DefaultImage.edges[0].node.publicURL
 
+        console.log(data.DefaultImage.edges[0].node.publicURL)
         return (
           <Helmet
             htmlAttributes={{
@@ -101,6 +105,7 @@ const detailsQuery = graphql`
         description
         author
         image
+        domain
       }
     }
     DefaultImage: allFile(filter: { name: { eq: "metaImage" } }) {

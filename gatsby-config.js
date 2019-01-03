@@ -1,10 +1,11 @@
 module.exports = {
-  pathPrefix: '/goneriding',
+  pathPrefix: '/',
   siteMetadata: {
     title: `Goneriding`,
     description: `Publication by Jacky Lee.`,
     author: `@gatsbyjs`,
     image: `src/images/metaImage.png`,
+    domain: `https://goneriding.co`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
