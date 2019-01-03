@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     title: `Goneriding`,
-    description: `Publication by Jacky Lee.`,
+    description: `Rides, Routes & Inspirations. Publication by Jacky Lee.`,
     author: `@gatsbyjs`,
     image: `src/images/metaImage.png`,
     domain: `https://goneriding.co`,

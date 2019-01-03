@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
   return (
     <IndexLayout>
       <SEO
-        title="Rides, Routes, Inspiration"
+        title="Rides, Routes & Inspirations"
         keywords={[
           `bike packing`,
           `publication`,
