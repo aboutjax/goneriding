@@ -15,7 +15,6 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           : data.DefaultSEO.siteMetadata.domain +
             data.DefaultImage.edges[0].node.publicURL
 
-        console.log(data.DefaultImage.edges[0].node.publicURL)
         return (
           <Helmet
             htmlAttributes={{
