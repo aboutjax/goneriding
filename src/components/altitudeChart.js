@@ -37,9 +37,16 @@ const AltitudeChart = props => {
       tooltips: {
         mode: 'index',
         intersect: false,
+        position: 'nearest',
         displayColors: false,
-        xPadding: 10,
-        yPadding: 10,
+        xPadding: 20,
+        yPadding: 20,
+        caretPadding: 4,
+        titleFontSize: 12,
+        titleFontColor: 'rgba(255, 255, 255, 0.5)',
+        titleFontStyle: 'bold',
+        bodyFontSize: 14,
+        titleSpacing: 10,
         callbacks: {
           footer: function(tooltipItems, data) {
             let datasets = data.datasets
@@ -90,10 +97,15 @@ const AltitudeChart = props => {
         ],
         xAxes: [
           {
-            display: false,
-            scaleLabel: {
-              show: false,
-              labelString: 'Month',
+            gridLines: {
+              color: 'rgba(0, 0, 0, 0.1)',
+              display: false,
+            },
+            ticks: {
+              display: false,
+              callback: function(value) {
+                return 'Distance: ' + _.round(value, 1) + ' km'
+              },
             },
           },
         ],
@@ -129,7 +141,7 @@ const AltitudeChart = props => {
               data={altitudeChartData}
               options={altitudeChartDataOptions}
               width={100}
-              height={20}
+              height={30}
             />
           </div>
         </div>
