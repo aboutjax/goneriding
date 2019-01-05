@@ -6,7 +6,7 @@ class Footer extends Component {
       <div className="bg-near-white gray pv2 ph2">
         <div className="pa3">
           <p className="lh-title tc lh-copy">
-            Publication by{' '}
+            Journal by{' '}
             <a className="link dim black" href="https://twitter.com/p0pmaker">
               Jacky Lee
             </a>

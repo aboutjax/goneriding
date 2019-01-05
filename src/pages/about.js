@@ -13,7 +13,7 @@ const SecondPage = () => (
       <div className="markdown-body mt6">
         <div className="pa4-l pa0 f4 lh-copy silver mw7 tl center">
           <p className="">
-            Welcome, this is a publication powered by{' '}
+            Welcome, this is a journal powered by{' '}
             <a
               className="link dim black"
               href="https://daringfireball.net/projects/markdown/syntax"

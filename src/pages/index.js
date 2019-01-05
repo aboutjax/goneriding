@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
         title="Rides, Routes & Inspirations"
         keywords={[
           `bike packing`,
-          `publication`,
+          `journal`,
           `bike touring`,
           `adventure cyling`,
           `world travel`,
