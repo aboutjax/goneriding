@@ -9,10 +9,11 @@ import MarkerLink from '../components/markerLink'
 import StravaStats from '../components/stravaStats'
 import AltitudeChart from '../components/altitudeChart'
 import SEO from '../components/seo'
+import RouteCard from '../components/routeCard'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { 'marker-link': MarkerLink },
+  components: { 'marker-link': MarkerLink, 'route-card': RouteCard },
 }).Compiler
 
 class PostPage extends Component {
@@ -79,20 +80,11 @@ class PostPage extends Component {
         />
         <RideLayout>
           <div>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={
+            <Img
+              fluid={
                 this.state.post.frontmatter.cover_image.childImageSharp.fluid
-                  .src
               }
-            >
-              <Img
-                fluid={
-                  this.state.post.frontmatter.cover_image.childImageSharp.fluid
-                }
-              />
-            </a>
+            />
 
             <div className="center mw8 pa4">
               <div className="pt4 pb3 mb4 mw7 center">

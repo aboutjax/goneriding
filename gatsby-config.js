@@ -33,6 +33,7 @@ module.exports = {
               maxWidth: 800,
               showCaptions: true,
               quality: 100,
+              linkImagesToOriginal: false,
             },
           },
           {
@@ -57,6 +58,9 @@ module.exports = {
       options: {
         trackingId: `UA-48474634-8`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
     },
     {
       resolve: `gatsby-plugin-manifest`,
