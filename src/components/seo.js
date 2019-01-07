@@ -11,8 +11,8 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         const metaDescription =
           description || data.DefaultSEO.siteMetadata.description
         const metaImage = image
-          ? data.DefaultSEO.siteMetadata.domain + image
-          : data.DefaultSEO.siteMetadata.domain +
+          ? data.DefaultSEO.siteMetadata.siteUrl + image
+          : data.DefaultSEO.siteMetadata.siteUrl +
             data.DefaultImage.edges[0].node.publicURL
 
         return (
@@ -104,7 +104,7 @@ const detailsQuery = graphql`
         description
         author
         image
-        domain
+        siteUrl
       }
     }
     DefaultImage: allFile(filter: { name: { eq: "metaImage" } }) {

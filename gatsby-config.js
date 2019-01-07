@@ -2,10 +2,10 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     title: `Goneriding`,
+    siteUrl: `https://goneriding.co`,
     description: `Rides, Routes & Inspirations. Journal by Jacky Lee.`,
     author: `@gatsbyjs`,
     image: `src/images/metaImage.png`,
-    domain: `https://goneriding.co`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
