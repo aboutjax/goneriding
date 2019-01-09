@@ -35,6 +35,7 @@ module.exports = {
               quality: 90,
               linkImagesToOriginal: false,
               wrapperStyle: `margin: 3em 0`,
+              withWebp: true,
             },
           },
           `gatsby-remark-prismjs`,
