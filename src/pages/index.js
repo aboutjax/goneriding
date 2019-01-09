@@ -128,7 +128,7 @@ export const query = graphql`
       }
     }
     featurePost: allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Hunua Overnighter" } } }
+      filter: { frontmatter: { title: { eq: "Wellington to Auckland: Mission Aborted" } } }
     ) {
       edges {
         node {

@@ -5,6 +5,7 @@ title: 'Turoa: NZ’s only HC climb'
 excerpt: After an ultimately great 180km ride on our previous day, we’re ready to climb New Zealand’s only Hors Category (HC) road. We were, and continue to be surprised that the Ohakune to Turoa climb is NZ’s only HC climb. When you think of all of the other mountain roads there are throughout NZ, it’s a little surprising. Anyway, we were heading up the hill at 7am.
 strava_id: 1469733020
 cover_image: 'cover.jpg'
+social_image: 'social.jpg'
 location: Ohakune, Mt Ruapehu
 author: Jason Bryant
 publish: true

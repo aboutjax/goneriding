@@ -69,13 +69,14 @@ class PostPage extends Component {
 
   render() {
     return (
+      
       <div>
         <SEO
           title={this.state.post.frontmatter.title}
           keywords={[`gatsby`, `application`, `react`]}
           description={this.state.post.frontmatter.excerpt}
           image={
-            this.state.post.frontmatter.cover_image.childImageSharp.fluid.src
+            this.state.post.frontmatter.social_image.childImageSharp.fluid.src
           }
         />
         <RideLayout>
@@ -86,7 +87,7 @@ class PostPage extends Component {
               }
             />
 
-            <div className="center mw8 pa4">
+            <div className="center mw7 pa4">
               <div className="pt4 pb3 mb4 mw7 center">
                 <h1 className="tc f2 f1-l mb3 near-dark lh-title serif">
                   {this.state.post.frontmatter.title}
@@ -164,6 +165,13 @@ export const query = graphql`
         }
         author
         strava_id
+        social_image{
+          childImageSharp {
+            fluid(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         cover_image {
           childImageSharp {
             fluid(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
