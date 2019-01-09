@@ -5,7 +5,6 @@ title: 'Ohakune Weekend'
 excerpt: The Ohakune weekend Stage 1 was upon us. We’d all managed to navigate our way safely to Ohakune, albeit some where pretty late. We were to get up at 4:30am to be on the road for 5. For those that arrived late on Friday night, that was a shock.
 strava_id: 1468105162
 cover_image: 'cover2.jpg'
-social_image: 'social.jpg'
 location: Ohakune, Mt Ruapehu
 author: Jason Bryant
 publish: true

@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 import RideLayout from '../components/post-layout'
 import { graphql } from 'gatsby'
 import Map from '../components/map'
-// import rehypeReact from 'rehype-react'
+import rehypeReact from 'rehype-react'
 import Img from 'gatsby-image'
 import Footer from '../components/footer'
-// import MarkerLink from '../components/markerLink'
+import MarkerLink from '../components/markerLink'
 import StravaStats from '../components/stravaStats'
 import AltitudeChart from '../components/altitudeChart'
 import SEO from '../components/seo'
-// import RouteCard from '../components/routeCard'
-// import ZoomImage from '../components/ZoomImage'
-// import Hidden from '../components/hidden'
-import TextPostBody from '../components/TextPostBody'
+import RouteCard from '../components/routeCard'
 
-
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { 'marker-link': MarkerLink, 'route-card': RouteCard },
+}).Compiler
 
 class PostPage extends Component {
   constructor(props) {
@@ -75,18 +75,18 @@ class PostPage extends Component {
           keywords={[`gatsby`, `application`, `react`]}
           description={this.state.post.frontmatter.excerpt}
           image={
-            this.state.post.frontmatter.social_image.childImageSharp.fixed.src
+            this.state.post.frontmatter.cover_image.childImageSharp.fluid.src
           }
         />
         <RideLayout>
-          <main>
+          <div>
             <Img
               fluid={
                 this.state.post.frontmatter.cover_image.childImageSharp.fluid
               }
             />
 
-            <div className="center mw7 pa4">
+            <div className="center mw8 pa4">
               <div className="pt4 pb3 mb4 mw7 center">
                 <h1 className="tc f2 f1-l mb3 near-dark lh-title serif">
                   {this.state.post.frontmatter.title}
@@ -111,7 +111,7 @@ class PostPage extends Component {
               </div>
               <div className="markdown-body">
                 <div className="lh-copy center f4">
-                  <TextPostBody htmlAst={this.state.post.htmlAst} />
+                  {renderAst(this.state.post.htmlAst)}
                 </div>
               </div>
               <div className="mt5 ph4 pv2 bg-near-white flex flex-wrap items-start">
@@ -132,7 +132,7 @@ class PostPage extends Component {
                 </a>
               </div>
             </div>
-          </main>
+          </div>
           <div className="db-l dn">
             <Footer />
           </div>
@@ -144,7 +144,6 @@ class PostPage extends Component {
           />
           <div className="db dn-l">
             <Footer />
-            
           </div>
         </div>
       </div>
@@ -169,13 +168,6 @@ export const query = graphql`
           childImageSharp {
             fluid(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
               ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        social_image {
-          childImageSharp {
-            fixed(width: 1400) {
-              ...GatsbyImageSharpFixed
             }
           }
         }

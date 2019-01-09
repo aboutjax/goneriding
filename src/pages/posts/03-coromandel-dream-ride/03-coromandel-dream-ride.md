@@ -5,7 +5,6 @@ title: 'Coromandel Dream Ride'
 excerpt: We’re up and ready to climb New Zealand’s only Hors Category (HC) road. We were, and continue to be surprised that the Ohakune to Turoa climb is NZ’s only HC climb. When you think of all of the other mountain roads there are throughout NZ, it’s a little surprising.
 strava_id: 1844248203
 cover_image: 'cover.jpg'
-social_image: 'social.jpg'
 location: Coromandel, New Zealand
 author: Jacky Lee
 publish: false

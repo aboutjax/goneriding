@@ -5,7 +5,6 @@ title: 'Tour of the Walking Dead'
 excerpt: During my first week of employment at Wahoo Fitness, I went over to Atlanta, Georgia to meet everyone at Wahoo HQ. Ben, Michael and I headed up north to Cartersville for a nice local scenic loop. I was told we'll be riding near some shooting locations of The Walking Dead.
 strava_id: 1523090078
 cover_image: 'cover.jpg'
-social_image: 'social.jpg'
 location: Atlanta, Georgia
 author: Jacky Lee
 publish: true

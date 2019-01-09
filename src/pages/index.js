@@ -128,11 +128,7 @@ export const query = graphql`
       }
     }
     featurePost: allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          title: { eq: "Wellington to Auckland: Mission Aborted" }
-        }
-      }
+      filter: { frontmatter: { title: { eq: "Hunua Overnighter" } } }
     ) {
       edges {
         node {
@@ -147,7 +143,7 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             cover_image {
               childImageSharp {
-                sizes(maxWidth: 2600) {
+                sizes(maxWidth: 1400) {
                   ...GatsbyImageSharpSizes
                 }
                 fixed(width: 1200, height: 630, cropFocus: CENTER) {

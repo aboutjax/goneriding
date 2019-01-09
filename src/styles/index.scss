@@ -58,8 +58,6 @@
 .c-header__logo {
   letter-spacing: -1px;
 }
-
-
 .c-header__emoji {
   position: relative;
   top: -3px;
@@ -134,14 +132,9 @@
 // Overriding markdown body styles
 .markdown-body {
   font-family: 'IBM Plex Sans', sans-serif !important;
-  h1,
-  h2,
-  h3 {
+  h1 {
     // font-family: 'IBM Plex Serif', serif;
     font-family: 'Merriweather', serif;
-  }
-
-  h1 {
     font-size: 36px !important;
 
     @media screen and (max-width: $large) {
@@ -149,35 +142,18 @@
     }
   }
 
-  h2 {
-    font-size: 24px !important;
-
-    @media screen and (max-width: $large) {
-      font-size: 18px !important;
-    }
-  }
-
-  ul,
-  li,
   p,
-  table,
   blockquote {
     max-width: 500px;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  table {
-    empty-cells: hide;
-  }
-
   blockquote {
-    margin: 3em auto !important;
+    margin: 0 auto !important;
   }
 
-  h1,
-  h2,
-  h3 {
+  h1 {
     max-width: 500px;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -185,7 +161,6 @@
 
   video {
     width: 100%;
-    margin: 3em 0;
   }
 
   a {
