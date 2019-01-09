@@ -32,14 +32,9 @@ module.exports = {
             options: {
               maxWidth: 800,
               showCaptions: true,
-              quality: 100,
+              quality: 90,
               linkImagesToOriginal: false,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: `margin: 3em 0`,
             },
           },
           `gatsby-remark-prismjs`,
