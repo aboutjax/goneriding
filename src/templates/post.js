@@ -76,7 +76,7 @@ class PostPage extends Component {
           keywords={[`gatsby`, `application`, `react`]}
           description={this.state.post.frontmatter.excerpt}
           image={
-            this.state.post.frontmatter.social_image.childImageSharp.fluid.src
+            this.state.post.frontmatter.social_image.childImageSharp.fixed.src
           }
         />
         <RideLayout>
@@ -167,8 +167,8 @@ export const query = graphql`
         strava_id
         social_image{
           childImageSharp {
-            fluid(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 1200, height: 630) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

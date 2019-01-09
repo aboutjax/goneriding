@@ -13,7 +13,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         const metaImage = image
           ? data.DefaultSEO.siteMetadata.siteUrl + image
           : data.DefaultSEO.siteMetadata.siteUrl +
-            data.DefaultImage.edges[0].node.publicURL
+          data.DefaultImage.edges[0].node.publicURL
 
         return (
           <Helmet
@@ -67,9 +67,9 @@ function SEO({ description, lang, meta, keywords, title, image }) {
               .concat(
                 keywords.length > 0
                   ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
+                    name: `keywords`,
+                    content: keywords.join(`, `),
+                  }
                   : []
               )
               .concat(meta)}
