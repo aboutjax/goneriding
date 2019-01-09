@@ -5,7 +5,7 @@ title: 'Hunua Overnighter'
 excerpt: There's nothing quite like the feeling of exploring on two wheels. The joy of discovering new grounds at your own pace always brings a smile to our faces. Some say it's an addiction, I don't disagree.
 strava_id: 1940699639
 cover_image: 'cover.jpg'
-social_image: 'social.jpg'
+social_image: 'social-image.jpg'
 location: Hunua Ranges
 author: Jacky Lee
 publish: true

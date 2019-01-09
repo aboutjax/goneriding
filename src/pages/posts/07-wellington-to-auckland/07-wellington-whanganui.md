@@ -5,7 +5,7 @@ title: 'Wellington to Auckland: Mission Aborted'
 excerpt: 'Why catch a plane when you can ride 900k from Wellington to Auckland? This is a story about two optimistic bike fanatics taking a punt at riding 900 km from Wellington to Auckland over 4 days.'
 strava_id: 1424700061
 cover_image: '01.jpg'
-social_image: 'social.jpg'
+social_image: 'social-image.jpg'
 location: Wellington
 author: Jacky Lee
 publish: true
