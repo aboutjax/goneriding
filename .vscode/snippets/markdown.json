@@ -1,0 +1,10 @@
+{
+  "Marker Link": {
+    "scope": "markdown",
+    "prefix": "marker",
+    "body": [
+      "<marker-link lat='${1:number}' lng='${2:number}' label='${3:string}' zoom='${4:number}'>${5:string}</marker-link>"
+    ],
+    "description": "Add a marker link with latlng value"
+  }
+}

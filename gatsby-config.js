@@ -4,7 +4,7 @@ module.exports = {
     title: `Goneriding`,
     siteUrl: `https://goneriding.co`,
     description: `Rides, Routes & Inspirations. Journal by Jacky Lee.`,
-    author: `@gatsbyjs`,
+    author: `@p0pmaker`,
     image: `src/images/metaImage.png`,
   },
   plugins: [
@@ -30,16 +30,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 860,
               showCaptions: true,
               quality: 100,
               linkImagesToOriginal: false,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
           `gatsby-remark-prismjs`,
