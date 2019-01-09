@@ -106,4 +106,4 @@ After the first torturous day, both of us knew there was no way we would be able
 
 ![Waiting for our ride home](IMG_1639.jpg "We waited for our ride home at a BP Petrol station in Bulls.")
 
-So there you go, this is a story about two optimistic bike fanatics taking a punt at riding 900 km from Wellington to Auckland over 4 days. We felt underprepared (physically & gear) after the first day. Knowing that was the easiest leg, we didn't want to risk getting stranded out there with minimal summer gear. This has been a good learning experience and we're keen to do it again sometime in the future with a bigger group.
+So there you go, this is a story about two optimistic bike fanatics taking a punt at riding 900 km from Wellington to Auckland over 4 days. We felt underprepared (physically & gear) after the first day. Knowing that was supposed to be the easiest leg, we didn't want to risk getting stranded out there with minimal summer gear. This has been a good learning experience and we're keen to do it again sometime in the future with a bigger group.
