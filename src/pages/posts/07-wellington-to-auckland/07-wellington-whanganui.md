@@ -55,7 +55,7 @@ Sam flew into Wellington with his slick Baum green machine. He assembled the bik
 
 We woke up before sunrise at 6am to the sound of gusty wind hailing outside our window. Forecast told us we would be pushing through a strong 47 km/h northerly wind. That was bad news: To get to Whanganui, it’s all north, which meant we'll be served headwind for breakfast, lunch and dinner.
 
-![Strong headwind awaits.](IMG_1390.jpg 'asdf')
+![Strong headwind awaits.](IMG_1390.jpg "Forecast told us we would be having a strong headwind.")
 
 We headed straight to a local cafe, <marker-link lat='-41.2924544' lng='174.7816318' label='A' zoom='12' >Joe's Garage </marker-link>, and filled ourselves up with a big breakfast and caffeine.
 
