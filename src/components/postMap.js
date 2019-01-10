@@ -138,7 +138,7 @@ const mapStyle = [
   },
 ]
 
-class Map extends Component {
+class PostMap extends Component {
   componentDidMount() { }
 
   initMap = () => {
@@ -222,4 +222,4 @@ class Map extends Component {
   }
 }
 
-export default Map
+export default PostMap

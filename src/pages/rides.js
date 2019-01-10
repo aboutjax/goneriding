@@ -3,6 +3,7 @@ import IndexLayout from '../components/index-layout'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
+import RidesMap from '../components/ridesMap'
 
 const RidesPage = ({ data }) => {
   let allPosts = data.allMarkdownRemark.edges
@@ -18,37 +19,41 @@ const RidesPage = ({ data }) => {
   }
 
   return (
-    <IndexLayout>
-      <SEO title="Rides" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="mw9 center w-100 mb4 ph3-l flex-grow-1">
-        <div className="fl w-100 flex flex-wrap w-100-l pa3 pa0-l">
-          {allPosts.map(({ node }) => (
-            <div key={node.id} className="fl w-100 w-50-ns w-25-l pa3">
-              <div>
-                <Link to={node.fields.slug} className="link db black">
-                  <Img
-                    sizes={node.frontmatter.cover_image.childImageSharp.fluid}
-                    backgroundColor="#d7d7d7"
-                    className="dim black br3 link"
-                  />
-                </Link>
-                <h3 className="near-black lh-title mb2 serif">
-                  <Link to={node.fields.slug} className="link dim black">
-                    {node.frontmatter.title}
+    <div className="c-post-container">
+
+      <IndexLayout>
+        <SEO title="Rides" keywords={[`gatsby`, `application`, `react`]} />
+        <div className="mw9 center w-100 mb4 ph3-l flex-grow-1">
+          <div className="fl w-100 flex flex-wrap w-100-l pa3 pa0-l">
+            {allPosts.map(({ node }) => (
+              <div key={node.id} className="fl w-100 w-50-ns w-25-l pa3">
+                <div>
+                  <Link to={node.fields.slug} className="link db black">
+                    <Img
+                      sizes={node.frontmatter.cover_image.childImageSharp.fluid}
+                      backgroundColor="#d7d7d7"
+                      className="dim black br3 link"
+                    />
                   </Link>
-                </h3>
-                <p className="black i f6 mb3 mt0 lh-solid silver">
-                  {node.frontmatter.date}
-                </p>
-                <p className="gray lh-copy mt0">
-                  {excerptTruncate(node.frontmatter.excerpt, 14)}
-                </p>
+                  <h3 className="near-black lh-title mb2 serif">
+                    <Link to={node.fields.slug} className="link dim black">
+                      {node.frontmatter.title}
+                    </Link>
+                  </h3>
+                  <p className="black i f6 mb3 mt0 lh-solid silver">
+                    {node.frontmatter.date}
+                  </p>
+                  <p className="gray lh-copy mt0">
+                    {excerptTruncate(node.frontmatter.excerpt, 14)}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </IndexLayout>
+      </IndexLayout>
+      <RidesMap></RidesMap>
+    </div>
   )
 }
 

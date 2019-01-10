@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PostLayout from '../components/post-layout'
 import { graphql } from 'gatsby'
-import Map from '../components/map'
+import PostMap from '../components/postMap'
 import rehypeReact from 'rehype-react'
 import Img from 'gatsby-image'
 import Footer from '../components/footer'
@@ -139,7 +139,7 @@ class PostPage extends Component {
 
         </PostLayout>
 
-        <Map
+        <PostMap
           loading={this.state.loading}
           activityData={this.state.activityData}
         />
