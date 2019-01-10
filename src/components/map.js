@@ -155,7 +155,10 @@ class Map extends Component {
       zoom: 1,
       styles: mapStyle,
       zoomControl: true,
-      fullscreenControl: true,
+      zoomControlOptions: {
+        position: window.google.maps.ControlPosition.RIGHT_CENTER
+      },
+      fullscreenControl: false,
       streetViewControl: false,
       scaleControl: false,
       mapTypeControl: false
