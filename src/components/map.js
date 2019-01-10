@@ -154,6 +154,11 @@ class Map extends Component {
       center: { lat: startLatlng[0], lng: startLatlng[1] },
       zoom: 1,
       styles: mapStyle,
+      zoomControl: true,
+      fullscreenControl: true,
+      streetViewControl: false,
+      scaleControl: false,
+      mapTypeControl: false
     })
 
     let setPolyline = new window.google.maps.Polyline({

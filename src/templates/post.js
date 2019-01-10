@@ -87,7 +87,7 @@ class PostPage extends Component {
               }
             />
 
-            <div className="center mw7 pa4-l ph4 pv0">
+            <div className="center mw7 pa4-l ph4 pb4">
               <div className="pt4 pb3 mb4 mw7 center">
                 <h1 className="tc f2 f1-l mb3 near-dark lh-title serif">
                   {this.state.post.frontmatter.title}
