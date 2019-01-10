@@ -139,7 +139,7 @@ const mapStyle = [
 ]
 
 class Map extends Component {
-  componentDidMount() {}
+  componentDidMount() { }
 
   initMap = () => {
     let startLatlng = this.props.activityData.start_latlng
@@ -206,10 +206,10 @@ class Map extends Component {
 
   render() {
     if (this.props.loading) {
-      return <div id="map" className="vh-100 vw-100 bg-near-white ride-map" />
+      return <div id="map" className="bg-near-white c-post-map" />
     } else {
       this.initMap()
-      return <div id="map" className="vh-100 vw-100 bg-near-white ride-map" />
+      return <div id="map" className="bg-near-white c-post-map" />
     }
   }
 }

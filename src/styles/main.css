@@ -38,19 +38,19 @@
   z-index: 2;
 }
 
-.ride-body {
+.post-body {
   overflow: auto;
 }
 
 @media screen and (max-width: 60em) {
-  .ride-body {
+  .post-body {
     overflow: inherit;
     height: auto;
   }
 }
 
 @media screen and (max-width: 60em) {
-  .ride-map {
+  .post-map {
     height: 600px;
   }
 }

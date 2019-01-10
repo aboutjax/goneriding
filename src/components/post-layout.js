@@ -17,11 +17,9 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div className="flex w-100 w-50-l fl shadow-5">
-          <div className="flex flex-column w-100 ride-body vh-100 lh-body">
-            <Header siteTitle={data.site.siteMetadata.title} />
-            {children}
-          </div>
+        <div className="c-post-body">
+          <Header siteTitle={data.site.siteMetadata.title} />
+          {children}
         </div>
       </>
     )}

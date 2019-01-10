@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import RideLayout from '../components/post-layout'
+import PostLayout from '../components/post-layout'
 import { graphql } from 'gatsby'
 import Map from '../components/map'
 import rehypeReact from 'rehype-react'
@@ -69,8 +69,8 @@ class PostPage extends Component {
 
   render() {
     return (
-      
-      <div>
+
+      <div className="c-post-container">
         <SEO
           title={this.state.post.frontmatter.title}
           keywords={[`gatsby`, `application`, `react`]}
@@ -79,7 +79,7 @@ class PostPage extends Component {
             this.state.post.frontmatter.social_image.childImageSharp.fixed.src
           }
         />
-        <RideLayout>
+        <PostLayout>
           <div>
             <Img
               fluid={
@@ -87,7 +87,7 @@ class PostPage extends Component {
               }
             />
 
-            <div className="center mw7 pa4">
+            <div className="center mw7 pa4-l ph4 pv0">
               <div className="pt4 pb3 mb4 mw7 center">
                 <h1 className="tc f2 f1-l mb3 near-dark lh-title serif">
                   {this.state.post.frontmatter.title}
@@ -134,19 +134,16 @@ class PostPage extends Component {
               </div>
             </div>
           </div>
-          <div className="db-l dn">
-            <Footer />
-          </div>
-        </RideLayout>
-        <div className="w-100 w-50-l top-0 bottom-0 right-0 fl">
-          <Map
-            loading={this.state.loading}
-            activityData={this.state.activityData}
-          />
-          <div className="db dn-l">
-            <Footer />
-          </div>
-        </div>
+
+          <Footer />
+
+        </PostLayout>
+
+        <Map
+          loading={this.state.loading}
+          activityData={this.state.activityData}
+        />
+
       </div>
     )
   }
