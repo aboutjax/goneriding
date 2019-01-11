@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ImageZoom from 'react-medium-image-zoom'
-import MarkerLink from './markerLink'
 
 class ImageZoomComponent extends Component {
 
