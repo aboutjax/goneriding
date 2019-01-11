@@ -18,17 +18,23 @@ The alarm went off. The usual quietness instilled. No one really talks much at t
 
 It wasn’t until we were all on the road that the chatter started. Nervous chatter. Chatter about doing 330km. We’d all discussed about carrying less equipment, and share the load. But in the silence no one broached the subject, so we all ended up carrying 2 tubes, gas, levers and tools. The only positive from all of carrying tubes is that we obviously scared the puncture demons away. We had just one puncture the whole day, and that happened early on.
 
-![Puncture](01.jpg 'The only puncture of the day.')
+<div>
+<image-zoom caption="The only puncture of the day."><img src='01.jpg'/></image-zoom>
+</div>
 
 # The Ride
 
 It all started out so well. A little tail wind, not too cold, and this time we had a group of seven riders. Then we hit the desert road. From here until just after the central plateau it all turned to shit. It started to rain. The wind was now wrapping around the mountain and offering us a headwind. The road surface is unkind to cyclists, even more so with roadworks. Although the shoulder is wide in places, it’s non-existent in others. When dealing with trucks it makes it especially scary.
 
-![Truck](IMG_3413.jpg 'Dealing with trucks early in the morning was slightly terrifying.')
+<div>
+<image-zoom caption="Dealing with trucks early in the morning was slightly terrifying."><img src='IMG_3413.jpg'/></image-zoom>
+</div>
 
 As soon as we reached the summit of the desert road, we cruised down to Turangi. A gentle roll at 40kph for 30 km. The feeling of reaching the highest point of the ride can’t be over exaggerated. It was here that the rain finally stopped for a while. We were frozen. Guy too cold to change gears with his fingers. He’d decided to brave the cold in just a jersey. Mad, simply mad, I tell you. The rest of us at least had a jacket.
 
-![Desert Road](IMG_0913.jpg 'Desert road.')
+<div>
+<image-zoom caption="Desert road."><img src='IMG_0913.jpg'/></image-zoom>
+</div>
 
 We arrived in Turangi. Headed straight for the <marker-link lat="-38.9899245" lng="175.8070904" zoom="15" label="A">nearest café </marker-link>. Breakfast and multiple coffees, all of which were pretty top notch. Trying to eat whilst shivering was proving a problem. Guy looked hypothermic. That warmed me up, knowing I wasn’t the coldest in our group. We had to make a decision. Would we be able to make 330km, or should we be sensible and cut it short! The answer was proving difficult to find. I made the executive decision that we should just abandon our dreams of reaching 330. Let’s just cut it short and let sanity prevail. As soon as it was suggested that we would cut it short everyone agreed in haste.
 
@@ -38,11 +44,16 @@ We finally left the café, and rode off towards Te Pihanga Saddle Road, state hi
 
 We regrouped and made our way to National Park. A <marker-link lat="-39.176939" lng="175.3995913" zoom="15" label="B">café</marker-link> and food beckoned. We could smell coffee. And with a good tailwind now playing its part, we knocked off the next 45km pretty quickly. National Park couldn’t come soon enough. Although we’d eaten only 3 hours previously, too soon for some, we all dived in and fed our souls.
 
-![Refueling at cafe](IMG_9488.jpg 'Refueling at cafe.')
+<div>
+<image-zoom caption="Refueling at cafe."><img src='IMG_9488.jpg'/></image-zoom>
+</div>
+
 
 Everyone was a little warmer and happier, now. We were fed and watered. The weather had improved. From National Park all the way to Ohakune we’d be gifted a tail wind. Absolute bliss. We raced along highway 4 towards the Makatote Viaduct railway bridge. We stopped to take some fresh team jersey pics. A great backdrop and well earned rest. The bridge is an absolute stunner. If you’re ever in the area it’s worth stopping and checking out.
 
-![Makatote Viaduct railway bridge](IMG_9500.jpg 'Makatote Viaduct railway bridge')
+<div>
+<image-zoom caption="Makatote Viaduct railway bridge."><img src='IMG_9500.jpg'/></image-zoom>
+</div>
 
 # The final dash
 
@@ -50,10 +61,17 @@ The final dash for Ohakune was a smashfest. All guns blazing we roared to the fi
 
 A dash to the old railway station for some more GLCC jersey pics, and our journey was nearly over. Although it was cut short, we felt this was the best decision for everyone. A night in the Powderkeg made sure of that. Everyone had a few beers and then it was straight to sleep, ready for the [Turoa TT the next day](/rides/turoa-nz-only-cycling-climb).
 
-![Giant TCR](giant_tcr.jpg 'Giant TCR #baap (bike against a pole)')
-![Ohakune Train Station](IMG_3485.jpg 'Ohakune Train Station')
+<div>
+<image-zoom caption="Giant TCR."><img src='giant_tcr.jpg'/></image-zoom>
+</div>
 
-![Ohakune Train Station Group Photo](IMG_5005.jpg 'Grey Lynn Cycle Club Group Photo')
+<div>
+<image-zoom caption="Ohakune Train Station."><img src='IMG_3485.jpg'/></image-zoom>
+</div>
+
+<div>
+<image-zoom caption="Grey Lynn Cycle Club Group Photo."><img src='IMG_5005.jpg'/></image-zoom>
+</div>
 
 # Makatote Viaduct
 
