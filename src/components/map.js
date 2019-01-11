@@ -24,7 +24,7 @@ const mapStyle = [
     elementType: 'geometry',
     stylers: [
       {
-        visibility: 'off',
+        visibility: 'on',
       },
     ],
   },
@@ -69,7 +69,7 @@ const mapStyle = [
     elementType: 'geometry.stroke',
     stylers: [
       {
-        visibility: 'off',
+        visibility: 'on',
       },
     ],
   },
@@ -155,6 +155,7 @@ class Map extends Component {
       zoom: 1,
       styles: mapStyle,
       zoomControl: true,
+      mapTypeId: 'terrain',
       zoomControlOptions: {
         position: window.google.maps.ControlPosition.RIGHT_CENTER
       },
