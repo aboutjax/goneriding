@@ -10,10 +10,13 @@ import StravaStats from '../components/stravaStats'
 import AltitudeChart from '../components/altitudeChart'
 import SEO from '../components/seo'
 import RouteCard from '../components/routeCard'
+import ImageZoomComponent from '../components/imageZoom'
+import Hidden from '../components/hidden'
+import ImageZoom from 'react-medium-image-zoom'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { 'marker-link': MarkerLink, 'route-card': RouteCard },
+  components: { 'marker-link': MarkerLink, 'route-card': RouteCard, 'image-zoom': ImageZoomComponent, 'hidden': Hidden },
 }).Compiler
 
 class PostPage extends Component {
@@ -68,6 +71,11 @@ class PostPage extends Component {
   }
 
   render() {
+    let coverImageSrc = this.state.post.frontmatter.cover_image.childImageSharp.sizes.src
+    let coverImageSrcSet = this.state.post.frontmatter.cover_image.childImageSharp.sizes.srcSet
+    let coverImageSrcSetFull = coverImageSrcSet.split(",").splice(-1)[0]
+    let coverImageSrcSetFullFlatten = coverImageSrcSetFull.replace(/(\r\n\t|\n|\r\t)/gm, "").split(" ")[0]
+
     return (
 
       <div className="c-post-container">
@@ -81,10 +89,18 @@ class PostPage extends Component {
         />
         <PostLayout>
           <div>
-            <Img
-              fluid={
-                this.state.post.frontmatter.cover_image.childImageSharp.fluid
-              }
+            <ImageZoom
+              image={{
+                src: coverImageSrc,
+                alt: "main",
+                className: 'w-100',
+              }}
+              zoomMargin={10}
+              zoomImage={{
+                src: coverImageSrcSetFullFlatten,
+                alt: "main",
+                className: 'w-100'
+              }}
             />
 
             <div className="center mw7 pa4-l ph4 pb4">
@@ -151,10 +167,10 @@ class PostPage extends Component {
 
 export const query = graphql`
   query($slug: String!) {
-    queryPost: markdownRemark(fields: { slug: { eq: $slug } }) {
-      htmlAst
+          queryPost: markdownRemark(fields: {slug: {eq: $slug } }) {
+          htmlAst
       frontmatter {
-        title
+          title
         location
         excerpt
         route_file {
@@ -164,22 +180,22 @@ export const query = graphql`
         strava_id
         social_image{
           childImageSharp {
-            fixed(width: 1200, height: 630) {
-              ...GatsbyImageSharpFixed
-            }
-          }
+        fixed(width: 1200, height: 630) {
+          ...GatsbyImageSharpFixed
         }
+        }
+      }
         cover_image {
           childImageSharp {
-            fluid(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        sizes(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
+          ...GatsbyImageSharpSizes
         }
-        date(formatString: "DD MMMM, YYYY")
+        }
       }
+      date(formatString: "DD MMMM, YYYY")
     }
   }
+}
 `
 
 export default PostPage

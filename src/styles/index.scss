@@ -61,7 +61,7 @@
   @media screen and (max-width: $large) {
     grid-row-start: 1;
     grid-row-end: 2;
-    padding-bottom: 200px;
+    padding-bottom: 180px;
   }
 }
 
@@ -76,7 +76,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
+    height: 180px;
   }
 }
 
@@ -210,9 +210,14 @@
     outline: none !important;
     background: none !important;
   }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .c-marker-link-label {
-  left: -0.3em;
-  top: -0.2em;
+  left: -0.4em;
+  top: -0.1em;
 }
