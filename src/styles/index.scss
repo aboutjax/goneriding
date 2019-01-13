@@ -84,8 +84,17 @@
   height: 100px;
 }
 
-.c-header__logo {
+.c-header__logo-text {
   letter-spacing: -1px;
+}
+
+.c-header_logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.c-header__logo-image {
+  width: 32px;
 }
 .c-header__emoji {
   position: relative;
