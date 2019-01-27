@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PostLayout from '../components/post-layout'
 import { graphql } from 'gatsby'
-import Map from '../components/map'
+import Map from '../components/mapbox'
 import rehypeReact from 'rehype-react'
 import Footer from '../components/footer'
 import MarkerLink from '../components/markerLink'

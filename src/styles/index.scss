@@ -171,13 +171,15 @@
 .markdown-body {
   font-family: 'IBM Plex Sans', sans-serif !important;
   h1 {
-    // font-family: 'IBM Plex Serif', serif;
-    font-family: 'Merriweather', serif;
     font-size: 36px !important;
-
+    
     @media screen and (max-width: $large) {
       font-size: 24px !important;
     }
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
   }
 
   p,
@@ -188,10 +190,10 @@
   }
 
   blockquote {
-    margin: 0 auto !important;
+    margin: 3em auto !important;
   }
 
-  h1,
+  h1,h2,h3
   ul {
     max-width: 500px;
     margin-left: auto !important;
@@ -220,13 +222,45 @@
     background: none !important;
   }
 
-  figure {
+  figure, video {
     margin-left: 0;
     margin-right: 0;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+
+  .c-photo-cluster {
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+    figure {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
 .c-marker-link-label {
   left: -0.4em;
   top: -0.1em;
+}
+
+.c-mapbox-marker {
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0 0px 4px #FFFFFF;
+  border-radius: 50%;
+  background: #000000;
+}
+
+.c-mapbox-marker-label {
+  width: 24px;
+  text-align: center;
+  height: 24px;
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 24px;
+  border-radius: 50%;
+	background: #000000;
 }

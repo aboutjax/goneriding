@@ -6,7 +6,7 @@ excerpt: 'Why catch a plane when you can ride 900k from Wellington to Auckland? 
 strava_id: 1424700061
 cover_image: '01.jpg'
 social_image: 'social-image.jpg'
-location: Wellington
+location: New Zealand
 author: Jacky Lee
 publish: true
 route_file: 'wellington-to-whanganui.gpx'

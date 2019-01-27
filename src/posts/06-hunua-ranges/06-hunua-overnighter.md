@@ -6,7 +6,7 @@ excerpt: There's nothing quite like the feeling of exploring on two wheels. The 
 strava_id: 1940699639
 cover_image: 'cover.jpg'
 social_image: 'social-image.jpg'
-location: Hunua Ranges
+location: New Zealand
 author: Jacky Lee
 publish: true
 route_file: 'hunua-overnighter.gpx'

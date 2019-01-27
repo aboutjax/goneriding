@@ -1,6 +1,7 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 import _ from 'lodash'
+import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
 
 let marker
 
@@ -8,18 +9,19 @@ let handleOnHover = latlng => {
   let newLatLng = { lat: parseFloat(latlng[0]), lng: parseFloat(latlng[1]) }
 
   if (marker) {
-    marker.setPosition(
-      new window.google.maps.LatLng(newLatLng.lat, newLatLng.lng)
-    )
+    marker.setLngLat(newLatLng)
   } else {
-    marker = new window.google.maps.Marker({
-      position: newLatLng,
-    })
-    marker.setMap(window.map)
+    let el = document.createElement('div');
+    el.className = 'c-mapbox-marker';
+
+    marker = new mapboxgl.Marker(el)
+      .setLngLat(newLatLng)
+      .addTo(window.map)
   }
 }
 
 const AltitudeChart = props => {
+  marker = false // Remove any marker on the map
   if (props.loading) {
     return <p />
   } else {
@@ -39,8 +41,8 @@ const AltitudeChart = props => {
         intersect: false,
         position: 'nearest',
         displayColors: false,
-        xPadding: 20,
-        yPadding: 20,
+        xPadding: 14,
+        yPadding: 14,
         caretPadding: 4,
         titleFontSize: 12,
         titleFontColor: 'rgba(255, 255, 255, 0.5)',
@@ -48,7 +50,7 @@ const AltitudeChart = props => {
         bodyFontSize: 14,
         titleSpacing: 10,
         callbacks: {
-          footer: function(tooltipItems, data) {
+          footer: function (tooltipItems, data) {
             let datasets = data.datasets
             let latlngDatasetStream = datasets[1]
             let onHoverDataIndex = tooltipItems[0].index
@@ -57,7 +59,7 @@ const AltitudeChart = props => {
             // Push lat lng for hover function
             handleOnHover(correspondingLatlng)
           },
-          label: function(t, d) {
+          label: function (t, d) {
             // Format tooltip elevation data
             return 'Elevation: ' + t.yLabel + 'm'
           },
@@ -79,7 +81,7 @@ const AltitudeChart = props => {
               autoSkip: true,
               autoSkipPadding: 10,
               fontColor: 'rgba(0, 0, 0, 1)',
-              callback: function(value) {
+              callback: function (value) {
                 return _.round(value, 1) + 'm'
               },
             },
@@ -103,7 +105,7 @@ const AltitudeChart = props => {
             },
             ticks: {
               display: false,
-              callback: function(value) {
+              callback: function (value) {
                 return 'Distance: ' + _.round(value, 1) + ' km'
               },
             },

@@ -6,7 +6,7 @@ excerpt: During my first week of employment at Wahoo Fitness, I went over to Atl
 strava_id: 1523090078
 cover_image: 'cover.jpg'
 social_image: 'social-image.jpg'
-location: Atlanta, Georgia
+location: United States
 author: Jacky Lee
 publish: true
 route_file: 'tour-of-walking-dead.gpx'

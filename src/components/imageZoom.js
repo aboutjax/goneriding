@@ -10,22 +10,26 @@ class ImageZoomComponent extends Component {
         let imgsrcFull = imgSrcSetArray.slice(-1)[0].split(" ")[0]
 
         return (
-            <figure className="pa2 mv5">
-                <ImageZoom
-                    image={{
-                        src: imgsrc,
-                        alt: "adf",
-                        className: 'w-100',
-                    }}
-                    zoomMargin={10}
-                    zoomImage={{
-                        src: imgsrcFull,
-                        alt: "adf"
-                    }}
-                />
-                <figcaption className="gatsby-resp-image-figcaption w-100 tc i db lh-copy silver">{this.props.caption ? this.props.caption : null}</figcaption>
-                {/* <MarkerLink lat='-40.473126' lng='175.285641' label='G' zoom='12'>Foxton</MarkerLink> */}
-            </figure>
+            <div>
+
+                <figure className="pa2 mv0">
+                    <ImageZoom
+                        image={{
+                            src: imgsrc,
+                            alt: "adf",
+                            style: { width: '100em' }
+                        }}
+                        zoomMargin={10}
+                        zoomImage={{
+                            src: imgsrcFull,
+                            alt: "adf"
+                        }}
+                    />
+                    {this.props.caption ?
+                        <figcaption className="mb5 gatsby-resp-image-figcaption w-100 tc i db lh-copy silver">{this.props.caption}</figcaption>
+                        : null}
+                </figure>
+            </div>
 
 
         )

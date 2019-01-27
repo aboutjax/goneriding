@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@mapbox/polyline": "^1.0.0",
     "chart.js": "^2.7.3",
     "gatsby": "^2.0.81",
     "gatsby-cli": "^2.4.8",
@@ -30,6 +31,7 @@
     "gh-pages": "^2.0.1",
     "github-markdown-css": "^2.10.0",
     "lodash": "^4.17.11",
+    "mapbox-gl": "^0.52.0",
     "moment": "^2.23.0",
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",

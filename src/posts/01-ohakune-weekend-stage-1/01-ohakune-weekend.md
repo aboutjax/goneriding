@@ -6,7 +6,7 @@ excerpt: The Ohakune weekend Stage 1 was upon us. We’d all managed to navigate
 strava_id: 1468105162
 cover_image: 'cover2.jpg'
 social_image: 'social-image.jpg'
-location: Ohakune, Mt Ruapehu
+location: New Zealand
 author: Jason Bryant
 publish: true
 route_file: 'ohakune-weekend-1.gpx'

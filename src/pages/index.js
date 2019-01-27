@@ -128,7 +128,7 @@ export const query = graphql`
       }
     }
     featurePost: allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Wellington to Auckland: Mission Aborted" } } }
+      filter: { frontmatter: { title: { eq: "Upwards to the Station Above the Clouds" } } }
     ) {
       edges {
         node {

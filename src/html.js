@@ -17,6 +17,8 @@ export default class HTML extends React.Component {
           <noscript>
             <p>Please enable javascript!</p>
           </noscript>
+
+          <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
         </head>
         <body className="sans-serif h-100" {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}

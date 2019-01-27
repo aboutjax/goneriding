@@ -6,7 +6,7 @@ excerpt: After an ultimately great 180km ride on our previous day, we’re ready
 strava_id: 1469733020
 cover_image: 'cover.jpg'
 social_image: 'social-image.jpg'
-location: Ohakune, Mt Ruapehu
+location: New Zealand
 author: Jason Bryant
 publish: true
 route_file: 'turoa-hc-climb.gpx'
