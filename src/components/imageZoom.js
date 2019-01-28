@@ -19,7 +19,7 @@ class ImageZoomComponent extends Component {
                             alt: "adf",
                             style: { width: '100em' }
                         }}
-                        zoomMargin={10}
+                        zoomMargin={0}
                         zoomImage={{
                             src: imgsrcFull,
                             alt: "adf"

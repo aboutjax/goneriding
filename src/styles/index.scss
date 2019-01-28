@@ -1,6 +1,10 @@
 @import './components/responsive';
 @import './components/fonts';
 
+// Variables
+$map-height: 240px;
+
+// Styles
 .feature-ride {
   min-height: calc(100vh - 100px - 3em);
 
@@ -61,7 +65,7 @@
   @media screen and (max-width: $large) {
     grid-row-start: 1;
     grid-row-end: 2;
-    padding-bottom: 180px;
+    padding-bottom: $map-height;
   }
 }
 
@@ -76,7 +80,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 180px;
+    height: $map-height;
   }
 }
 

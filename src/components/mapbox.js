@@ -34,7 +34,7 @@ class Map extends Component {
         window.map.addControl(nav, 'top-right')
 
         // Add full screen control
-        window.map.addControl(new mapboxgl.FullscreenControl())
+        // window.map.addControl(new mapboxgl.FullscreenControl())
 
         let scale = new mapboxgl.ScaleControl({
             maxWidth: 80,
