@@ -17,7 +17,6 @@ class Map extends Component {
         let decodedPolyline = polyline.toGeoJSON(this.props.activityData.map.polyline)
         let decodedPolylineArray = decodedPolyline.coordinates
 
-
         window.map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/p0pmaker/cjrf0kzjd4xde2tqwor6ltd0u',
@@ -30,13 +29,19 @@ class Map extends Component {
         let nav = new mapboxgl.NavigationControl({
             showCompass: true
         })
+
+        // Add navigation control
         window.map.addControl(nav, 'top-right')
+
+        // Add full screen control
+        window.map.addControl(new mapboxgl.FullscreenControl())
 
         let scale = new mapboxgl.ScaleControl({
             maxWidth: 80,
             unit: 'metric'
         });
 
+        // Add scale control
         window.map.addControl(scale);
 
 
