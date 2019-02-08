@@ -48,7 +48,7 @@ $map-height: 240px;
   grid-template-rows: 1fr;
   height: 100vh;
   width: 100vw;
-  overflow: auto;
+  // overflow: auto;
   @media screen and (max-width: $large) {
     display: grid;
     grid-template-columns: 1fr;
@@ -62,9 +62,13 @@ $map-height: 240px;
   -webkit-overflow-scrolling: touch;
   grid-column-start: 1;
   grid-column-end: 2;
+  position: absolute;
+  width: 50%;
+  height: 100%;
   @media screen and (max-width: $large) {
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
     padding-bottom: $map-height;
   }
 }
