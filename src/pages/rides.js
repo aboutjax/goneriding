@@ -5,14 +5,11 @@ import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
 const RidesPage = ({ data }) => {
-  let allPosts = data.allPosts.edges
+  // let allPosts = data.allPosts.edges
   let newZealandPosts = data.newZealandPosts.edges
   let taiwanPosts = data.taiwanPosts.edges
 
-  console.log(taiwanPosts);
-
-
-
+  console.log(taiwanPosts)
 
   // Truncate post excerpt function
   let excerptTruncate = (str, number_of_words) => {
@@ -134,7 +131,9 @@ export const query = graphql`
 
     newZealandPosts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { publish: { eq: true }, location: { eq: "New Zealand" } } }
+      filter: {
+        frontmatter: { publish: { eq: true }, location: { eq: "New Zealand" } }
+      }
     ) {
       totalCount
       edges {
@@ -175,7 +174,9 @@ export const query = graphql`
 
     taiwanPosts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { publish: { eq: true }, location: { eq: "Taiwan" } } }
+      filter: {
+        frontmatter: { publish: { eq: true }, location: { eq: "Taiwan" } }
+      }
     ) {
       totalCount
       edges {
@@ -192,20 +193,8 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             cover_image {
               childImageSharp {
-                sizes(maxWidth: 1800) {
-                  ...GatsbyImageSharpSizes
-                }
-                fluid(maxWidth: 700, maxHeight: 500) {
-                  base64
-                  tracedSVG
-                  aspectRatio
-                  src
-                  srcSet
-                  srcWebp
-                  srcSetWebp
-                  sizes
-                  originalImg
-                  originalName
+                fluid(maxWidth: 700, maxHeight: 500, cropFocus: CENTER) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

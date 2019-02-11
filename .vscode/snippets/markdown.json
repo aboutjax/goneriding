@@ -6,5 +6,21 @@
       "<marker-link lat='${1:number}' lng='${2:number}' label='${3:string}' zoom='${4:number}'>${5:string}</marker-link>"
     ],
     "description": "Add a marker link with latlng value"
+  },
+  "Image Zoom": {
+    "scope": "markdown",
+    "prefix": "image-zoom",
+    "body": [
+      "<image-zoom><img src='${1:string}'/></image-zoom>"
+    ],
+    "description": "Add a image"
+  },
+  "Image Cluster": {
+    "scope": "markdown",
+    "prefix": "image-cluster",
+    "body": [
+      "<div class='c-photo-cluster'></div>"
+    ],
+    "description": "Add a image cluster"
   }
 }

@@ -6,9 +6,9 @@ $map-height: 240px;
 
 // Styles
 .feature-ride {
-  min-height: calc(100vh - 100px - 3em);
+  min-height: calc(100vh - 100px - 2em);
 
-  @media screen and (max-width: $large) {
+  @media screen and (max-width: $large - 1) {
     min-height: 60vh;
   }
 
@@ -29,9 +29,10 @@ $map-height: 240px;
 }
 
 .feature-ride-container {
-  @media screen and (max-width: $large) {
+  @media screen and (max-width: $large - 1) {
     position: relative;
   }
+
   position: sticky;
   top: 0px;
 }
@@ -39,8 +40,6 @@ $map-height: 240px;
 .feature-ride__info {
   z-index: 2;
 }
-
-
 
 .c-post-container {
   display: grid;
@@ -79,7 +78,6 @@ $map-height: 240px;
   grid-column-end: 3;
   @media screen and (max-width: $large) {
     box-shadow: 0 -4px 36px rgba(0, 0, 0, 0.3);
-    // border-radius: 16px 16px 0 0;
     position: fixed !important;
     bottom: 0;
     left: 0;
@@ -180,13 +178,16 @@ $map-height: 240px;
   font-family: 'IBM Plex Sans', sans-serif !important;
   h1 {
     font-size: 36px !important;
-    
+
     @media screen and (max-width: $large) {
       font-size: 24px !important;
     }
   }
-  
-  h1, h2, h3, h4 {
+
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: 'Merriweather', serif;
   }
 
@@ -201,7 +202,9 @@ $map-height: 240px;
     margin: 3em auto !important;
   }
 
-  h1,h2,h3,
+  h1,
+  h2,
+  h3,
   ul {
     max-width: 500px;
     margin-left: auto !important;
@@ -230,13 +233,13 @@ $map-height: 240px;
     background: none !important;
   }
 
-  figure, video {
+  figure,
+  video {
     margin-left: 0;
     margin-right: 0;
     margin-top: 3em;
     margin-bottom: 3em;
   }
-
 
   .c-photo-cluster {
     margin-top: 3em;
@@ -257,7 +260,7 @@ $map-height: 240px;
 .c-mapbox-marker {
   width: 16px;
   height: 16px;
-  box-shadow: 0 0 0px 4px #FFFFFF;
+  box-shadow: 0 0 0px 4px #ffffff;
   border-radius: 50%;
   background: #000000;
 }
@@ -266,9 +269,9 @@ $map-height: 240px;
   width: 24px;
   text-align: center;
   height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   line-height: 24px;
   border-radius: 50%;
-	background: #000000;
+  background: #000000;
 }
