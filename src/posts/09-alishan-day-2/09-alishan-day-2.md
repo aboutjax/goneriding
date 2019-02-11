@@ -37,7 +37,6 @@ Starting from the top of the descent, I strapped on the GoPro and took some foot
 <div class='c-photo-cluster'>
 <div class='flex'>
 <image-zoom><img src='IMG_3583.jpg'/></image-zoom>
-<image-zoom><img src='IMG_3606.jpg'/></image-zoom>
 </div>
 </div>
 
@@ -51,8 +50,10 @@ Along Highway 21, we came across the <marker-link lat='23.512564' lng='120.89102
 
 > the [Couple Trees](https://www.rtaiwanr.com/alishan/couple-trees) were actually two dead Formosan cypresses that had been standing for more than a thousand years before they were killed in the forest fire back in 1963. Due to the high altitude of the location, the trees are not rotten and remain as two white trunks as they are today.
 
+Unfortunately in 2017, one of trunks have fallen, so I suppose 'Widow Tree' would be a more fitting name today.
+
 <div class='c-photo-cluster'>
-<image-zoom caption="Unfortunately in 2017, one of trunks have fallen, so I suppose 'Widow Tree' would be a more fitting name today."><img src='IMG_3600.jpg'/></image-zoom>
+<image-zoom><img src='IMG_3600.jpg'/></image-zoom>
 <div class="flex">
 <image-zoom><img src='IMG_3603.jpg'/></image-zoom>
 <image-zoom><img src='IMG_3604.jpg'/></image-zoom>
