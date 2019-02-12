@@ -14,7 +14,7 @@ route_file: 'What_goes_up_must_come_down.gpx'
 
 After a long climb from the [previous day](/rides/upwards-to-the-station-above-the-clouds), a long descent down to Checheng was on the itinerary.
 
-We got up for breakfast at around 6:30am, but decided to wait until 8:30am for my departure because I didn't want to risk cornering into any corners while the tarmac was still frosty.
+We got up for breakfast at around 6:30am, but decided to wait until 8:30am for my departure because I didn't want to risk cornering while the tarmac was still frosty.
 
 <div class='c-photo-cluster'>
 <image-zoom caption="At 8:30am I departed our accomodation and began the day with a 600m climb to Tataka Visitor Center"><img src='darkroom01.jpg'/></image-zoom>
