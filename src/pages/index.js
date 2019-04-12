@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
   let featurePostCoverFixedImageSrc =
     featurePost.node.frontmatter.cover_image.childImageSharp.fixed.src
 
-  let otherPosts = data.allPosts.edges.slice(0, 7)
+  let otherPosts = data.allPosts.edges.slice(0, 8)
 
   // Truncate post excerpt function
   let excerptTruncate = (str, number_of_words) => {
@@ -129,9 +129,7 @@ export const query = graphql`
     }
     featurePost: allMarkdownRemark(
       filter: {
-        frontmatter: {
-          title: { eq: "Upwards to the Station Above the Clouds" }
-        }
+        frontmatter: { title: { eq: "Chapter 2 Taiwan Travel: Day 1" } }
       }
     ) {
       edges {

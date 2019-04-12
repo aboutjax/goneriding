@@ -25,15 +25,15 @@ const AltitudeChart = props => {
   } else {
     // Use filter array instead of using numbers because the order might change and break shit.
     let latlngStream = props.data.filter(item => {
-      return item.type == 'latlng'
+      return item.type === 'latlng'
     })[0].data
 
     let distanceStream = props.data.filter(item => {
-      return item.type == 'distance'
+      return item.type === 'distance'
     })[0].data
 
     let altitudeStream = props.data.filter(item => {
-      return item.type == 'altitude'
+      return item.type === 'altitude'
     })[0].data
 
     function mToKm(m) {
