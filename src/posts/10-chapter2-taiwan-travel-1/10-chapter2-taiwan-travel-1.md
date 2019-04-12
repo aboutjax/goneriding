@@ -103,3 +103,7 @@ Roughly 20km in, we began climbing out of Taipei, through Pingxi.
 </div>
 
 Some of us headed straight into the rooftop spa & pool at the hotel. We figured any sort of muscle recovery would be ideal for the brutal climbs for the next couple of days.
+
+## Photography Credit
+
+Photos from this entry by [Domho://Photography](https://www.facebook.com/domhosports) and [C.j. Lin](<[https://link](https://www.facebook.com/chunju.lin.315)>)

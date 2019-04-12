@@ -10,12 +10,19 @@ import AltitudeChart from '../components/altitudeChart'
 import SEO from '../components/seo'
 import RouteCard from '../components/routeCard'
 import ImageZoomComponent from '../components/imageZoom'
+import InfoCard from '../components/infoCard'
 import Hidden from '../components/hidden'
 import ImageZoom from 'react-medium-image-zoom'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { 'marker-link': MarkerLink, 'route-card': RouteCard, 'image-zoom': ImageZoomComponent, 'hidden': Hidden },
+  components: {
+    'marker-link': MarkerLink,
+    'route-card': RouteCard,
+    'image-zoom': ImageZoomComponent,
+    hidden: Hidden,
+    'info-card': InfoCard,
+  },
 }).Compiler
 
 class PostPage extends Component {
@@ -70,13 +77,16 @@ class PostPage extends Component {
   }
 
   render() {
-    let coverImageSrc = this.state.post.frontmatter.cover_image.childImageSharp.sizes.src
-    let coverImageSrcSet = this.state.post.frontmatter.cover_image.childImageSharp.sizes.srcSet
-    let coverImageSrcSetFull = coverImageSrcSet.split(",").splice(-1)[0]
-    let coverImageSrcSetFullFlatten = coverImageSrcSetFull.replace(/(\r\n\t|\n|\r\t)/gm, "").split(" ")[0]
+    let coverImageSrc = this.state.post.frontmatter.cover_image.childImageSharp
+      .sizes.src
+    let coverImageSrcSet = this.state.post.frontmatter.cover_image
+      .childImageSharp.sizes.srcSet
+    let coverImageSrcSetFull = coverImageSrcSet.split(',').splice(-1)[0]
+    let coverImageSrcSetFullFlatten = coverImageSrcSetFull
+      .replace(/(\r\n\t|\n|\r\t)/gm, '')
+      .split(' ')[0]
 
     return (
-
       <div className="c-post-container">
         <SEO
           title={this.state.post.frontmatter.title}
@@ -91,14 +101,14 @@ class PostPage extends Component {
             <ImageZoom
               image={{
                 src: coverImageSrc,
-                alt: "main",
+                alt: 'main',
                 className: 'w-100',
               }}
               zoomMargin={10}
               zoomImage={{
                 src: coverImageSrcSetFullFlatten,
-                alt: "main",
-                className: 'w-100'
+                alt: 'main',
+                className: 'w-100',
               }}
             />
 
@@ -151,14 +161,12 @@ class PostPage extends Component {
           </div>
 
           <Footer />
-
         </PostLayout>
 
         <Map
           loading={this.state.loading}
           activityData={this.state.activityData}
         />
-
       </div>
     )
   }
@@ -166,10 +174,10 @@ class PostPage extends Component {
 
 export const query = graphql`
   query($slug: String!) {
-          queryPost: markdownRemark(fields: {slug: {eq: $slug } }) {
-          htmlAst
+    queryPost: markdownRemark(fields: { slug: { eq: $slug } }) {
+      htmlAst
       frontmatter {
-          title
+        title
         location
         excerpt
         route_file {
@@ -177,24 +185,24 @@ export const query = graphql`
         }
         author
         strava_id
-        social_image{
+        social_image {
           childImageSharp {
-        fixed(width: 1200, height: 630) {
-          ...GatsbyImageSharpFixed
+            fixed(width: 1200, height: 630) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
-        }
-      }
         cover_image {
           childImageSharp {
-        sizes(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
-          ...GatsbyImageSharpSizes
+            sizes(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
+              ...GatsbyImageSharpSizes
+            }
+          }
         }
-        }
+        date(formatString: "DD MMMM, YYYY")
       }
-      date(formatString: "DD MMMM, YYYY")
     }
   }
-}
 `
 
 export default PostPage
