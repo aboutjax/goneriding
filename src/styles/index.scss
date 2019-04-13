@@ -2,7 +2,7 @@
 @import './components/fonts';
 
 // Variables
-$map-height: 240px;
+$map-height: 200px;
 
 // Styles
 .feature-ride {
@@ -248,6 +248,12 @@ $map-height: 240px;
     figure {
       margin-top: 0;
       margin-bottom: 0;
+    }
+
+    .flex {
+      @media screen and (max-width: $large) {
+        flex-direction: column;
+      }
     }
   }
 }
