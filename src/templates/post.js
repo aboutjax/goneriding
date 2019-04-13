@@ -136,7 +136,7 @@ class PostPage extends Component {
                 </div>
               </div>
               <div className="markdown-body">
-                <div className="lh-copy center f4">
+                <div className="lh-copy center f5 f4-l">
                   {renderAst(this.state.post.htmlAst)}
                 </div>
               </div>

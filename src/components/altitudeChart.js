@@ -84,7 +84,6 @@ const AltitudeChart = props => {
             },
             ticks: {
               beginAtZero: false,
-              min: 0,
               autoSkip: true,
               autoSkipPadding: 10,
               fontColor: 'rgba(0, 0, 0, 1)',
