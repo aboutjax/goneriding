@@ -12,7 +12,7 @@ publish: true
 route_file: 'Wuling_Pilgrimage_day_1.gpx'
 ---
 
-The week I arrived in Taiwan in January, a [Facebook Event](<[https://link](https://www.facebook.com/events/315813365694649)>) from Yao Bike appeared on my Facebook. The event was for a bike ride itinerary onto the highest point in Taiwan: Wuling.
+The week I arrived in Taiwan in January, a [Facebook Event](<[https://link](https://www.facebook.com/events/315813365694649)>) from Yao Bike appeared on my feed. The event was for a bike ride itinerary onto the highest point in Taiwan: Wuling.
 
 The itinerary:
 
@@ -20,11 +20,11 @@ The itinerary:
 - Day 2: Yilan → Wuling Farm • 99km / 2620m
 - Day 3: Wuling Farm → Wuling • 63km / 2326m
 
-Summiting Wuling has always been on my bucket list, so I immediately contacted Yao Bike and signed myself up. For those that don't know, cycling to Wuling is considered one of the toughest climb in the world. It is the reason hundreds of professional cyclist travel here to attempt the famous [Taiwan KOM](https://www.youtube.com/watch?v=Sxfd2xzlM6k) race, held every year in October.
+Summiting Wuling has always been on my bucket list, so I immediately contacted Yao Bike and signed myself up. For those that don't know, cycling to Wuling is considered one of the toughest climb in the world. It is the reason hundreds of professional cyclists travel here to attempt the famous [Taiwan KOM](https://www.youtube.com/watch?v=Sxfd2xzlM6k) race, held every year in October.
 
 Our route won't be entirely the same as the Taiwan KOM, since we're going up through the north side of the mountain. But the infamous 'last 10km' will be the same, so we can at least experience why everyone hates it in the race.
 
-The day finally came, cyclists from all over the Asia Pacific region (Thailand, Korea, Japan, Taiwan, China) gathered in Taipei the day before the departure. I took the high speed train from Kaohsiung to Taipei, arrived at around 1pm <marker-link lat='25.089801' lng='121.518402' label='A' zoom='16'>UiNN Business Hotel</marker-link>, assembled my bike, then did some work at the cafe until the briefing.
+The day finally came and cyclists from all over the Asia Pacific region (Thailand, Korea, Japan, Taiwan, China) gathered in Taipei the day before the departure. I took the high speed train from Kaohsiung to Taipei, arrived at around 1pm <marker-link lat='25.089801' lng='121.518402' label='A' zoom='16'>UiNN Business Hotel</marker-link>, assembled my bike, then did some work at the cafe until the briefing.
 
 <div class='c-photo-cluster'>
 <image-zoom caption="There were around 30 riders that came from all over the Asia Pacific Region. I admit I was envious of everyone's slick Chapter 2 bikes."><img src='03.jpg'/></image-zoom>
