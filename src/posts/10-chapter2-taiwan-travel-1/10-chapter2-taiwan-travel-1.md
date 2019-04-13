@@ -106,4 +106,4 @@ Some of us headed straight into the rooftop spa & pool at the hotel. We figured 
 
 ## Photography Credit
 
-Photos from this entry by [Domho://Photography](https://www.facebook.com/domhosports) and [C.j. Lin](<[https://link](https://www.facebook.com/chunju.lin.315)>)
+Photos from this entry by [Domho://Photography](https://www.facebook.com/domhosports) and [C.j. Lin](https://www.facebook.com/chunju.lin.315)
