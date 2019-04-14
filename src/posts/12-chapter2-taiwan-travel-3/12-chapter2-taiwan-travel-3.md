@@ -62,7 +62,7 @@ From here it was a steady 4% hill without too many sharp pinches.
 
 ## The last 10KM
 
-Immediately after we made a right turn after the tunnel, the road kicked straight up to a whopping 11%, and stayed there. It was like staring at a merciless wall. I found myself looking away at what's ahead, staring at my handlebar was far less intimidating.
+Immediately after we made a right turn at the tunnel, the road kicked straight up to a whopping 11%, and stayed there. It was like staring at a merciless wall. I found myself looking away at what's ahead, staring at my handlebar was far less intimidating.
 
 The hairpins here were the steepest I have ever ridden, sometimes at 20% at certain areas, where I had to do the delicate balance of wheelie vs. spinning out. To make things even harder, the high altitude made if difficult to breath, and my heart rate peaked only at 160. Each pedal felt heavier than usual. Fortunately Terence was my climbing buddy for the day, I don't know how he's doing this on a size 28 cassette, bloody insane.
 
