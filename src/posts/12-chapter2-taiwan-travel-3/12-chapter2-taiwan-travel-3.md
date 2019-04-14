@@ -65,7 +65,7 @@ The road continued to gently pitch upwards. It was a steady 4% hill without too 
 
 Immediately after we made a right turn after the tunnel, the road kicked straight up to a whopping 11%, and stayed there. It was like staring at a merciless wall. I found myself looking away at what's ahead, staring at my handlebar was far less intimidating.
 
-The hairpins here were the steepest I have ever ridden, sometimes at 20% at certain areas, where I had to do the delicate balance of wheelie vs. spinning out. Fortunately Terence was my climbing buddy for the day, I don't know how he's doing this on a size 28 cassette, bloody insane.
+The hairpins here were the steepest I have ever ridden, sometimes at 20% at certain areas, where I had to do the delicate balance of wheelie vs. spinning out. To make things even harder, climbing at high altitude made breathing harder, and my heart rate peaked only at 160. Each pedal felt heavier than usual. Fortunately Terence was my climbing buddy for the day, I don't know how he's doing this on a size 28 cassette, bloody insane.
 
 <div class='c-photo-cluster'>
 <image-zoom caption="Terence, my climbing buddy."><img src='Chapter2_TW_day4-57.jpg'/></image-zoom>
@@ -96,6 +96,7 @@ After an hour of agony, Terence and I finally made it to the summit. The pilgrim
 Today was a massive success, the pilgrimage to <marker-link lat='24.137157' lng='121.275718' label='C' zoom='12'>Wuling</marker-link> was as tough as advertised. I can't imagine having to race the 100km from sea level to here. This was a humbling experience, and it's motivating me to train harder, so one day I can attempt the [Taiwan KOM](https://www.youtube.com/watch?v=Sxfd2xzlM6k).
 
 <div class='c-photo-cluster'>
+<image-zoom><img src='03.jpg'/></image-zoom>
 <image-zoom caption="Everybody was stoked to have completed the challenge, but a huge 'fuck you' to the organiser Yao for organising such a torturous route!"><img src='Chapter2_TW_day4-92.jpg'/></image-zoom>
 </div>
 
