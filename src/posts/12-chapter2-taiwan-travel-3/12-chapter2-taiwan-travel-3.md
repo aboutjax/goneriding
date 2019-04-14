@@ -26,7 +26,7 @@ The final day of the trip came faster than I anticipated. Time certainly flies w
 <image-zoom><img src='Chapter2_TW_day4-9.jpg'/></image-zoom>
 </div>
 
-Word on the street (anyone that's done Wuling before) warned everyone to take it easy today. Pacing is critical to prepare yourself for the "last 10km". The "last 10km" came up multiple times this trip. Poetically they called it 天堂路(Road to Heaven) and it's the section before summiting Wuling.
+Word on the street (anyone that's done Wuling before) warned everyone to take it easy today. Pacing is critical to prepare yourself for the "last 10km". The "last 10km" came up multiple times this trip. Poetically they called it 天堂路(Road to Heaven) and it's the section before summiting Wuling, the highest road in Taiwan.
 
 The air at 1700m elevation was chilly in the morning. We departed at an easy pace, and began with 300m of climbing.
 
@@ -36,19 +36,18 @@ The air at 1700m elevation was chilly in the morning. We departed at an easy pac
 
 ## 清泉橋
 
-At 14km in, we made a brief stop at <marker-link lat='24.297262' lng='121.280214' label='A' zoom='13'>清泉橋</marker-link>. This bridge was built by the French in 1954, a popular photo op destination for anyone travelling through here.
+At 14km in, we made a brief stop at <marker-link lat='24.297262' lng='121.280214' label='A' zoom='13'>清泉橋</marker-link>. This bridge was built by the French in 1954, a popular destination for anyone travelling through here.
 
 <div class='c-photo-cluster'>
 <image-zoom caption="清泉橋"><img src='Chapter2_TW_day4-12.jpg'/></image-zoom>
 </div>
 
-The road continued to gently pitch upwards. It was a steady 4% hill without too many sharp pinches.
+From here it was a steady 4% hill without too many sharp pinches.
 
 <div class='c-photo-cluster'>
-<image-zoom><img src='Chapter2_TW_day4-21.jpg'/></image-zoom>
 <div class='flex'>
+<image-zoom><img src='Chapter2_TW_day4-21.jpg'/></image-zoom>
 <image-zoom><img src='Chapter2_TW_day4-26.jpg'/></image-zoom>
-<image-zoom><img src='Chapter2_TW_day4-22.jpg'/></image-zoom>
 </div>
 </div>
 
@@ -65,24 +64,27 @@ The road continued to gently pitch upwards. It was a steady 4% hill without too 
 
 Immediately after we made a right turn after the tunnel, the road kicked straight up to a whopping 11%, and stayed there. It was like staring at a merciless wall. I found myself looking away at what's ahead, staring at my handlebar was far less intimidating.
 
-The hairpins here were the steepest I have ever ridden, sometimes at 20% at certain areas, where I had to do the delicate balance of wheelie vs. spinning out. To make things even harder, climbing at high altitude made breathing harder, and my heart rate peaked only at 160. Each pedal felt heavier than usual. Fortunately Terence was my climbing buddy for the day, I don't know how he's doing this on a size 28 cassette, bloody insane.
+The hairpins here were the steepest I have ever ridden, sometimes at 20% at certain areas, where I had to do the delicate balance of wheelie vs. spinning out. To make things even harder, the high altitude made if difficult to breath, and my heart rate peaked only at 160. Each pedal felt heavier than usual. Fortunately Terence was my climbing buddy for the day, I don't know how he's doing this on a size 28 cassette, bloody insane.
 
 <div class='c-photo-cluster'>
 <image-zoom caption="Terence, my climbing buddy."><img src='Chapter2_TW_day4-57.jpg'/></image-zoom>
 <div class='flex'>
 <image-zoom><img src='Chapter2_TW_day4-58.jpg'/></image-zoom>
-<image-zoom><img src='Chapter2_TW_day4-59.jpg'/></image-zoom>
+<image-zoom><img src='04.jpg'/></image-zoom>
 </div>
+<div class='flex'>
 <image-zoom><img src='Chapter2_TW_day4-65.jpg'/></image-zoom>
+<image-zoom><img src='05.jpg'/></image-zoom>
+</div>
 <div class='flex'>
 <image-zoom><img src='Chapter2_TW_day4-85.jpg'/></image-zoom>
 <image-zoom><img src='Chapter2_TW_day4-79.jpg'/></image-zoom>
 </div>
 <div class='flex'>
 <image-zoom><img src='Chapter2_TW_day4-77.jpg'/></image-zoom>
-<image-zoom><img src='Chapter2_TW_day4-70.jpg'/></image-zoom>
 <image-zoom><img src='Chapter2_TW_day4-63.jpg'/></image-zoom>
 </div>
+<image-zoom><img src='06.jpg'/></image-zoom>
 </div>
 
 ## Wuling
