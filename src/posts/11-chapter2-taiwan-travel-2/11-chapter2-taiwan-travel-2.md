@@ -78,3 +78,7 @@ After lunch, the road continues to kick upwards. This was the last stop before w
 </div>
 <image-zoom caption="Everybody was stoked the hardest part of the day was over. It was all downhill from there... for now."><img src='Chapter2_TW_day3_101.jpg'/></image-zoom>
 </div>
+
+## Photography credit
+
+Photos from this entry by [Domho://Photography](https://www.facebook.com/domhosports) and [C.j. Lin](https://www.facebook.com/chunju.lin.315)

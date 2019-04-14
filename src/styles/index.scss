@@ -256,6 +256,7 @@ $map-height: 200px;
     .flex {
       @media screen and (max-width: $large) {
         flex-direction: column;
+        width: 100%;
       }
     }
   }
