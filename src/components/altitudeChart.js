@@ -57,7 +57,7 @@ const AltitudeChart = props => {
         bodyFontSize: 14,
         titleSpacing: 10,
         callbacks: {
-          footer: function(tooltipItems, data) {
+          footer: function (tooltipItems, data) {
             let datasets = data.datasets
             let latlngDatasetStream = datasets[1]
             let onHoverDataIndex = tooltipItems[0].index
@@ -66,7 +66,7 @@ const AltitudeChart = props => {
             // Push lat lng for hover function
             handleOnHover(correspondingLatlng)
           },
-          label: function(t, d) {
+          label: function (t, d) {
             // Format tooltip elevation data
             return 'Elevation: ' + t.yLabel + 'm'
           },
@@ -74,6 +74,7 @@ const AltitudeChart = props => {
       },
       hover: { mode: 'nearest', intersect: true, animationDuration: 1000 },
       layout: { padding: { left: 0 } },
+      scaleBeginAtZero: false,
       scales: {
         yAxes: [
           {
@@ -83,11 +84,11 @@ const AltitudeChart = props => {
               zeroLineColor: 'rgba(255, 255, 255, 0.5)',
             },
             ticks: {
-              beginAtZero: false,
+              beginAtZero: true,
               autoSkip: true,
               autoSkipPadding: 10,
               fontColor: 'rgba(0, 0, 0, 1)',
-              callback: function(value) {
+              callback: function (value) {
                 return _.round(value, 1) + 'm'
               },
             },
@@ -111,7 +112,7 @@ const AltitudeChart = props => {
             },
             ticks: {
               display: false,
-              callback: function(value) {
+              callback: function (value) {
                 return 'Distance: ' + _.round(value, 1) + ' km'
               },
             },

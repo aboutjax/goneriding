@@ -129,7 +129,7 @@ export const query = graphql`
     }
     featurePost: allMarkdownRemark(
       filter: {
-        frontmatter: { title: { eq: "Chapter 2 Taiwan Travel: Day 1" } }
+        frontmatter: { title: { eq: "Alpine, New Jersey" } }
       }
     ) {
       edges {
