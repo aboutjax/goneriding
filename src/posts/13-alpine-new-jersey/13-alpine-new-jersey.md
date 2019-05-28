@@ -11,6 +11,9 @@ author: Jacky Lee
 publish: true
 route_file: 'alpine-new-jersey.gpx'
 ---
+
+*This post is a combination of multiple rides on the same route.*
+
 I arrived in New York on the evening of Friday 3rd of May, and it had been raining non-stop for 3 days straight. The forecast finally looked dry the following Tuesday. [Tiffany Tu](https://www.instagram.com/tifftuu/) organised a group ride to Piermont and I RSVPed almost immediately because I had been itching for a ride to explore the roads of New York. We met up near <marker-link lat='40.651381' lng='-73.971898' label='A' zoom='14'>Prospect Park</marker-link> the next morning.
 
 First thing we did was stop by at Rapha New York and get acquainted over morning coffee. Tiffany works for Rapha as a ride leader so she's the perfect local guide to all things cycling in this city. She also shared with me some protips about living & riding in New York – Come to Rapha to for hosing down your bike, because my apartment building doesn't have any bike cleaning facilities. After coffee we made our way to George Washington Bridge, where we're linked up with Tiffany's cycling buddy — [Martin](https://www.instagram.com/martinlau_/).
