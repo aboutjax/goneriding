@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import IndexLayout from '../components/index-layout'
 import SEO from '../components/seo'
 import FeatureCard from '../components/feature-card'
+import { RideCard } from '../components/rideCard'
 
 const IndexPage = ({ data }) => {
   let featurePost = data.featurePost.edges[0]
@@ -56,29 +57,7 @@ const IndexPage = ({ data }) => {
           <div className="fl w-100 flex flex-wrap w-50-l pa3 pa0-l">
             {otherPosts.map(({ node }) => (
               <div key={node.id} className="fl w-100 w-50-ns pa3">
-                <div>
-                  <Link to={node.fields.slug} className="link black db">
-                    <Img
-                      fluid={node.frontmatter.cover_image.childImageSharp.fluid}
-                      backgroundColor="#d7d7d7"
-                      className="dim black br3"
-                    />
-                  </Link>
-                  <h3 className="near-black lh-title mb2">
-                    <Link
-                      to={node.fields.slug}
-                      className="link dim black serif"
-                    >
-                      {node.frontmatter.title}
-                    </Link>
-                  </h3>
-                  <p className="silver i f6 mb3 mt0 lh-solid">
-                    {node.frontmatter.date}
-                  </p>
-                  <p className="fw3 gray lh-copy mt0">
-                    {excerptTruncate(node.frontmatter.excerpt, 40)}
-                  </p>
-                </div>
+                <RideCard node={node} />
               </div>
             ))}
             <div className="pa3 w-100">
@@ -101,7 +80,7 @@ export default IndexPage
 export const query = graphql`
   query {
     allPosts: allMarkdownRemark(
-      filter: { frontmatter: { publish: { eq: true } } }
+      filter: { frontmatter: { publish: { eq: true }, type: { eq: "ride" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       totalCount
@@ -128,9 +107,7 @@ export const query = graphql`
       }
     }
     featurePost: allMarkdownRemark(
-      filter: {
-        frontmatter: { title: { eq: "Alpine, New Jersey" } }
-      }
+      filter: { frontmatter: { title: { eq: "Dirty Kanza 100 Weekend" } } }
     ) {
       edges {
         node {

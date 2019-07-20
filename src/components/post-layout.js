@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 
-const Layout = ({ children }) => (
+const Layout = props => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -17,9 +17,15 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div className="c-post-body">
+        <div
+          className={
+            props.type === 'full-width'
+              ? 'c-post-body c-post-body--full-width'
+              : 'c-post-body'
+          }
+        >
           <Header siteTitle={data.site.siteMetadata.title} />
-          {children}
+          {props.children}
         </div>
       </>
     )}

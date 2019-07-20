@@ -5,7 +5,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    // const slug = createFilePath({ node, getNode, basePath: `pages` })
 
     createNodeField({
       node,
@@ -33,6 +33,9 @@ exports.createPages = ({ graphql, actions }) => {
         allMarkdownRemark(filter: { frontmatter: { publish: { eq: true } } }) {
           edges {
             node {
+              frontmatter {
+                type
+              }
               fields {
                 slug
               }
@@ -42,31 +45,41 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve('./src/templates/post.js'),
-          context: {
-            slug: node.fields.slug,
-          },
-        })
+        // console.log(node.frontmatter.type)
+        if (node.frontmatter.type == 'blog') {
+          createPage({
+            path: node.fields.slug,
+            component: path.resolve('./src/templates/blog.js'),
+            context: {
+              slug: node.fields.slug,
+            },
+          })
+        } else if (node.frontmatter.type == 'ride') {
+          createPage({
+            path: node.fields.slug,
+            component: path.resolve('./src/templates/ride.js'),
+            context: {
+              slug: node.fields.slug,
+            },
+          })
+        }
       })
       resolve()
     })
   })
 }
 
-
 exports.onCreateWebpackConfig = ({ actions, stage }) => {
-  if (stage === "build-html") {
+  if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
             test: /mapbox-gl/,
-            use: ['null-loader']
+            use: ['null-loader'],
           },
         ],
-      }
+      },
     })
   }
-};
+}

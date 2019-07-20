@@ -166,7 +166,7 @@ $map-height: 200px;
 
 .serif {
   font-family: 'IBM Plex Serif', serif;
-  font-family: 'Merriweather', serif;
+  // font-family: 'Merriweather', serif;
 }
 
 .gatsby-resp-image-link {
@@ -191,14 +191,18 @@ $map-height: 200px;
   h2,
   h3,
   h4 {
-    font-family: 'Merriweather', serif;
+    font-family: 'IBM Plex Serif', serif;
   }
 
+  table,
   p,
   blockquote {
     max-width: 500px;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+  table {
   }
 
   blockquote {

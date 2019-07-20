@@ -1,26 +1,13 @@
 import React from 'react'
 import IndexLayout from '../components/index-layout'
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import SEO from '../components/seo'
+import { RideCard } from '../components/rideCard'
 
 const RidesPage = ({ data }) => {
-  // let allPosts = data.allPosts.edges
   let newZealandPosts = data.newZealandPosts.edges
   let taiwanPosts = data.taiwanPosts.edges
   let unitedStatesPosts = data.unitedStatesPosts.edges
-
-  console.log(taiwanPosts)
-
-  // Truncate post excerpt function
-  let excerptTruncate = (str, number_of_words) => {
-    return (
-      str
-        .split(' ')
-        .splice(0, number_of_words)
-        .join(' ') + '...'
-    )
-  }
 
   return (
     <IndexLayout>
@@ -29,81 +16,24 @@ const RidesPage = ({ data }) => {
         <h3 className="mw9 black bb mh3-l pv3 mh4 fw1">United States</h3>
         <div className="w-100 flex flex-wrap w-100-l pa3 pa0-l">
           {unitedStatesPosts.map(({ node }) => (
-            <div key={node.id} className="fl w-100 w-50-ns w-25-l pa3">
-              <div>
-                <Link to={node.fields.slug} className="link db black">
-                  <Img
-                    sizes={node.frontmatter.cover_image.childImageSharp.fluid}
-                    backgroundColor="#d7d7d7"
-                    className="dim black br3 link"
-                  />
-                </Link>
-                <h3 className="near-black lh-title mb2 serif">
-                  <Link to={node.fields.slug} className="link dim black">
-                    {node.frontmatter.title}
-                  </Link>
-                </h3>
-                <p className="black i f6 mb3 mt0 lh-solid silver">
-                  {node.frontmatter.date}
-                </p>
-                <p className="gray lh-copy mt0">
-                  {excerptTruncate(node.frontmatter.excerpt, 14)}
-                </p>
-              </div>
+            <div className="fl w-100 w-50-ns w-25-l pa3">
+              <RideCard node={node} />
             </div>
           ))}
         </div>
         <h3 className="mw9 black bb mh3-l pv3 mh4 fw1">Taiwan</h3>
         <div className="w-100 flex flex-wrap w-100-l pa3 pa0-l">
           {taiwanPosts.map(({ node }) => (
-            <div key={node.id} className="fl w-100 w-50-ns w-25-l pa3">
-              <div>
-                <Link to={node.fields.slug} className="link db black">
-                  <Img
-                    sizes={node.frontmatter.cover_image.childImageSharp.fluid}
-                    backgroundColor="#d7d7d7"
-                    className="dim black br3 link"
-                  />
-                </Link>
-                <h3 className="near-black lh-title mb2 serif">
-                  <Link to={node.fields.slug} className="link dim black">
-                    {node.frontmatter.title}
-                  </Link>
-                </h3>
-                <p className="black i f6 mb3 mt0 lh-solid silver">
-                  {node.frontmatter.date}
-                </p>
-                <p className="gray lh-copy mt0">
-                  {excerptTruncate(node.frontmatter.excerpt, 14)}
-                </p>
-              </div>
+            <div className="fl w-100 w-50-ns w-25-l pa3">
+              <RideCard node={node} />
             </div>
           ))}
         </div>
         <h3 className="mw9 black bb mh3-l pv3 mh4 fw1">New Zealand</h3>
         <div className="w-100 flex flex-wrap w-100-l pa3 pa0-l">
           {newZealandPosts.map(({ node }) => (
-            <div key={node.id} className="fl w-100 w-50-ns w-25-l pa3">
-              <div>
-                <Link to={node.fields.slug} className="link db black">
-                  <Img
-                    sizes={node.frontmatter.cover_image.childImageSharp.fluid}
-                    backgroundColor="#d7d7d7"
-                    className="dim black br3 link"
-                  />
-                </Link>
-                <h3 className="near-black lh-title mb2 serif">
-                  <Link to={node.fields.slug} className="link dim black">
-                    {node.frontmatter.title}
-                  </Link>
-                </h3>
-                <p className="black i f6 mb3 mt0 lh-solid silver">
-                  {node.frontmatter.date}
-                </p>
-                <p className="gray lh-copy mt0">
-                  {excerptTruncate(node.frontmatter.excerpt, 14)}
-                </p>
-              </div>
+            <div className="fl w-100 w-50-ns w-25-l pa3">
+              <RideCard node={node} />
             </div>
           ))}
         </div>
@@ -118,7 +48,7 @@ export const query = graphql`
   query {
     allPosts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { publish: { eq: true } } }
+      filter: { frontmatter: { publish: { eq: true }, type: { eq: "ride" } } }
     ) {
       totalCount
       edges {
@@ -160,7 +90,11 @@ export const query = graphql`
     newZealandPosts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
-        frontmatter: { publish: { eq: true }, location: { eq: "New Zealand" } }
+        frontmatter: {
+          publish: { eq: true }
+          type: { eq: "ride" }
+          location: { eq: "New Zealand" }
+        }
       }
     ) {
       totalCount
@@ -203,7 +137,11 @@ export const query = graphql`
     taiwanPosts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
-        frontmatter: { publish: { eq: true }, location: { eq: "Taiwan" } }
+        frontmatter: {
+          publish: { eq: true }
+          type: { eq: "ride" }
+          location: { eq: "Taiwan" }
+        }
       }
     ) {
       totalCount
@@ -234,7 +172,10 @@ export const query = graphql`
     unitedStatesPosts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
-        frontmatter: { publish: { eq: true }, location: { eq: "United States" } }
+        frontmatter: {
+          publish: { eq: true }
+          location: { eq: "United States" }
+        }
       }
     ) {
       totalCount
