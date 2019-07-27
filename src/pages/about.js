@@ -5,13 +5,9 @@ import SEO from '../components/seo'
 const SecondPage = () => (
   <Layout>
     <SEO title="About" />
-    <div className="mv4 mw9 center w-100 pa4 flex-grow-1 tc">
-      <h1 className="lh-copy f3 f2-l serif ph2 ph4-l mw6 center">
-        “Nothing compares to the simple pleasure of riding a bike”
-      </h1>
-      <cite className="mb4 db silver"> – John F Kennedy.</cite>
-      <div className="markdown-body mt6">
-        <div className="pa4-l pa0 f4 lh-copy silver mw7 tl center">
+    <div className="mw6 center pa3 flex-grow-1 tc">
+      <div className="markdown-body">
+        <div className="f4 lh-copy silver mw7 tl center">
           <p className="">
             Welcome, this is a journal powered by{' '}
             <a

@@ -8,6 +8,7 @@
     "@ibm/plex": "^2.0.0",
     "@mapbox/polyline": "^1.0.0",
     "chart.js": "^2.7.3",
+    "framer-motion": "^1.2.6",
     "gatsby": "^2.0.81",
     "gatsby-cli": "^2.4.8",
     "gatsby-image": "^2.0.20",

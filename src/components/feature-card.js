@@ -15,7 +15,9 @@ const FeatureCard = ({ title, excerpt, imageSrc, slug, date }) => {
       className="link black br0 br3-l overflow-hidden w-100 h-100 dib feature-ride no-underline flex dim flex-column justify-end"
     >
       <div className="pv5 ph5 ph5-l mw7 center feature-ride__info">
-        <h1 className="tc f1-l f2 mb3 near-white lh-title serif">{title}</h1>
+        <h1 className="tc f1-l f2 mb3 near-white fw6 lh-title serif">
+          {title}
+        </h1>
         <p className="f4 tc mv0 mt4 near-white lh-copy">{excerpt}</p>
         <p className="i tc mt4 mb0 near-white o-30">{date}</p>
       </div>

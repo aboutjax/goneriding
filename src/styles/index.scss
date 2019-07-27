@@ -75,6 +75,11 @@ $map-height: 200px;
   }
 }
 
+.c-post-body--full-width {
+  width: 100%;
+  padding-bottom: 0;
+}
+
 .c-post-map {
   height: 100vh;
   grid-column-start: 2;
@@ -90,7 +95,7 @@ $map-height: 200px;
 }
 
 .c-header {
-  height: 100px;
+  // height: 100px;
 }
 
 .c-header__logo-text {
@@ -194,9 +199,12 @@ $map-height: 200px;
     font-family: 'IBM Plex Serif', serif;
   }
 
+  ul,
+  ol,
   table,
   p,
   blockquote {
+    margin-bottom: 2rem !important;
     max-width: 500px;
     margin-left: auto !important;
     margin-right: auto !important;

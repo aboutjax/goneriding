@@ -4,15 +4,15 @@ import React from 'react'
 import LogoImage from '../images/gatsby-icon.png'
 
 const Header = ({ siteTitle }) => (
-  <div className="c-header near-black pv4 ph2 ph3-l flex justify-between items-center flex-none">
+  <div className="c-header near-black pv4 ph2 ph3-l flex-column flex flex-row-l justify-between items-center flex-none">
     <h2
-      className="ph3 lh-solid fw9 dim f3-l f4 serif c-header__logo-text {
+      className="ph3 lh-solid dim f3-l f4 serif tc tl-l c-header__logo-text {
   letter-spacing: -1px;
 }"
     >
       <Link
         to="/"
-        className="near-black no-underline ttc fw6 link c-header_logo-container"
+        className="near-black no-underline ttc mb4 mb0-l fw6 link c-header_logo-container"
       >
         <img className="c-header__logo-image" src={LogoImage} alt="logo" />
         {siteTitle}
@@ -20,12 +20,21 @@ const Header = ({ siteTitle }) => (
     </h2>
     <nav className="ph3">
       <Link to="/rides" className="san-serif fw4 near-black link dim mr4">
+        <span role="img" aria-label="bike">
+          🚴
+        </span>{' '}
         Rides
       </Link>
-      {/* <Link to="/blog" className="san-serif fw4 near-black link dim mr4">
-        Blog
-      </Link> */}
+      <Link to="/blog" className="san-serif fw4 near-black link dim mr4">
+        <span role="img" aria-label="speech">
+          💬
+        </span>{' '}
+        Words
+      </Link>
       <Link to="/about" className="san-serif fw4 near-black link dim">
+        <span role="img" aria-label="information">
+          ℹ️
+        </span>{' '}
         About
       </Link>
     </nav>

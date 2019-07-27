@@ -1,16 +1,11 @@
 import React from 'react'
 import IndexLayout from '../components/index-layout'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+
 import SEO from '../components/seo'
 
 const BlogPage = ({ data }) => {
-  //   console.log(data.allPosts)
-
   let blogPosts = data.allPosts.edges
-  let profileImage = data.profileImage
-
-  console.log(profileImage)
 
   // Truncate post excerpt function
   let excerptTruncate = (str, number_of_words) => {
@@ -25,14 +20,7 @@ const BlogPage = ({ data }) => {
   return (
     <IndexLayout>
       <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="mw6 center w-100 mb4 ph3-l flex-grow-1">
-        <div class="mw9 pa5 center flex flex-column items-center">
-          <Img
-            className="br-100 w-20 center"
-            fluid={data.profileImage.childImageSharp.fluid}
-          />
-          <p class="gray lh-copy tc">Personal blog by Jacky Lee</p>
-        </div>
+      <div className="mw6 center w-100 mb4 pa3-l flex-grow-1">
         <div className="w-100 flex flex-wrap w-100-l pa3 pa0-l">
           {blogPosts.map(({ node }) => (
             <div key={node.id} className="ph4-l ph3 fl w-100">
@@ -100,14 +88,6 @@ export const query = graphql`
               }
             }
           }
-        }
-      }
-    }
-
-    profileImage: file(relativePath: { eq: "profile.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 150, maxHeight: 150) {
-          ...GatsbyImageSharpFluid
         }
       }
     }
