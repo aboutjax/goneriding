@@ -297,3 +297,62 @@ $map-height: 200px;
   border-radius: 50%;
   background: #000000;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ffffff;
+    background: #000;
+  }
+
+  .black {
+    color: #fff;
+  }
+
+  .c-header {
+    * {
+      color: #fff;
+    }
+  }
+
+  .bg-white {
+    background: #000;
+  }
+
+  .bg-near-white {
+    background: #333;
+  }
+
+  .bg-black {
+    background: #fff;
+  }
+
+  .white {
+    color: #000;
+  }
+
+  .markdown-body {
+    color: #fff !important;
+    p {
+      color: #fff;
+    }
+
+    table {
+      tr,
+      th,
+      td {
+        color: #fff;
+        background: #000;
+      }
+    }
+    a,
+    .link {
+      color: rgb(255, 147, 65) !important;
+    }
+  }
+
+  .c-altitude-card,
+  .c-strava-stats-card {
+    background: #333;
+    color: #fff;
+  }
+}

@@ -4,7 +4,7 @@ import React from 'react'
 import LogoImage from '../images/gatsby-icon.png'
 
 const Header = ({ siteTitle }) => (
-  <div className="c-header near-black pv4 ph2 ph3-l flex-column flex flex-row-l justify-between items-center flex-none">
+  <div className="mw9 center w-100 c-header near-black pv4 ph2 ph3-l flex-column flex flex-row-l justify-between items-center flex-none">
     <h2
       className="ph3 lh-solid dim f3-l f4 serif tc tl-l c-header__logo-text {
   letter-spacing: -1px;
@@ -20,21 +20,21 @@ const Header = ({ siteTitle }) => (
     </h2>
     <nav className="ph3">
       <Link to="/rides" className="san-serif fw4 near-black link dim mr4">
-        <span role="img" aria-label="bike">
+        {/* <span role="img" aria-label="bike">
           🚴
-        </span>{' '}
+        </span>{' '} */}
         Rides
       </Link>
       <Link to="/blog" className="san-serif fw4 near-black link dim mr4">
-        <span role="img" aria-label="speech">
+        {/* <span role="img" aria-label="speech">
           💬
-        </span>{' '}
+        </span>{' '} */}
         Words
       </Link>
       <Link to="/about" className="san-serif fw4 near-black link dim">
-        <span role="img" aria-label="information">
+        {/* <span role="img" aria-label="information">
           ℹ️
-        </span>{' '}
+        </span>{' '} */}
         About
       </Link>
     </nav>

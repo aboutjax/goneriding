@@ -20,6 +20,23 @@ let handleOnHover = latlng => {
 
 const AltitudeChart = props => {
   marker = false // Remove any marker on the map
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  let chartLineColour,
+    chartLineBackground,
+    chartFontColor,
+    chartFontColorSupplementary
+
+  if (isDarkMode) {
+    chartLineColour = 'rgb(255, 147, 65)'
+    chartLineBackground = 'rgba(255, 147, 65, 0.2)'
+    chartFontColor = 'rgba(255, 255, 255, 0.4)'
+    chartFontColorSupplementary = 'rgba(255, 255, 255, 0.1)'
+  } else {
+    chartLineColour = 'rgb(0, 0, 0)'
+    chartLineBackground = 'rgba(0, 0, 0, 0.2)'
+    chartFontColor = 'rgba(0, 0, 0, 1)'
+    chartFontColorSupplementary = 'rgba(0, 0, 0, 0.1)'
+  }
   if (props.loading) {
     return <p />
   } else {
@@ -57,7 +74,7 @@ const AltitudeChart = props => {
         bodyFontSize: 14,
         titleSpacing: 10,
         callbacks: {
-          footer: function (tooltipItems, data) {
+          footer: function(tooltipItems, data) {
             let datasets = data.datasets
             let latlngDatasetStream = datasets[1]
             let onHoverDataIndex = tooltipItems[0].index
@@ -66,7 +83,7 @@ const AltitudeChart = props => {
             // Push lat lng for hover function
             handleOnHover(correspondingLatlng)
           },
-          label: function (t, d) {
+          label: function(t, d) {
             // Format tooltip elevation data
             return 'Elevation: ' + t.yLabel + 'm'
           },
@@ -80,15 +97,15 @@ const AltitudeChart = props => {
           {
             id: 'y-axis-1',
             gridLines: {
-              color: 'rgba(0, 0, 0, 0.06)',
-              zeroLineColor: 'rgba(255, 255, 255, 0.5)',
+              color: chartFontColorSupplementary,
+              zeroLineColor: chartFontColor,
             },
             ticks: {
               beginAtZero: true,
               autoSkip: true,
               autoSkipPadding: 10,
-              fontColor: 'rgba(0, 0, 0, 1)',
-              callback: function (value) {
+              fontColor: chartFontColor,
+              callback: function(value) {
                 return _.round(value, 1) + 'm'
               },
             },
@@ -107,12 +124,12 @@ const AltitudeChart = props => {
         xAxes: [
           {
             gridLines: {
-              color: 'rgba(0, 0, 0, 0.1)',
+              color: chartFontColor,
               display: false,
             },
             ticks: {
               display: false,
-              callback: function (value) {
+              callback: function(value) {
                 return 'Distance: ' + _.round(value, 1) + ' km'
               },
             },
@@ -125,9 +142,9 @@ const AltitudeChart = props => {
       labels: distanceStreamKm,
       datasets: [
         {
-          borderColor: 'rgba(0, 0, 0, 0)',
+          borderColor: chartLineColour,
           borderWidth: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          backgroundColor: chartLineBackground,
           pointRadius: 0,
           pointBorderWidth: 0,
           lineTension: 0.1,
