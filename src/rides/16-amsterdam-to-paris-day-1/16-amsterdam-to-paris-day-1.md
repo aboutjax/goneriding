@@ -44,7 +44,7 @@ Packing for 3 days in summer was easy. Amsterdam was still warm during the day, 
 </div>
 </div>
 
-### Bike lanes galore
+# Bike lanes galore
 
 Riding south to the border between Netherlands and Belgium was amazing, because dedicated bike lanes paved the entire way. Better yet, they have under river <marker-link lat='51.834557' lng='4.514594' label='B' zoom='16'>tunnels</marker-link> for bikes...
 
@@ -65,7 +65,7 @@ Riding south to the border between Netherlands and Belgium was amazing, because 
 <image-zoom caption="'The Elastic Perspective' by Next Architects"><img src='images/DSC07874.jpeg'/></image-zoom>
 </div>
 
-### Arriving Antwerp
+# Arriving Antwerp
 
 We arrived at Antwerp around 4pm, checked into our Airbnb, then headed out to meet [Nicolas](https://www.instagram.com/nicoloi/), a long time insta friend who's a local. He kindly showed us around his favourite stomping grounds in the old city of Antwerp, where we bonded over dinner & the finest belgium beers 💯🍻.
 
