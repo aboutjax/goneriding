@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Line } from 'react-chartjs-2'
 import _ from 'lodash'
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
@@ -20,9 +20,16 @@ let handleOnHover = latlng => {
 
 const AltitudeChart = props => {
   let isDarkMode
+  const [theme, setTheme] = useState('light')
 
   useEffect(() => {
     isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+    if (isDarkMode) {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
   })
 
   marker = false // Remove any marker on the map
@@ -31,7 +38,7 @@ const AltitudeChart = props => {
     chartFontColor,
     chartFontColorSupplementary
 
-  if (isDarkMode) {
+  if (theme === 'dark') {
     chartLineColour = 'rgb(255, 147, 65)'
     chartLineBackground = 'rgba(255, 147, 65, 0.2)'
     chartFontColor = 'rgba(255, 255, 255, 0.4)'
