@@ -43,7 +43,7 @@ class BlogPage extends Component {
         <PostLayout type="full-width">
           <div class="pa4-l ph4">
             <div class="mw9 center tc pa5-l pa3 pv6">
-              <h1 className="serif f2 lh-title fw6">
+              <h1 className="serif f2 lh-title fw9">
                 {this.state.post.frontmatter.title}
               </h1>
             </div>

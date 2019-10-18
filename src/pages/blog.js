@@ -26,7 +26,7 @@ const BlogPage = ({ data }) => {
             <div key={node.id} className="ph4-l ph3 fl w-100">
               <div className="center mw7">
                 <Link to={node.fields.slug} className="link db black">
-                  <h3 className="near-black lh-title mb2 serif fw6">
+                  <h3 className="near-black lh-title mb2 serif fw9">
                     <Link to={node.fields.slug} className="link dim black">
                       {node.frontmatter.title}
                     </Link>

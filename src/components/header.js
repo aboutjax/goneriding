@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
     >
       <Link
         to="/"
-        className="near-black no-underline ttc mb4 mb0-l fw6 link c-header_logo-container"
+        className="near-black no-underline ttc mb4 mb0-l fw9 link c-header_logo-container"
       >
         <img className="c-header__logo-image" src={LogoImage} alt="logo" />
         {siteTitle}

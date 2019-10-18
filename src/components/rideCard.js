@@ -22,7 +22,7 @@ export const RideCard = props => {
           className="dim black br3 link"
         />
       </Link>
-      <h3 className="near-black lh-title fw6 mb2 serif">
+      <h3 className="near-black lh-title fw9 mb2 serif">
         <Link to={props.node.fields.slug} className="link dim black">
           {props.node.frontmatter.title}
         </Link>

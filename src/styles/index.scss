@@ -105,10 +105,18 @@ $map-height: 200px;
 .c-header_logo-container {
   display: flex;
   align-items: center;
+  @media screen and (max-width: $large - 1) {
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .c-header__logo-image {
   width: 32px;
+  @media screen and (max-width: $large - 1) {
+    width: 50px;
+  }
 }
 .c-header__emoji {
   position: relative;
