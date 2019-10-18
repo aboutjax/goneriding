@@ -21,9 +21,9 @@ let handleOnHover = latlng => {
 const AltitudeChart = props => {
   let isDarkMode
   const [theme, setTheme] = useState('light')
-  isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
 
   useEffect(() => {
+    isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
     if (isDarkMode) {
       setTheme('dark')
     } else {
