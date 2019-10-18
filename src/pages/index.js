@@ -5,6 +5,7 @@ import IndexLayout from '../components/index-layout'
 import SEO from '../components/seo'
 import FeatureCard from '../components/feature-card'
 import { RideCard } from '../components/rideCard'
+import { motion } from 'framer-motion'
 
 const IndexPage = ({ data }) => {
   let featurePost = data.featurePost.edges[0]
@@ -25,6 +26,31 @@ const IndexPage = ({ data }) => {
     )
   }
 
+  // Framer Motion Variants
+  const list = {
+    visible: {
+      opacity: 1,
+      transition: {
+        opacity: { ease: 'linear' },
+        y: { type: 'spring', stiffness: 10000 },
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: { opacity: 0 },
+  }
+
+  const item = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        opacity: { ease: 'linear' },
+        y: { type: 'spring', stiffness: 100 },
+      },
+    },
+    hidden: { opacity: 0, y: 5 },
+  }
+
   return (
     <IndexLayout>
       <SEO
@@ -41,23 +67,39 @@ const IndexPage = ({ data }) => {
       />
       <div className="mw9 center w-100 mb4 flex-grow-1">
         <div className="cf ph0 ph3-l">
-          <div className="fl w-100 w-50-l pa3-l feature-ride-container">
-            <FeatureCard
-              slug={featurePost.node.fields.slug}
-              imageSrc={featurePostCoverImageSrc}
-              title={featurePost.node.frontmatter.title}
-              excerpt={excerptTruncate(
-                featurePost.node.frontmatter.excerpt,
-                24
-              )}
-              date={featurePost.node.frontmatter.date}
-            />
-          </div>
-          <div className="fl w-100 flex flex-wrap w-50-l pa3 pa0-l">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={list}
+            className="fl w-100 w-50-l pa3-l feature-ride-container"
+          >
+            <motion.div variants={item}>
+              <FeatureCard
+                slug={featurePost.node.fields.slug}
+                imageSrc={featurePostCoverImageSrc}
+                title={featurePost.node.frontmatter.title}
+                excerpt={excerptTruncate(
+                  featurePost.node.frontmatter.excerpt,
+                  24
+                )}
+                date={featurePost.node.frontmatter.date}
+              />
+            </motion.div>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={list}
+            className="fl w-100 flex flex-wrap w-50-l pa3 pa0-l"
+          >
             {otherPosts.map(({ node }) => (
-              <div key={node.id} className="fl w-100 w-50-ns pa3">
+              <motion.div
+                variants={item}
+                key={node.id}
+                className="fl w-100 w-50-ns pa3"
+              >
                 <RideCard node={node} />
-              </div>
+              </motion.div>
             ))}
             <div className="pa3 w-100">
               <Link
@@ -67,7 +109,7 @@ const IndexPage = ({ data }) => {
                 View all rides
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </IndexLayout>

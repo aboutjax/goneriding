@@ -3,6 +3,52 @@ import IndexLayout from '../components/index-layout'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import { RideCard } from '../components/rideCard'
+import { motion } from 'framer-motion'
+
+const ListOfRides = props => {
+  // Framer Motion Variants
+  const list = {
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: { opacity: 0 },
+  }
+
+  const item = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        opacity: { ease: 'linear' },
+        y: { type: 'spring', stiffness: 100 },
+      },
+    },
+    hidden: { opacity: 0, y: 10 },
+  }
+
+  return (
+    <div>
+      <h3 className="mw9 ttu gray bb mh3-l pv3 mh4 fw6 f6 tl-l tc">
+        {props.location || 'Country'}
+      </h3>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={list}
+        className="w-100 flex flex-wrap w-100-l pa3 pa0-l"
+      >
+        {props.data.map(({ node }) => (
+          <motion.div variants={item} className="fl w-100 w-50-ns w-25-l pa3">
+            <RideCard node={node} />
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  )
+}
 
 const RidesPage = ({ data }) => {
   let newZealandPosts = data.newZealandPosts.edges
@@ -14,38 +60,13 @@ const RidesPage = ({ data }) => {
     <IndexLayout>
       <SEO title="Rides" keywords={[`gatsby`, `application`, `react`]} />
       <div className="mw9 center w-100 mb4 ph3-l flex-grow-1">
-        <h3 className="mw9 black bb mh3-l pv3 mh4 fw1">Netherlands</h3>
-        <div className="w-100 flex flex-wrap w-100-l pa3 pa0-l">
-          {netherlandsPosts.map(({ node }) => (
-            <div className="fl w-100 w-50-ns w-25-l pa3">
-              <RideCard node={node} />
-            </div>
-          ))}
-        </div>
-        <h3 className="mw9 black bb mh3-l pv3 mh4 fw1">United States</h3>
-        <div className="w-100 flex flex-wrap w-100-l pa3 pa0-l">
-          {unitedStatesPosts.map(({ node }) => (
-            <div className="fl w-100 w-50-ns w-25-l pa3">
-              <RideCard node={node} />
-            </div>
-          ))}
-        </div>
-        <h3 className="mw9 black bb mh3-l pv3 mh4 fw1">Taiwan</h3>
-        <div className="w-100 flex flex-wrap w-100-l pa3 pa0-l">
-          {taiwanPosts.map(({ node }) => (
-            <div className="fl w-100 w-50-ns w-25-l pa3">
-              <RideCard node={node} />
-            </div>
-          ))}
-        </div>
-        <h3 className="mw9 black bb mh3-l pv3 mh4 fw1">New Zealand</h3>
-        <div className="w-100 flex flex-wrap w-100-l pa3 pa0-l">
-          {newZealandPosts.map(({ node }) => (
-            <div className="fl w-100 w-50-ns w-25-l pa3">
-              <RideCard node={node} />
-            </div>
-          ))}
-        </div>
+        <ListOfRides location="Netherlands" data={netherlandsPosts} />
+
+        <ListOfRides location="united states" data={unitedStatesPosts} />
+
+        <ListOfRides location="taiwan" data={taiwanPosts} />
+
+        <ListOfRides location="New Zealand" data={newZealandPosts} />
       </div>
     </IndexLayout>
   )

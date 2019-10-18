@@ -13,6 +13,7 @@ import ImageZoomComponent from '../components/imageZoom'
 import InfoCard from '../components/infoCard'
 import Hidden from '../components/hidden'
 import ImageZoom from 'react-medium-image-zoom'
+import { motion } from 'framer-motion'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -134,6 +135,29 @@ class PostPage extends Component {
       .replace(/(\r\n\t|\n|\r\t)/gm, '')
       .split(' ')[0]
 
+    // Framer Motion Variants
+    const list = {
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.2,
+        },
+      },
+      hidden: { opacity: 0 },
+    }
+
+    const item = {
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          opacity: { ease: 'linear' },
+          y: { type: 'spring', stiffness: 100 },
+        },
+      },
+      hidden: { opacity: 0, y: 20 },
+    }
+
     return (
       <div className="c-post-container">
         <SEO
@@ -145,7 +169,7 @@ class PostPage extends Component {
           }
         />
         <PostLayout>
-          <div>
+          <motion.div initial="hidden" animate="visible" variants={list}>
             <ImageZoom
               image={{
                 src: coverImageSrc,
@@ -160,7 +184,7 @@ class PostPage extends Component {
               }}
             />
 
-            <div className="center mw7 pa4-l ph4 pb4">
+            <motion.div variants={item} className="center mw7 pa4-l ph4 pb4">
               <div className="pt4 pb3 mb4 mw7 center">
                 <h1 className="tc f3 fw9 f2-l mb3 near-dark lh-title serif">
                   {this.state.post.frontmatter.title}
@@ -205,8 +229,8 @@ class PostPage extends Component {
                   view strava activity
                 </a>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           <Footer />
         </PostLayout>
