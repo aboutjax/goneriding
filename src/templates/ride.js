@@ -32,11 +32,38 @@ class PostPage extends Component {
     this.state = {
       post: props.data.queryPost,
       loading: true,
+      access_token: null,
     }
   }
 
+  fetchToken() {
+    let localStorage = window.localStorage
+    let exchangeTokenUrl =
+      'https://www.strava.com/oauth/token?client_id=17775&client_secret=1409e35fe6b71ed9a6ae59ea08552d6a4010d700&code=c5141474b2c2f0bcaed94be1f28a8e0c6d574071&grant_type=authorization_code'
+
+    let urls = [exchangeTokenUrl]
+    let requests = urls.map(url =>
+      fetch(exchangeTokenUrl, {
+        method: 'post',
+      })
+        .then(resp => {
+          return resp.json()
+        })
+        .then(json => {
+          this.setState({ access_token: json.access_token })
+          localStorage.setItem('token_access_token', json.access_token)
+          localStorage.setItem('token_expires_at', json.expires_at)
+        })
+    )
+
+    Promise.all(requests).then(responses => {
+      this.fetchData()
+    })
+  }
+
   fetchData() {
-    let publicAccessToken = '011c89ee01402ab591de0240d59ee84455fd4d42'
+    let localStorage = window.localStorage
+    let access_token = localStorage.getItem('token_access_token')
     let activityApiUrl =
       'https://www.strava.com/api/v3/activities/' +
       this.state.post.frontmatter.strava_id
@@ -51,7 +78,7 @@ class PostPage extends Component {
         method: 'get',
         headers: {
           'content-type': 'application/json',
-          authorization: 'Bearer ' + publicAccessToken,
+          authorization: 'Bearer ' + access_token,
         },
       })
         .then(resp => {
@@ -73,7 +100,25 @@ class PostPage extends Component {
   }
 
   componentDidMount() {
-    this.fetchData()
+    let localStorage = window.localStorage
+    let localStorageAccessToken = localStorage.getItem('token_access_token')
+    let localStorageAccessTokenExpiresAt = localStorage.getItem(
+      'token_expires_at'
+    )
+    let currentTime = Date.now() / 1000
+
+    // If localstorage doesn't have access token, fetch a new one.
+    if (!localStorageAccessToken) {
+      this.fetchToken()
+    } else if (parseInt(localStorageAccessTokenExpiresAt) < currentTime) {
+      // If localstorage token expired, fetch new token
+
+      this.fetchToken()
+    } else {
+      // Otherwise use existing token to fetch data
+
+      this.fetchData()
+    }
   }
 
   render() {
