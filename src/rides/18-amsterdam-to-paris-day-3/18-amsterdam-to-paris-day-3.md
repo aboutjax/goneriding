@@ -3,7 +3,7 @@ type: 'ride'
 path: '/rides/amsterdam-to-paris-day-3'
 date: '2019-09-16'
 title: Amsterdam to Paris - Day 3
-excerpt: After the longest leg from the previous day, we decided to treat ourselves with a bit of snoozing in and begin riding at 8am.
+excerpt: After the longest leg from the previous day, we decided to treat ourselves with a bit of snoozing in and began riding at 8am.
 strava_id: 2714536179
 cover_image: 'images/DSC08325.jpeg'
 social_image: 'images/social-image.jpg'
@@ -13,7 +13,7 @@ publish: true
 route_file: 'Day_3_St_Quentin_Paris_WTF_is_up_with_the_sand_paths_Komoot_.gpx'
 ---
 
-After the longest leg from the previous day, we decided to treat ourselves with a bit of snoozing in and begin riding at 8am. We only had to cover 150 km, we thought it would be a piece of cake and we'd make it into Paris by early afternoon. Little did we know Komoot would surprise us with some sketchy sand paths that made us walk our bikes, which added 2 hours to our original schedule.
+After the longest leg from the previous day, we decided to treat ourselves with a bit of snoozing in and began riding at 8am. We only had to cover 150 km, we thought it would be a piece of cake and we'd make it into Paris by early afternoon. Little did we know Komoot would surprise us with some sketchy sand paths that made us walk our bikes, which added 2 hours to our original schedule.
 
 <div class='c-photo-cluster'>
 <image-zoom caption='Rolling out of our Airbnb in Saint Quentin'><img src='images/IMG_7083.jpeg'/></image-zoom>
@@ -76,7 +76,7 @@ Post stuffing our face with delicious food, we gave ourselves the biggest pat on
 
 ## Paris Sunset
 
-Once we were on the main roads, we raced against the clock to get to Paris, and fortunately at 8:30pm we made it into Saint Dennis just in time for the sunset! A friend of mine, [Yin-Ho](https://twitter.com/yinhochong), kindly took us into his house for the night. He even prepared dinner for us and made us feel so welcome in his place! 🙏 (Yin-Ho if you're reading this, I heart you.)
+Once we were on the main roads, we raced against the clock to get to Paris, and fortunately at 8:30pm we made it into Saint Dennis just in time for the sunset! A friend of mine, [Yin-Ho](https://twitter.com/yinhochong), kindly took us into his house for the night. He even prepared dinner for us and made us feel so welcomed in his place! 🙏 (Yin-Ho if you're reading this, I heart you.)
 
 <div class='c-photo-cluster'>
 <div class='flex'>
