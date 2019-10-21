@@ -10,16 +10,17 @@
   "Image Zoom": {
     "scope": "markdown",
     "prefix": "image-zoom",
-    "body": [
-      "<image-zoom><img src='${1:string}'/></image-zoom>"
-    ],
+    "body": ["<image-zoom><img src='${1:string}'/></image-zoom>"],
     "description": "Add a image"
   },
   "Image Cluster": {
     "scope": "markdown",
     "prefix": "image-cluster",
     "body": [
-      "<div class='c-photo-cluster'></div>"
+      "<div class='c-photo-cluster'>",
+      "<div class='flex'>",
+      "</div>",
+      "</div>"
     ],
     "description": "Add a image cluster"
   }

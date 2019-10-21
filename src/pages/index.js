@@ -148,7 +148,7 @@ export const query = graphql`
       }
     }
     featurePost: allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Dirty Kanza 100 Weekend" } } }
+      filter: { frontmatter: { title: { eq: "Amsterdam to Paris - Day 3" } } }
     ) {
       edges {
         node {
