@@ -23,7 +23,7 @@ After the longest leg from the previous day, we decided to treat ourselves with 
 </div>
 </div>
 
-After coffee & bagels, we set off for our final destination — Paris. Ian's legs felt good that day, mind didn't. But I was looking forward to a celebratory beer in Paris, so that kept me going.
+After coffee & bagels, we set off for our final destination — Paris. Ian's legs felt good that day, mine didn't. But I was looking forward to a celebratory beer in Paris, so that kept me going.
 
 <div class='c-photo-cluster'>
 <div class='flex'>
