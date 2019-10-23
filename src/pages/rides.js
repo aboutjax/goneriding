@@ -55,11 +55,14 @@ const RidesPage = ({ data }) => {
   let taiwanPosts = data.taiwanPosts.edges
   let unitedStatesPosts = data.unitedStatesPosts.edges
   let netherlandsPosts = data.netherlandsPosts.edges
+  let spainPosts = data.spainPosts.edges
 
   return (
     <IndexLayout>
       <SEO title="Rides" keywords={[`gatsby`, `application`, `react`]} />
       <div className="mw9 center w-100 mb4 ph3-l flex-grow-1">
+        <ListOfRides location="Spain" data={spainPosts} />
+
         <ListOfRides location="Netherlands" data={netherlandsPosts} />
 
         <ListOfRides location="united states" data={unitedStatesPosts} />
@@ -171,6 +174,41 @@ export const query = graphql`
           publish: { eq: true }
           type: { eq: "ride" }
           location: { eq: "Netherlands" }
+        }
+      }
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            strava_id
+            excerpt
+            title
+            location
+            date(formatString: "DD MMMM, YYYY")
+            cover_image {
+              childImageSharp {
+                fluid(maxWidth: 700, maxHeight: 500, cropFocus: CENTER) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    spainPosts: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: {
+        frontmatter: {
+          publish: { eq: true }
+          type: { eq: "ride" }
+          location: { eq: "Spain" }
         }
       }
     ) {

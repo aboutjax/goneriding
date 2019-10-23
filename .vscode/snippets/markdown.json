@@ -19,6 +19,7 @@
     "body": [
       "<div class='c-photo-cluster'>",
       "<div class='flex'>",
+      "<image-zoom><img src='images/${1:string}'/></image-zoom>",
       "</div>",
       "</div>"
     ],
