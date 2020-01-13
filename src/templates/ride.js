@@ -38,8 +38,9 @@ class PostPage extends Component {
   }
 
   fetchToken() {
+    // http://www.strava.com/oauth/authorize?client_id=17775&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read
     let localStorage = window.localStorage
-    let uniqueAuthorizationCode = 'c5141474b2c2f0bcaed94be1f28a8e0c6d574071'
+    let uniqueAuthorizationCode = '19cf80665f14bd450f42bcabf859c1c897027aea'
     let exchangeTokenUrl =
       'https://www.strava.com/oauth/token?client_id=17775&client_secret=1409e35fe6b71ed9a6ae59ea08552d6a4010d700&code=' +
       uniqueAuthorizationCode +
@@ -89,6 +90,7 @@ class PostPage extends Component {
           return resp.json()
         })
         .then(json => {
+          console.log(json)
           let checkIsArray = Array.isArray(json)
           if (checkIsArray) {
             this.setState({ streams: json })
@@ -111,15 +113,21 @@ class PostPage extends Component {
     )
     let currentTime = Date.now() / 1000
 
+    // this.fetchData()
+
     // If localstorage doesn't have access token, fetch a new one.
     if (!localStorageAccessToken) {
+      console.log('fetch token')
+
       this.fetchToken()
     } else if (parseInt(localStorageAccessTokenExpiresAt) < currentTime) {
       // If localstorage token expired, fetch new token
+      console.log('fetch new token')
 
       this.fetchToken()
     } else {
       // Otherwise use existing token to fetch data
+      console.log('use token')
 
       this.fetchData()
     }
