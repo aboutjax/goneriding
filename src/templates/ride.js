@@ -40,11 +40,12 @@ class PostPage extends Component {
   fetchToken() {
     // http://www.strava.com/oauth/authorize?client_id=17775&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read
     let localStorage = window.localStorage
-    let uniqueAuthorizationCode = '19cf80665f14bd450f42bcabf859c1c897027aea'
+    // let uniqueAuthorizationCode = '1ffafee6b184fa2955cab3185d877595c12c74a9'
     let exchangeTokenUrl =
-      'https://www.strava.com/oauth/token?client_id=17775&client_secret=1409e35fe6b71ed9a6ae59ea08552d6a4010d700&code=' +
-      uniqueAuthorizationCode +
-      '&grant_type=authorization_code'
+      'https://www.strava.com/oauth/token?client_id=17775&client_secret=1409e35fe6b71ed9a6ae59ea08552d6a4010d700' +
+      // uniqueAuthorizationCode +
+      '&grant_type=refresh_token' +
+      '&refresh_token=314d5d0afe2f3b9ed8a7a6d658a7d6a025a52b0e'
 
     let urls = [exchangeTokenUrl]
     let requests = urls.map(url =>
@@ -112,8 +113,6 @@ class PostPage extends Component {
       'token_expires_at'
     )
     let currentTime = Date.now() / 1000
-
-    // this.fetchData()
 
     // If localstorage doesn't have access token, fetch a new one.
     if (!localStorageAccessToken) {
