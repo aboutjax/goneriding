@@ -114,22 +114,24 @@ class PostPage extends Component {
     )
     let currentTime = Date.now() / 1000
 
+    this.fetchToken()
+
     // If localstorage doesn't have access token, fetch a new one.
-    if (!localStorageAccessToken) {
-      console.log('fetch token')
+    // if (!localStorageAccessToken) {
+    //   console.log('fetch token')
 
-      this.fetchToken()
-    } else if (parseInt(localStorageAccessTokenExpiresAt) < currentTime) {
-      // If localstorage token expired, fetch new token
-      console.log('fetch new token')
+    //   this.fetchToken()
+    // } else if (parseInt(localStorageAccessTokenExpiresAt) < currentTime) {
+    //   // If localstorage token expired, fetch new token
+    //   console.log('fetch new token')
 
-      this.fetchToken()
-    } else {
-      // Otherwise use existing token to fetch data
-      console.log('use token')
+    //   this.fetchToken()
+    // } else {
+    //   // Otherwise use existing token to fetch data
+    //   console.log('use token')
 
-      this.fetchData()
-    }
+    //   this.fetchData()
+    // }
   }
 
   render() {
