@@ -33,7 +33,7 @@
     "gh-pages": "^2.0.1",
     "github-markdown-css": "^2.10.0",
     "lodash": "^4.17.11",
-    "mapbox-gl": "^0.52.0",
+    "mapbox-gl": "^2.0.1",
     "moment": "^2.23.0",
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",
