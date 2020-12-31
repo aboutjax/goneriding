@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@ibm/plex": "^2.0.0",
-    "@mapbox/polyline": "^1.0.0",
+    "@mapbox/polyline": "^1.1.1",
     "chart.js": "^2.7.3",
     "framer-motion": "^1.2.6",
     "gatsby": "^2.0.81",
