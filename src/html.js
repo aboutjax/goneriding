@@ -18,7 +18,9 @@ export default class HTML extends React.Component {
             <p>Please enable javascript!</p>
           </noscript>
 
-          <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+
+          <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+          {/* <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script> */}
         </head>
         <body className="sans-serif h-100" {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
@@ -29,11 +31,6 @@ export default class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
 
-          <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALHs0FMYH5alNI5LNsBkt0N-J7m7aYbsY&libraries=geometry"
-            async
-            defer
-          />
         </body>
       </html>
     )

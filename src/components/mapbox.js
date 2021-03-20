@@ -15,9 +15,9 @@ class Map extends Component {
     let mapTheme
 
     if (isDarkMode) {
-      mapTheme = 'mapbox://styles/mapbox/dark-v10'
+      mapTheme = 'mapbox://styles/mapbox/streets-v11'
     } else {
-      mapTheme = 'mapbox://styles/p0pmaker/cjrf0kzjd4xde2tqwor6ltd0u'
+      mapTheme = 'mapbox://styles/mapbox/streets-v11'
     }
     let startLatlng = this.props.activityData.start_latlng
     let decodedPolyline = polyline.toGeoJSON(
