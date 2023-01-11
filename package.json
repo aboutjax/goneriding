@@ -28,7 +28,7 @@
     "gatsby-remark-responsive-image": "^1.0.0-alpha13-alpha.435e0178",
     "gatsby-remark-smartypants": "^2.0.7",
     "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-transformer-remark": "^2.1.17",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.9",
     "gh-pages": "^2.0.1",
     "github-markdown-css": "^2.10.0",
